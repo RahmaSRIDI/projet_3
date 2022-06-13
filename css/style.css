@@ -1,0 +1,489 @@
+@charset "UTF-8";
+/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  /* box-sizing est appliqué à tous les éléments */
+}
+
+.logo-ohmyfood {
+  position: absolute;
+  top: 3%;
+  left: 30%;
+  max-width: 40%;
+}
+
+.formulaire-rech {
+  display: flex;
+  position: absolute;
+  top: 9%;
+  left: 0%;
+}
+
+.btn-Location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  background-color: #dddcdc;
+  color: black;
+  cursor: pointer;
+  border: none;
+  width: 414px;
+  height: 60px;
+  padding-top: 15px;
+}
+
+.recherche-Text {
+  position: relative;
+  left: 7%;
+  margin-left: 10px;
+  background-color: #dddcdc;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.fa-location-dot {
+  position: relative;
+  left: 6%;
+  font-size: 100%;
+}
+
+.exploration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: #F2F2F2;
+  top: 15%;
+  width: 414px;
+  height: 330px;
+}
+
+#reservez1 {
+  position: relative;
+  top: 5%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#reservez2 {
+  margin-top: 0%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#decouvrez1 {
+  position: relative;
+  top: 0%;
+  margin-bottom: 1%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+#decouvrez2 {
+  margin-top: 0%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.btn-explorer {
+  position: relative;
+  top: 7%;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 250px;
+  height: 51px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Roboto";
+}
+
+.title-fonctionnement {
+  position: absolute;
+  top: 63%;
+  left: 5%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.choisissez {
+  display: flex;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
+/* .fa-circle-1{
+
+    position:relative;
+    top:0%;
+    left:0%;
+} */
+.btn-phone {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #F2F2F2;
+  color: grey;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  padding-top: 25px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fa-mobile-screen-button {
+  position: relative;
+  left: 8%;
+  padding-right: 15px;
+  font-size: 120%;
+}
+
+.choix-resto {
+  position: relative;
+  left: 10%;
+  background-color: #F2F2F2;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.composez {
+  display: flex;
+  position: absolute;
+  top: 88%;
+  left: 5%;
+}
+
+.btn-menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #F2F2F2;
+  color: grey;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  padding-top: 25px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fa-list-ul {
+  position: relative;
+  left: 8%;
+  padding-right: 15px;
+  font-size: 120%;
+}
+
+.compose-menu {
+  position: relative;
+  left: 10%;
+  background-color: #F2F2F2;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.degustez {
+  display: flex;
+  position: absolute;
+  top: 101%;
+  left: 5%;
+}
+
+.btn-store {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #F2F2F2;
+  color: grey;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  padding-top: 25px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fa-store {
+  position: relative;
+  left: 8%;
+  padding-right: 15px;
+  font-size: 120%;
+}
+
+.deguste-resto {
+  position: relative;
+  left: 10%;
+  background-color: #F2F2F2;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.restaurants {
+  position: absolute;
+  width: 414px;
+  height: 1300px;
+  margin-top: 20px;
+  top: 115%;
+  left: 0%;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-restaurants {
+  padding-left: 5%;
+  padding-top: 5%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+
+.card-restaurant-1 {
+  text-align: left;
+  background-color: white;
+  position: absolute;
+  top: 7%;
+  margin-left: 20px;
+  margin-right: 25PX;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.img-restaurant-1 {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+}
+
+.btn-nouveau {
+  position: absolute;
+  left: 70%;
+  top: 5%;
+  background-color: #99E2D0;
+  border: none;
+  color: green;
+  padding: 7px;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Roboto";
+}
+
+.restaurant-img-text-title {
+  font-weight: bold;
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.restaurant-img-text-desc {
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.fa-heart {
+  position: relative;
+  bottom: 15%;
+  left: 85%;
+  font-size: 150%;
+}
+
+.fa-heart:active {
+  color: #9356DC;
+}
+
+.card-restaurant-2 {
+  text-align: left;
+  background-color: white;
+  position: absolute;
+  top: 28%;
+  margin-left: 20px;
+  margin-right: 25PX;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.img-restaurant-2 {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+}
+
+.restaurant-img-text-title {
+  font-weight: bold;
+  font-family: "Roboto";
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.restaurant-img-text-desc {
+  font-family: "Roboto";
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.card-restaurant-3 {
+  text-align: left;
+  background-color: white;
+  position: absolute;
+  top: 49%;
+  margin-left: 20px;
+  margin-right: 25PX;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.img-restaurant-3 {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+}
+
+.restaurant-img-text-title {
+  font-weight: bold;
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.restaurant-img-text-desc {
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.card-restaurant-4 {
+  text-align: left;
+  background-color: white;
+  position: absolute;
+  top: 70%;
+  margin-left: 20px;
+  margin-right: 25PX;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.img-restaurant-4 {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+}
+
+.restaurant-img-text-title {
+  font-weight: bold;
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.restaurant-img-text-desc {
+  margin-top: 5Px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.footer {
+  position: absolute;
+  width: 414px;
+  height: 250px;
+  top: 285%;
+  left: 0%;
+  padding-left: 25px;
+  color: white;
+  background-color: rgb(43, 42, 41);
+  font-family: "Shrikhand";
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  margin-bottom: 30px;
+}
+
+.footer-element {
+  font-family: "Roboto";
+}
+
+.fa-utensils {
+  color: white;
+}
+
+.btn-resto {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+}
+
+.resto-text {
+  position: relative;
+  top: 10%;
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 15px;
+}
+
+.fa-handshake-angle {
+  color: white;
+}
+
+.btn-part {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+}
+
+.part-text {
+  position: relative;
+  top: 10%;
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 10px;
+  margin-bottom: 0%;
+}
+
+/*# sourceMappingURL=style.css.map */

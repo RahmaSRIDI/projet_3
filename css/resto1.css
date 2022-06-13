@@ -1,0 +1,372 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  /* box-sizing est appliqué à tous les éléments */
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  font-size: 150%;
+}
+.logo-ohmyfood {
+  position: absolute;
+  top: 3%;
+  left: 30%;
+  max-width: 40%;
+}
+
+.img-resto-1 {
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 414px;
+  height: 240px;
+}
+
+.entree {
+  position: absolute;
+  width: 414px;
+  height: 1200px;
+  margin-top: 20px;
+  top: 33%;
+  left: 0%;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.title-alafran {
+  padding-left: 5%;
+  padding-top: 5%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Shrikhand";
+}
+
+.fa-heart {
+  position: absolute;
+  top: 3%;
+  left: 80%;
+  font-size: 150%;
+}
+
+/*****************************/
+.title-entr {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.bordure-moitie-1 {
+  position: absolute;
+  top: 7%;
+  margin-left: 5%;
+  width: 40px;
+  height: 20px;
+  border-bottom: solid;
+  border-color: #99E2D0;
+  margin-top: 2%;
+}
+
+.btn-menu {
+  position: absolute;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.checked {
+  position: absolute;
+  top: 10%;
+  left: 78%;
+  width: 65px;
+  height: 70px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+}
+.fa-circle-check {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  font-size: 150%;
+  color: white;
+}
+
+.btn-menu:active {
+  width: 305px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.btn-menu:focus {
+  width: 305px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.btn-1-entree {
+  top: 10%;
+}
+
+.btn-2-entree {
+  top: 17%;
+}
+
+.btn-3-entree {
+  top: 24%;
+}
+
+.tartare {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 120%;
+  color: black;
+}
+
+.aux-zests {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 37%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-size: 100%;
+  color: black;
+}
+
+.prix {
+  position: absolute;
+  top: 40%;
+  left: 89%;
+  background-color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: black;
+  font-size: 85%;
+}
+
+/*****************************/
+.title-plats {
+  position: absolute;
+  top: 31%;
+  left: 5%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.bordure-moitie-2 {
+  position: absolute;
+  top: 32%;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 40px;
+  height: 20px;
+  border-bottom: solid;
+  border-color: #99E2D0;
+}
+
+.btn-1-plats {
+  top: 35%;
+}
+
+.btn-2-plats {
+  top: 42%;
+}
+
+.btn-3-plats {
+  top: 49%;
+}
+
+.coquilles {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 120%;
+  color: black;
+}
+
+.puree {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 37%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-size: 100%;
+  color: black;
+}
+
+/********************************/
+.title-dessert {
+  position: absolute;
+  top: 56%;
+  left: 5%;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.bordure-moitie-3 {
+  position: absolute;
+  top: 57%;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 40px;
+  height: 20px;
+  border-bottom: solid;
+  border-color: #99E2D0;
+}
+
+.btn-1-dessert {
+  top: 60%;
+}
+
+.btn-2-dessert {
+  top: 67%;
+}
+
+.btn-3-dessert {
+  top: 74%;
+}
+
+.petales {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 120%;
+  color: black;
+}
+
+.noisettes {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 37%;
+  left: 3%;
+  width: 280px;
+  background-color: white;
+  border: none;
+  font-family: "Roboto";
+  font-size: 100%;
+  color: black;
+}
+
+/************************************/
+.btn-commander {
+  position: absolute;
+  top: 85%;
+  left: 20%;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 250px;
+  height: 61px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Roboto";
+}
+
+/*************************************/
+.footer {
+  position: absolute;
+  width: 414px;
+  height: 250px;
+  top: 195%;
+  left: 0%;
+  padding-left: 25px;
+  color: white;
+  background-color: rgb(43, 42, 41);
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+.footer-title {
+  margin-bottom: 30px;
+}
+
+.footer-element {
+  font-family: "Roboto";
+}
+
+.fa-utensils {
+  color: white;
+}
+
+.btn-resto {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+}
+
+.resto-text {
+  position: relative;
+  top: 10%;
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 15px;
+}
+
+.fa-handshake-angle {
+  color: white;
+}
+
+.btn-part {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+}
+
+.part-text {
+  position: relative;
+  top: 10%;
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 10px;
+  margin-bottom: 0%;
+}
+
+/*# sourceMappingURL=resto1.css.map */
