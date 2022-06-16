@@ -4,12 +4,16 @@
   /* box-sizing est appliqué à tous les éléments */
 }
 
+/* les variables*/
+/********* mixin menu ************/
+/********* mixin resto ************/
 .fa-arrow-left {
   position: absolute;
   top: 3%;
   left: 10%;
   font-size: 150%;
 }
+
 .logo-ohmyfood {
   position: absolute;
   top: 3%;
@@ -17,7 +21,7 @@
   max-width: 40%;
 }
 
-.img-resto-1 {
+.img-resto {
   position: absolute;
   top: 9%;
   left: 0%;
@@ -26,28 +30,27 @@
 }
 
 .entree {
-  position: absolute;
-  width: 414px;
-  height: 1200px;
-  margin-top: 20px;
-  top: 33%;
-  left: 0%;
-  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
+  align-items: left;
+  position: absolute;
+  background-color: #F2F2F2;
+  top: 33%;
+  width: 414px;
+  height: 1200px;
+  left: 0%;
+  margin-top: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
-.title-alafran {
+.entree .title-alafran {
   padding-left: 5%;
-  padding-top: 5%;
-  font-size: 20px;
+  padding-top: 2%;
+  font-size: 150%;
   font-weight: bold;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
 }
-
-.fa-heart {
+.entree .fa-heart {
   position: absolute;
   top: 3%;
   left: 80%;
@@ -59,23 +62,50 @@
   position: absolute;
   top: 6%;
   left: 5%;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
 .bordure-moitie-1 {
   position: absolute;
   top: 7%;
+  margin-top: 2%;
   margin-left: 5%;
   width: 40px;
   height: 20px;
   border-bottom: solid;
   border-color: #99E2D0;
-  margin-top: 2%;
 }
 
-.btn-menu {
+.btn-1-entree {
   position: absolute;
+  top: 10%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-2-entree {
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-3-entree {
+  position: absolute;
+  top: 24%;
   left: 5%;
   background-color: white;
   cursor: pointer;
@@ -88,7 +118,7 @@
 
 .checked {
   position: absolute;
-  top: 10%;
+  top: 9%;
   left: 78%;
   width: 65px;
   height: 70px;
@@ -96,6 +126,7 @@
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
 }
+
 .fa-circle-check {
   display: flex;
   justify-content: center;
@@ -116,19 +147,7 @@
   border-bottom-right-radius: 0%;
 }
 
-.btn-1-entree {
-  top: 10%;
-}
-
-.btn-2-entree {
-  top: 17%;
-}
-
-.btn-3-entree {
-  top: 24%;
-}
-
-.tartare {
+.menu-entree {
   display: flex;
   justify-content: flex-start;
   position: absolute;
@@ -138,12 +157,12 @@
   background-color: white;
   border: none;
   font-family: "Roboto";
-  font-weight: bold;
   font-size: 120%;
   color: black;
+  font-weight: bold;
 }
 
-.aux-zests {
+.menu-entree-desc {
   display: flex;
   justify-content: flex-start;
   position: absolute;
@@ -173,7 +192,7 @@
   position: absolute;
   top: 31%;
   left: 5%;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
@@ -189,15 +208,42 @@
 }
 
 .btn-1-plats {
+  position: absolute;
   top: 35%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-2-plats {
+  position: absolute;
   top: 42%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-3-plats {
+  position: absolute;
   top: 49%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .coquilles {
@@ -210,9 +256,9 @@
   background-color: white;
   border: none;
   font-family: "Roboto";
-  font-weight: bold;
   font-size: 120%;
   color: black;
+  font-weight: bold;
 }
 
 .puree {
@@ -234,7 +280,7 @@
   position: absolute;
   top: 56%;
   left: 5%;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
@@ -250,15 +296,42 @@
 }
 
 .btn-1-dessert {
+  position: absolute;
   top: 60%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-2-dessert {
+  position: absolute;
   top: 67%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-3-dessert {
+  position: absolute;
   top: 74%;
+  left: 5%;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 70px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .petales {
@@ -271,9 +344,9 @@
   background-color: white;
   border: none;
   font-family: "Roboto";
-  font-weight: bold;
   font-size: 120%;
   color: black;
+  font-weight: bold;
 }
 
 .noisettes {
@@ -293,23 +366,30 @@
 /************************************/
 .btn-commander {
   position: absolute;
-  top: 85%;
+  top: 86%;
   left: 20%;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 100%;
   width: 250px;
   height: 61px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 25px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-commander:hover {
+  background: linear-gradient(#FF79DA, white);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 /*************************************/
 .footer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 414px;
   height: 250px;
@@ -318,20 +398,14 @@
   padding-left: 25px;
   color: white;
   background-color: rgb(43, 42, 41);
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
   font-weight: normal;
 }
-
-.footer-title {
+.footer .footer-title {
   margin-bottom: 30px;
 }
-
-.footer-element {
-  font-family: "Roboto";
-}
-
-.fa-utensils {
-  color: white;
+.footer .footer-element {
+  font-family: "Roboto", sans-serif;
 }
 
 .btn-resto {
@@ -339,8 +413,10 @@
   width: 250px;
   background-color: rgb(43, 42, 41);
 }
-
-.resto-text {
+.btn-resto .fa-utensils {
+  color: white;
+}
+.btn-resto .resto-text {
   position: relative;
   top: 10%;
   background-color: rgb(43, 42, 41);
@@ -349,17 +425,15 @@
   margin-left: 15px;
 }
 
-.fa-handshake-angle {
-  color: white;
-}
-
 .btn-part {
   display: flex;
   width: 250px;
   background-color: rgb(43, 42, 41);
 }
-
-.part-text {
+.btn-part .fa-handshake-angle {
+  color: white;
+}
+.btn-part .part-text {
   position: relative;
   top: 10%;
   background-color: rgb(43, 42, 41);
@@ -369,4 +443,4 @@
   margin-bottom: 0%;
 }
 
-/*# sourceMappingURL=resto1.css.map */
+/*# sourceMappingURL=resto.css.map */

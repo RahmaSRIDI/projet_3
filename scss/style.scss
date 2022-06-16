@@ -6,537 +6,360 @@
     /* box-sizing est appliqué à tous les éléments */
 }
 
+
+@import './variables.scss';
+@import './mixins.scss';
+
 .logo-ohmyfood {
 
-    position:absolute;
-    top:3%;
-    left:30%;
-    max-width: 40%;
+@include logoohmyfood;
 
 }
 
-.formulaire-rech {
+    .btn-Location {
 
-    display: flex;
-    position: absolute;
-    top: 9%;
-    left: 0%;
-}
+     @include location();
+        
+        .fa-location-dot{
 
-.btn-Location {
+         @include iconelocation ();
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    background-color: #dddcdc;
-    color: black;
-    cursor: pointer;
-    border: none;
-    width: 414px;
-    height: 60px;
-    padding-top: 15px;
+       } //end fa-location-dot
 
-}
+        .recherche-Text{
+         
+         @include textlocation();
+        
+        } // end recherche-Text
 
-.recherche-Text{
+    } // end btn-Location
 
-    position:relative;
-    left:7%;
-    margin-left: 10px;
-    background-color: #dddcdc;
-    border: none;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 100%;
 
-}
-
-.fa-location-dot{
-
-    position:relative;
-    left:6%;
-    font-size: 100%;
-
-}
 .exploration{
 
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position:absolute;
-    background-color: #F2F2F2;
-    top:15%;
-    width: 414px;
-    height: 330px;
+@include notification(center,15%,330px);
 
+    #reservez1{
+
+        @include positionreserv(10%);
+    }
+    #reservez2{
+        @include positionreserv(20%);
+    }
+    #decouvrez1{
+
+        @include positionreserv(35%);
+    }
+    #decouvrez2{
+        @include positionreserv(45%);
+    }
+
+    .btn-explorer{
+    
+        @include boutonexplorer(63%,51px);
+        &:hover {
+            background: linear-gradient($rose,white);
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+        }
+    }
 }
-#reservez1{
+.number{
 
-    position:relative;
-    top:5%;
-    font-family: 'Roboto';
-    font-weight: bold;
-}
-#reservez2{
-
-    margin-top:0%;
-    font-family: 'Roboto';
-    font-weight: bold;
+@include chiffre(35%)
 }
 
-#decouvrez1{
 
-    position :relative;
-    top:0%;
-    margin-bottom:1%;
-    font-family: 'Roboto';
-    font-weight: bold;
-}
-#decouvrez2{
-
-    margin-top:0%;
-    font-family: 'Roboto';
-    font-weight: bold;
-}
-.btn-explorer{
-
-    position :relative;
-    top:7%;
-    background: linear-gradient(#FF79DA,#9356DC);
-    border: none;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    width: 250px;
-    height: 51px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    font-family: 'Roboto';
-
-}
 .title-fonctionnement{
-
-    position:absolute;
-    top:63%;
-    left:5%;
-    font-family: 'Roboto';
+    @include positionabsolut(63%,5%);
+    font-family: $policetext;
     font-weight: bold;
 
 }
 
+.btn-fonct-1{
+
+@include boutonfonct; 
+
+&:hover{
+    .step-fonct{
+        background: rgb(241, 215, 248);
+        }
+.fa-mobile-screen-button{
+    color:$violet;
+}
+        background: rgba(245, 219, 252, 0.87);
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+    }
+
+}
+
+.btn-fonct-2{
+
+@include boutonfonct; 
+
+&:hover{
+    .step-fonct{
+        background: rgb(241, 215, 248);
+        }
+.fa-list-ul{
+    color:$violet;
+}
+        background: rgba(245, 219, 252, 0.87);
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+    }
+
+}
+
+.btn-fonct-3{
+
+    @include boutonfonct; 
+    
+    &:hover{
+        .step-fonct{
+            background: rgb(241, 215, 248);
+            }
+    .fa-store{
+        color:$violet;
+    }
+            background:  rgb(241, 215, 248);
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+        }
+    
+    }
+
+
+.step-fonct{
+
+@include etapefonct;
+
+}
 .choisissez{
 
-    display: flex;
-    position: absolute;
-    top: 75%;
-    left: 5%;
+    @include positionabsolut(75%,5%);   
+
 }
-
-/* .fa-circle-1{
-
-    position:relative;
-    top:0%;
-    left:0%;
-} */
-
-.btn-phone{
-
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    background-color: #F2F2F2;
-    color: grey;
-    cursor: pointer;
-    border: none;
-    width: 370px;
-    height: 70px;
-    padding-top: 25px;
-    border-radius: 17px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-}
-
 
 .fa-mobile-screen-button{
 
-    position:relative;
-    left:8%;
-    padding-right: 15px;
-    font-size: 120%;
-
-}
-.choix-resto{
-
-    position:relative;
-    left:10%;
-    background-color: #F2F2F2;
-    border: none;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 100%;
+    @include iconefonct;
 
 }
 
 .composez{
 
-    display: flex;
-    position: absolute;
-    top: 88%;
-    left: 5%;
+@include positionabsolut(88%,5%);
+
 }
-.btn-menu{
-
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    background-color: #F2F2F2;
-    color: grey;
-    cursor: pointer;
-    border: none;
-    width: 370px;
-    height: 70px;
-    padding-top: 25px;
-    border-radius: 17px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-}
-
-
 
 .fa-list-ul{
 
-    position:relative;
-    left:8%;
-    padding-right: 15px;
-    font-size: 120%;
-
-}
-.compose-menu{
-
-    position:relative;
-    left:10%;
-    background-color: #F2F2F2;
-    border: none;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 100%;
+    @include iconefonct;
 
 }
 
 .degustez{
 
-    display: flex;
-    position: absolute;
-    top: 101%;
-    left: 5%;
-}
-.btn-store{
+    @include positionabsolut(101%,5%);
 
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    background-color: #F2F2F2;
-    color: grey;
-    cursor: pointer;
-    border: none;
-    width: 370px;
-    height: 70px;
-    padding-top: 25px;
-    border-radius: 17px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 }
-
 
 .fa-store{
 
-    position:relative;
-    left:8%;
-    padding-right: 15px;
-    font-size: 120%;
-
-}
-
-.deguste-resto{
-
-    position:relative;
-    left:10%;
-    background-color: #F2F2F2;
-    border: none;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 100%;
+ @include iconefonct;
 
 }
 
 .restaurants{
 
-    position: absolute;
-    width:414px;
-    height: 1300px;
-    margin-top: 20px;
-    top: 115%;
-    left: 0%;
-    background-color: #F2F2F2;
-    display: flex;
-    flex-direction: column;
-
+@include les4resto();
+ 
 }
 
 .title-restaurants{
 
-    padding-left:5%;
-    padding-top: 5%;
-    font-size: 20px;
-    font-weight: bold;
-    font-family:'Roboto';
+@include restaurants(5%,$taille-police-moyenne,$policetext);
 
 }
+
+.btn-nouveau{
+
+    @include boutonnv();
+    
+    }
 
 .card-restaurant-1{
 
-    text-align: left;
-    background-color: white;
-    position: absolute;
-    top:7%;
-    margin-left: 20px;
-    margin-right: 25PX;
-    width: 90%;
-    height: 250px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-    padding: 0px;
-    border-radius: 20px;
-}
-
-.img-restaurant-1{
-
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    object-fit: cover;
+    @include carteresto(7%);
 
 }
-.btn-nouveau{
-position :absolute;
-left:70%;
-top:5%;
-background-color: #99E2D0;
-border: none;
-color: green;
-padding: 7px;
-font-size: 16px;
-width: 100px;
-height: 30px;
-font-weight: bold;
-cursor: pointer;
-font-family: 'Roboto';
+
+.img-restaurant{
+
+@include imageresto();
 
 }
 
 .restaurant-img-text-title {
+
+    @include imgdescription();
     font-weight: bold;
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+
 }
 
 .restaurant-img-text-desc {
 
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+@include imgdescription();
+
 }
-.fa-heart{
-    position:relative;
-    bottom:15%;
-    left:85%;
-    font-size: 150%;
+.heart11{
+
+    color:transparent;
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+    &:hover{
+        color:$violet;
+        .heart21{
+         display:none;
+        }
+    }
+
 }
-.fa-heart:active {
-    
-    color:#9356DC;
+.heart21{
+
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+ &:hover {
+   display:none;
+    }
 
 }
 
+.heart12{
+
+    color:transparent;
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+    &:hover{
+        color:$violet;
+        .heart22{
+         display:none;
+        }
+    }
+
+}
+.heart22{
+
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+ &:hover {
+   display:none;
+    }
+
+}
+
+.heart13{
+
+    color:transparent;
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+    &:hover{
+        color:$violet;
+        .heart23{
+         display:none;
+        }
+    }
+
+}
+.heart23{
+
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+ &:hover {
+   display:none;
+    }
+
+}
+.heart14{
+
+    color:transparent;
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+    &:hover{
+        color:$violet;
+        .heart24{
+         display:none;
+        }
+    }
+
+}
+.heart24{
+
+    @include positionabsolut(80%,85%);
+    font-size: $taille-police-grande;
+ &:hover {
+   display:none;
+    }
+
+}
 .card-restaurant-2{
 
-    text-align: left;
-    background-color: white;
-    position: absolute;
-    top:28%;
-    margin-left: 20px;
-    margin-right: 25PX;
-    width: 90%;
-    height: 250px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-    padding: 0px;
-    border-radius: 20px;
-}
-
-.img-restaurant-2{
-
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    object-fit: cover;
-
-}
-.restaurant-img-text-title {
-
-    font-weight: bold;
-    font-family: 'Roboto';
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-
-.restaurant-img-text-desc {
-
-    font-family: 'Roboto';
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
+    @include carteresto(28%);
+ }
 
 .card-restaurant-3{
 
-    text-align: left;
-    background-color: white;
-    position: absolute;
-    top:49%;
-    margin-left: 20px;
-    margin-right: 25PX;
-    width: 90%;
-    height: 250px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-    padding: 0px;
-    border-radius: 20px;
-}
-.img-restaurant-3{
+    @include carteresto(49%);
 
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    object-fit: cover;
-
-}
-.restaurant-img-text-title {
-    font-weight: bold;
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-
-.restaurant-img-text-desc {
-
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
 }
 
 .card-restaurant-4{
 
-    text-align: left;
-    background-color: white;
-    position: absolute;
-    top:70%;
-    margin-left: 20px;
-    margin-right: 25PX;
-    width: 90%;
-    height: 250px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-    padding: 0px;
-    border-radius: 20px;
-}
-.img-restaurant-4{
-
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    object-fit: cover;
+    @include carteresto(70%);
 
 }
-.restaurant-img-text-title {
-    font-weight: bold;
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
 
-.restaurant-img-text-desc {
-
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
 .footer {
-    position: absolute;
-    width: 414px;
-    height: 250px;
-    top: 285%;
-    left: 0%;
-    padding-left: 25px;
-    color:white;
-    background-color: rgb(43, 42, 41);
-    font-family: 'Shrikhand';
-    font-weight:normal;
-    display: flex;
-    flex-direction: column;
-}
+    
+@include footerohmyfood(285%);
 
-.footer-title{
-    margin-bottom: 30px;
-}
+    .footer-title{
+     margin-bottom: 30px;
+     }
 
-.footer-element{
+    .footer-element{
 
-    font-family: 'Roboto';
-}
-
-.fa-utensils{
-
-color: white;
-
+     font-family: $policetext;
+     }
 }
 
 .btn-resto{
-    display:flex;
-    width: 250px;
-    background-color: rgb(43, 42, 41);
-}
 
-.resto-text{
+@include boutonfooter();
 
-     position:relative;
-     top:10%;
-     background-color: rgb(43, 42, 41);
-     color:white;
-     margin-top: 0%;
-     margin-left: 15px;
-}
+    .fa-utensils{
+    color: white;
+    }
 
-.fa-handshake-angle{
+   .resto-text{
 
-    color:white;
+    @include iconefooter(15px);      
+    }
 }
 
 .btn-part{
 
-    display:flex;
-    width: 250px;
-    background-color: rgb(43, 42, 41);
+    @include boutonfooter();
   
-}
-.part-text{
+    .fa-handshake-angle{
+        color:white;
+    }
+
+    .part-text{
     
-    position:relative;
-    top:10%;
-     background-color: rgb(43, 42, 41);
-     color:white;
-     margin-top: 0%;
-     margin-left: 10px;
-     margin-bottom: 0%;
+        @include iconefooter(10px);
+         margin-bottom: 0%;
+    }
 }
+
+
+  

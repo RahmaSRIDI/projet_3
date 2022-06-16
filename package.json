@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/style.scss:./css/style.css --watch ./scss/resto1.scss:./css/resto1.css --watch ./scss/resto2.scss:./css/resto2.css --watch ./scss/resto3.scss:./css/resto3.css --watch ./scss/resto4.scss:./css/resto4.css"
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --watch ./scss/resto.scss:./css/resto.css --watch ./scss/animation.scss:./css/animation.css --watch ./scss/normalize.scss:./css/normalize.css"
   },
   "keywords": [],
   "author": "",

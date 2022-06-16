@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    /* box-sizing est appliqué à tous les éléments */
+}
+@import './variables.scss';
+@import './mixins.scss';
+
+.fa-arrow-left{
+
+    @include positionabsolut(3%,10%);
+    font-size: $taille-police-grande;
+}
+
+.logo-ohmyfood {
+
+@include logoohmyfood();
+
+}
+.img-resto {
+
+@include positionabsolut(9%,0%);
+    width: 414px;
+    height: 240px;
+}
+
+.entree{
+    
+    @include notification(left,33%,1200px);
+    left: 0%;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    .title-alafran{
+
+        @include restaurants(2%,$taille-police-grande,$policetitle);
+    
+    }
+    .fa-heart{
+    
+        @include positionabsolut(3%,80%);
+        font-size: $taille-police-grande;
+    
+    }
+
+}
+
+
+/*****************************/
+.title-entr{
+
+@include positionabsolut(6%,5%);
+    font-family: $policetext;
+    font-weight: bold;
+
+}
+
+.bordure-moitie-1{
+
+@include  borduremoitie (7%);
+    
+}
+
+.btn-1-entree{
+
+@include  boutonmenu(10%);
+
+}
+
+.btn-2-entree{
+
+@include  boutonmenu(17%);
+
+}
+.btn-3-entree{
+
+@include  boutonmenu(24%);
+
+}
+.checked {
+    position:absolute;
+    top:9%;
+    left: 78%;
+    width:65px;
+    height: 70px;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    background-color: #99E2D0;
+    }
+    .fa-circle-check{
+        display: flex;
+        justify-content: center;
+        padding-top:25px;
+        font-size: 150%;
+        color:white;
+    }
+
+    .btn-menu:active{
+        width :305px;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+      
+    }
+    
+.btn-menu:focus{
+    width :305px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+
+
+.menu-entree{
+
+    @include textmenu(0%,$taille-police-moyenne);
+    font-weight: bold;
+
+}
+
+.menu-entree-desc{
+
+    @include textmenu(37%,$taille-police-normal);
+
+
+}
+
+.prix {
+@include prixmenu ();
+
+}
+/*****************************/
+
+.title-plats{
+
+    @include positionabsolut(31%,5%);
+    font-family: $policetext;
+    font-weight: bold;
+   
+}
+
+.bordure-moitie-2{
+
+@include  borduremoitie (32%);  
+
+}
+
+.btn-1-plats{
+
+    @include  boutonmenu(35%);
+
+}
+.btn-2-plats{
+
+    @include  boutonmenu(42%);
+
+}
+.btn-3-plats{
+
+    @include  boutonmenu(49%);
+}
+
+.coquilles{
+
+    @include textmenu(0%,$taille-police-moyenne);
+    font-weight: bold;
+
+}
+
+.puree{
+
+    @include textmenu(37%,$taille-police-normal);
+
+}
+/********************************/
+
+
+.title-dessert{
+
+    @include positionabsolut(56%,5%);
+    font-family: $policetext;
+    font-weight: bold;
+
+}
+.bordure-moitie-3{
+
+@include  borduremoitie (57%); 
+
+}
+
+.btn-1-dessert{
+
+    @include  boutonmenu(60%);
+
+}
+.btn-2-dessert{
+
+    @include  boutonmenu(67%);
+
+}
+.btn-3-dessert{
+
+    @include  boutonmenu(74%);
+
+}
+
+.petales{
+
+    @include textmenu(0%,$taille-police-moyenne);
+    font-weight: bold;
+
+}
+
+.noisettes{
+
+   @include textmenu(37%,$taille-police-normal);
+
+}
+/************************************/
+
+.btn-commander{
+
+    @include boutonexplorer(86%,61px);
+    &:hover {
+        background: linear-gradient($rose,white);
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+    }
+}
+
+
+/*************************************/
+
+
+.footer {
+    
+    @include footerohmyfood(195%);
+    
+        .footer-title{
+         margin-bottom: 30px;
+         }
+    
+        .footer-element{
+    
+         font-family: $policetext;
+         }
+    }
+    
+    .btn-resto{
+    
+    @include boutonfooter();
+    
+        .fa-utensils{
+        color: white;
+        }
+    
+       .resto-text{
+    
+        @include iconefooter(15px);      
+        }
+    }
+    
+    .btn-part{
+    
+        @include boutonfooter();
+      
+        .fa-handshake-angle{
+            color:white;
+        }
+    
+        .part-text{
+        
+            @include iconefooter(10px);
+             margin-bottom: 0%;
+        }
+    }
+    
