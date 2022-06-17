@@ -50,11 +50,27 @@
   font-weight: bold;
   font-family: "Shrikhand", cursive;
 }
-.entree .fa-heart {
+.entree .heart1 {
+  color: transparent;
   position: absolute;
   top: 3%;
   left: 80%;
   font-size: 150%;
+}
+.entree .heart1:hover {
+  color: #9356DC;
+}
+.entree .heart1:hover .heart2 {
+  display: none;
+}
+.entree .heart2 {
+  position: absolute;
+  top: 3%;
+  left: 80%;
+  font-size: 150%;
+}
+.entree .heart2:hover {
+  display: none;
 }
 
 /*****************************/
@@ -151,6 +167,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
   }
 }
+/**********************/
 .menu-entree {
   display: flex;
   justify-content: flex-start;
@@ -222,6 +239,7 @@
     color: black;
   }
 }
+/*********************************************/
 .checked {
   position: absolute;
   top: 10%;
@@ -280,8 +298,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton4 3s linear;
 }
 
+@keyframes animationbutton4 {
+  0% {
+    background-color: #f2f2f2;
+    top: 36%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-2-plats {
   position: absolute;
   top: 42%;
@@ -292,8 +321,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton5 3s linear;
 }
 
+@keyframes animationbutton5 {
+  0% {
+    background-color: #f2f2f2;
+    top: 43%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-3-plats {
   position: absolute;
   top: 49%;
@@ -304,8 +344,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton6 3s linear;
 }
 
+@keyframes animationbutton6 {
+  0% {
+    background-color: #f2f2f2;
+    top: 50%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 /********************************/
 .title-dessert {
   position: absolute;
@@ -336,8 +387,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton7 3s linear;
 }
 
+@keyframes animationbutton7 {
+  0% {
+    background-color: #f2f2f2;
+    top: 61%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-2-dessert {
   position: absolute;
   top: 67%;
@@ -348,8 +410,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton8 3s linear;
 }
 
+@keyframes animationbutton8 {
+  0% {
+    background-color: #f2f2f2;
+    top: 68%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-3-dessert {
   position: absolute;
   top: 74%;
@@ -360,8 +433,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
+  animation: animationbutton9 3s linear;
 }
 
+@keyframes animationbutton9 {
+  0% {
+    background-color: #f2f2f2;
+    top: 75%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 /************************************/
 .btn-commander {
   position: absolute;
@@ -440,6 +524,19 @@
   margin-top: 0%;
   margin-left: 10px;
   margin-bottom: 0%;
+}
+
+a h4 {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:active {
+  color: black;
 }
 
 /*# sourceMappingURL=resto.css.map */

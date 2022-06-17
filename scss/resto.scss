@@ -36,15 +36,28 @@
         @include restaurants(2%,$taille-police-grande,$policetitle);
     
     }
-    .fa-heart{
+    .heart1{
+
+        color:transparent;
+        @include positionabsolut(3%,80%);
+        font-size: $taille-police-grande;
+        &:hover{
+            color:$violet;
+            .heart2{
+             display:none;
+            }
+        }
+    
+    }
+    .heart2{
     
         @include positionabsolut(3%,80%);
         font-size: $taille-police-grande;
-    
-    }
-
+     &:hover {
+       display:none;
+        }
 }
-
+}
 
 /*****************************/
 .title-entr{
@@ -125,7 +138,7 @@ animation: animationbutton3 3s linear ;
     }
 }
 
-
+/**********************/
 .menu-entree{
 
     @include textmenu(0%,$taille-police-moyenne);
@@ -182,7 +195,7 @@ animation-name: animationprix 3s linear;
         color:black;
     }
     }
-
+/*********************************************/
 
 .checked {
     position:absolute;
@@ -234,21 +247,64 @@ animation-name: animationprix 3s linear;
 
 }
 
+
 .btn-1-plats{
 
     @include  boutonmenu(35%);
-}
+    animation: animationbutton4 3s linear ;
+    }
+    @keyframes animationbutton4 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:36%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
+    
 
 
 .btn-2-plats{
 
     @include  boutonmenu(42%);
-
-}
+    animation: animationbutton5 3s linear ;
+    }
+    @keyframes animationbutton5 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:43%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
 .btn-3-plats{
 
     @include  boutonmenu(49%);
-}
+    animation: animationbutton6 3s linear ;
+    }
+    @keyframes animationbutton6 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:50%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
 
 /********************************/
 
@@ -269,18 +325,57 @@ animation-name: animationprix 3s linear;
 .btn-1-dessert{
 
     @include  boutonmenu(60%);
-
-}
+    animation: animationbutton7 3s linear ;
+    }
+    @keyframes animationbutton7 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:61%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
 .btn-2-dessert{
 
     @include  boutonmenu(67%);
-
-}
+    animation: animationbutton8 3s linear ;
+    }
+    @keyframes animationbutton8 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:68%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
 .btn-3-dessert{
 
     @include  boutonmenu(74%);
-
-}
+    animation: animationbutton9 3s linear ;
+    }
+    @keyframes animationbutton9 {
+    
+        0%{
+                background-color : #f2f2f2;
+          top:75%;
+            }
+        
+        100%{
+            
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
+        }
+    }
 
 
 /************************************/
@@ -340,4 +435,20 @@ animation-name: animationprix 3s linear;
              margin-bottom: 0%;
         }
     }
+
+
+    a h4 {
+
+        color: white;
+        text-decoration: none;
     
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+        &:active{
+            color: black; 
+        }
+    
+    }
