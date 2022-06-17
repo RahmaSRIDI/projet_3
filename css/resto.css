@@ -87,9 +87,24 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: animationbutton1 3s linear;
+}
+.btn-1-entree:active {
+  width: 305px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
 }
 
+@keyframes animationbutton1 {
+  0% {
+    background-color: #f2f2f2;
+    top: 11%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-2-entree {
   position: absolute;
   top: 17%;
@@ -100,9 +115,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: animationbutton2 3s linear;
 }
 
+@keyframes animationbutton2 {
+  0% {
+    background-color: #f2f2f2;
+    top: 18%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
+}
 .btn-3-entree {
   position: absolute;
   top: 24%;
@@ -113,40 +138,19 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: animationbutton3 3s linear;
 }
 
-.checked {
-  position: absolute;
-  top: 9%;
-  left: 78%;
-  width: 65px;
-  height: 70px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #99E2D0;
+@keyframes animationbutton3 {
+  0% {
+    background-color: #f2f2f2;
+    top: 25%;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
+  }
 }
-
-.fa-circle-check {
-  display: flex;
-  justify-content: center;
-  padding-top: 25px;
-  font-size: 150%;
-  color: white;
-}
-
-.btn-menu:active {
-  width: 305px;
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
-.btn-menu:focus {
-  width: 305px;
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
 .menu-entree {
   display: flex;
   justify-content: flex-start;
@@ -160,8 +164,19 @@
   font-size: 120%;
   color: black;
   font-weight: bold;
+  animation-name: animationmenu 3s linear;
 }
 
+@keyframes animationmenu {
+  0% {
+    background-color: #f2f2f2;
+    color: #f2f2f2;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
 .menu-entree-desc {
   display: flex;
   justify-content: flex-start;
@@ -174,8 +189,17 @@
   font-family: "Roboto";
   font-size: 100%;
   color: black;
+  animation-name: animationdesc 3s linear;
 }
 
+@keyframes animationdesc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .prix {
   position: absolute;
   top: 40%;
@@ -185,8 +209,47 @@
   font-weight: bold;
   color: black;
   font-size: 85%;
+  animation-name: animationprix 3s linear;
 }
 
+@keyframes animationprix {
+  0% {
+    background-color: #f2f2f2;
+    color: #f2f2f2;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+.checked {
+  position: absolute;
+  top: 10%;
+  left: 78%;
+  width: 65px;
+  height: 70px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  background-color: #99E2D0;
+  animation-name: animationcheck 3s linear;
+}
+.checked .fa-circle-check {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  font-size: 150%;
+  color: white;
+  animation-name: animationcheck 3s linear;
+}
+
+@keyframes animationcheck {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
 /*****************************/
 .title-plats {
   position: absolute;
@@ -217,7 +280,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-2-plats {
@@ -230,7 +292,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-3-plats {
@@ -243,36 +304,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.coquilles {
-  display: flex;
-  justify-content: flex-start;
-  position: absolute;
-  top: 0%;
-  left: 3%;
-  width: 280px;
-  background-color: white;
-  border: none;
-  font-family: "Roboto";
-  font-size: 120%;
-  color: black;
-  font-weight: bold;
-}
-
-.puree {
-  display: flex;
-  justify-content: flex-start;
-  position: absolute;
-  top: 37%;
-  left: 3%;
-  width: 280px;
-  background-color: white;
-  border: none;
-  font-family: "Roboto";
-  font-size: 100%;
-  color: black;
 }
 
 /********************************/
@@ -305,7 +336,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-2-dessert {
@@ -318,7 +348,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-3-dessert {
@@ -331,36 +360,6 @@
   width: 370px;
   height: 70px;
   border-radius: 17px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.petales {
-  display: flex;
-  justify-content: flex-start;
-  position: absolute;
-  top: 0%;
-  left: 3%;
-  width: 280px;
-  background-color: white;
-  border: none;
-  font-family: "Roboto";
-  font-size: 120%;
-  color: black;
-  font-weight: bold;
-}
-
-.noisettes {
-  display: flex;
-  justify-content: flex-start;
-  position: absolute;
-  top: 37%;
-  left: 3%;
-  width: 280px;
-  background-color: white;
-  border: none;
-  font-family: "Roboto";
-  font-size: 100%;
-  color: black;
 }
 
 /************************************/
