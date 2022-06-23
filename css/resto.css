@@ -4,9 +4,8 @@
   /* box-sizing est appliqué à tous les éléments */
 }
 
-/* les variables*/
-/********* mixin menu ************/
-/********* mixin resto ************/
+/* les variables*/ /*****************mixin acceuil ******************/
+/********************* mixin resto *******************/
 .logo-ohmyfood {
   display: flex;
   align-items: center;
@@ -42,9 +41,24 @@
   border-top-right-radius: 20px;
 }
 
+.menu-2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: -40px;
+  background-color: #F2F2F2;
+  width: 414px;
+  height: 1470px;
+  padding-left: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .title-and-heart {
   display: flex;
+  justify-content: space-between;
   padding-left: 5%;
+  padding-right: 20px;
   padding-top: 2%;
   font-size: 170%;
   font-weight: bold;
@@ -54,7 +68,7 @@
 }
 
 .heart {
-  margin-left: 33px;
+  margin-left: 0px;
   margin-top: 15px;
   font-size: 30px;
   color: transparent;
@@ -123,6 +137,8 @@
 }
 
 .btn-plat {
+  display: flex;
+  align-items: flex-end;
   background-color: white;
   cursor: pointer;
   border: none;
@@ -135,48 +151,54 @@
   transition: transform 300ms ease;
   animation: animation-card 500ms both;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  resize: horizontal;
 }
 
-.menu-entree {
+.choix-menu {
+  width: 315px;
   display: flex;
-  justify-content: flex-start;
-  width: 350px;
-  height: 27px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 70px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-desc {
+  width: 95%;
+  height: 23px;
   background-color: white;
   border: none;
   font-family: "Roboto";
   font-weight: bold;
   font-size: 120%;
   color: black;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 0px;
   margin-left: 10px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.desc-and-prix {
-  display: flex;
-}
-
-.menu-entree-desc {
-  display: flex;
-  justify-content: flex-start;
-  width: 330px;
-  height: 27px;
+.menu-desc-compl {
+  width: 95%;
+  height: 23px;
   background-color: white;
   border: none;
   font-family: "Roboto";
+  font-weight: bold;
   font-size: 100%;
   color: black;
-  font-weight: bold;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 0px;
   margin-left: 10px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /********************/
@@ -197,33 +219,25 @@
   display: none;
 }
 
-.prix p {
-  margin-top: 0px;
-  font-family: "Roboto";
-  font-weight: bold;
-}
-
 .prix {
   font-family: "Roboto";
   font-weight: bold;
-  transition: all 700ms ease-out;
+  transition: all 600ms ease-out;
   display: block;
-  padding-left: 10px;
-  margin-top: 0px;
-}
-.prix:hover {
-  transform: translateX(-80px);
-  padding-left: 90px;
+  padding-right: 15px;
+  margin-left: 39px;
+  padding-top: 20px;
+  height: 70px;
 }
 
 .check {
   position: absolute;
-  font-size: 35px;
-  top: 22px;
-  left: 18px;
+  font-size: 27px;
+  top: 27px;
+  left: 22px;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 0px;
   -webkit-text-stroke-color: #99E2D0;
   background-color: white;
 }
@@ -242,12 +256,12 @@
 }
 
 .btn-plat:hover .prix {
-  transform: translateX(-80px);
-  padding-left: 90px;
+  transform: translateX(-90px);
+  padding-left: 80px;
 }
 
 .btn-plat:hover .check {
-  animation: check-rotate 700ms both alternate ease;
+  animation: check-rotate 1000ms both alternate ease;
 }
 
 /*******************************/
@@ -309,6 +323,8 @@
 }
 
 .btn-commander {
+  display: flex;
+  justify-content: space-around;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   color: white;
