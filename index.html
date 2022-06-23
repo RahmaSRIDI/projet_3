@@ -28,32 +28,50 @@
     <link rel="stylesheet" media="screen and (max-width:767px)" href="css/style.css" />
 
     <title>Ohmyfood</title>
-</head>
-<div class="loadder-bloc">
+</head> 
+<!--<div class="loadder-bloc">
     <div class="loader"></div>
+</div>-->
+
+<div class="loader">
+  
+  <div class="loader-circle">
+    <div>
+      <i class="material-icons">
+        storefood
+      </i>
+      <i class="material-icons">
+       restaurant
+      </i>
+      <i class="material-icons">
+        tapas
+      </i>
+      <div>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 <main>
     <header>
 
-       <img src="assets/logo/ohmyfood.png" alt="ohmyfood" class="logo-ohmyfood" /> 
+       <div class="logo-ohmyfood"><img src="assets/logo/ohmyfood.png" alt="ohmyfood" class="logo-img"/> </div>
 
     </header>
 
     <section>
-
 
         <button disabled class="btn-Location">
             <i class="fa-solid fa-location-dot"></i>
             <p class="recherche-Text">Paris, Belleville</p>
         </button>
 
-
         <div class="exploration">
-            <h2 id="reservez1">Réservez le menu qui</h2>
-            <h2 id="reservez2">vous convient</h2>
-            <h3 id="decouvrez1">Découvrez des restaurants d'exception,</h3>
-            <h3 id="decouvrez2">séléctionnés par nos soins.</h3>
+            <p id="reservez1">Réservez le menu qui</p>
+            <p id="reservez2">vous convient</p>
+            <p id="decouvrez1">Découvrez des restaurants d'exception,</p>
+            <p id="decouvrez2">séléctionnés par nos soins.</p>
             <button class="btn-explorer">Explorer nos restaurants</button>
         </div>
 
@@ -63,71 +81,83 @@
 
         <h2 class="title-fonctionnement">Fonctionnement</h2>
 
-        <div class="choisissez">
             <button disabled class="btn-fonct-1">
+                <div class="number">1</div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
-                <p class="step-fonct">Choisissez un restaurant</p>
+                <p class="step-fonct">Choisissez un restaurant</p> 
             </button>
-            <div class="number">1</div>
-        </div>
-        <div class="composez">
+           
+        
+        
             <button disabled class="btn-fonct-2">
+                <div class="number">2</div>
                 <i class="fa-solid fa-list-ul"></i>
                 <p class="step-fonct">Composez votre menu</p>
             </button>
-            <div class="number">2</div>
-        </div>
-        <div class="degustez">
+            
+     
+    
             <button disabled class="btn-fonct-3">
+                <div class="number">3</div>
                 <i class="fa-solid fa-store"></i>
-                <p class="step-fonct">Dégustez au restaurant</p>
-            </button>
-            <div class="number">3</div>
-        </div>
+                <p class="step-fonct">Dégustez au restaurant</p> 
+            </button> 
+     
     </section>
 
     <section>
 
         <div class="restaurants">
-            <p class="title-restaurants">Restaurants</p>
-
+            <h2 class="title-restaurants">Restaurants</h2>
             <div class="card-restaurant-1">
-                <a href="resto1.html"><img class="img-restaurant"
-                        src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" /></a>
-                <button class="btn-nouveau">Nouveau</button>
-                <p class="restaurant-img-text-title">La palette du goût</p>
+                <a href="resto1.html">
+                    <img class="img-restaurant"
+                        src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+                        <button class="btn-nouveau-1">Nouveau</button></a>
+               <div class="title-and-heart"> <p class="restaurant-img-text-title">La palette du goût</p>
+                <div class="heart">
+                    <i class="fa-solid fa-heart heart heart-blanc"></i>
+                    <i class="fa-solid fa-heart heart heart-violet"></i>
+                  </div> </div>
                 <p class="restaurant-img-text-desc">Ménilmontant </p>
-                <div class="heart11"><i class="fa-solid fa-heart"></i> </div>
-                <div class="heart21"><i class="fa-regular fa-heart"></i> </div>
             </div>
-
             <div class="card-restaurant-2">
-                <a href="resto2.html"> <img class="img-restaurant"
-                        src="assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" /></a>
-                <button class="btn-nouveau">Nouveau</button>
-                <p class="restaurant-img-text-title">La note enchantée</p>
+                <a href="resto2.html">
+                     <img class="img-restaurant"
+                        src="assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
+                        <button class="btn-nouveau-2">Nouveau</button></a>
+                <div class="title-and-heart"> <p class="restaurant-img-text-title">La note enchantée</p>
+                    <div class="heart">
+                        <i class="fa-solid fa-heart heart heart-blanc"></i>
+                        <i class="fa-solid fa-heart heart heart-violet"></i>
+                      </div> </div>
                 <p class="restaurant-img-text-desc">Charonne</p>
-                <div class="heart12"><i class="fa-solid fa-heart"></i> </div>
-                <div class="heart22"><i class="fa-regular fa-heart"></i> </div>
+
             </div>
 
             <div class="card-restaurant-3">
                 <a href="resto3.html"> <img class="img-restaurant"
                         src="assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" /></a>
-                <p class="restaurant-img-text-title">À la française</p>
+                        <div class="title-and-heart"> <p class="restaurant-img-text-title">À la française</p>
+                            <div class="heart">
+                                <i class="fa-solid fa-heart heart heart-blanc"></i>
+                                <i class="fa-solid fa-heart heart heart-violet"></i>
+                              </div> </div>
                 <p class="restaurant-img-text-desc">Cité Rouge</p>
-                <div class="heart13"><i class="fa-solid fa-heart"></i> </div>
-                <div class="heart23"><i class="fa-regular fa-heart"></i> </div>
+
             </div>
 
             <div class="card-restaurant-4">
                 <a href="resto4.html"> <img class="img-restaurant"
                         src="assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                         alt="Le délice des sens" /></a>
-                <p class="restaurant-img-text-title">Le délice des sens</p>
+                        <div class="title-and-heart"> <p class="restaurant-img-text-title">À la française</p>
+                            <div class="heart">
+                                <i class="fa-solid fa-heart heart heart-blanc"></i>
+                                <i class="fa-solid fa-heart heart heart-violet"></i>
+                              </div> </div>
                 <p class="restaurant-img-text-desc">Folie-Méricourt</p>
-                <div class="heart14"><i class="fa-solid fa-heart"></i> </div>
-                <div class="heart24"><i class="fa-regular fa-heart"></i> </div>
+
             </div>
         </div>
 
@@ -135,23 +165,22 @@
 
     <footer class="footer">
 
-        <h3 class="footer-title">Ohmyfood</h3>
+        <p class="footer-title">Ohmyfood</p>
         <div class="footer-element">
 
             <div class="btn-resto">
                 <i class="fa-solid fa-utensils"></i>
-                <h4 class="resto-text">Proposer un restaurant</h4>
+                <p class="resto-text">Proposer un restaurant</p>
             </div>
 
             <div class="btn-part">
                 <i class="fa-solid fa-handshake-angle"></i>
-                <h4 class="part-text">Devenir Partenaire</h4>
+                <p class="part-text">Devenir Partenaire</p>
             </div>
 
-            <h4>Mentions légales</h4>
-            <a href="mailto:votrenom@bidule.com">
-                <h4>Contact</h4>
-            </a>
+            <p>Mentions légales</p>
+            <a href="mailto:votrenom@bidule.com"><p>Contact</p></a>
+           
         </div>
     </footer>
 

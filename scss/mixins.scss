@@ -27,6 +27,12 @@
     padding-top: 15px;
 }
 
+@mixin iconelocation (){
+    position:absolute;
+    left:30%;
+    font-size: $taille-police-normal;
+}
+
 @mixin textlocation(){
         
     display: flex;
@@ -40,12 +46,6 @@
     border: none;
     font-family: $policetext;
     font-weight: bold;
-    font-size: $taille-police-normal;
-}
-
-@mixin iconelocation (){
-    position:absolute;
-    left:30%;
     font-size: $taille-police-normal;
 }
 
@@ -91,7 +91,6 @@
 
     display: flex;
     flex-direction: row;
-    position: relative;
     background-color: $grisclair;
     color: grey;
     cursor: pointer;
@@ -198,6 +197,8 @@ font-family: $policetext;
     top:$position;
 
 }
+
+
 @mixin imageresto(){
     width: 100%;
     height: 70%;

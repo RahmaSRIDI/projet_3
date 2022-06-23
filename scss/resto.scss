@@ -5,452 +5,430 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.fa-arrow-left{
-
-    @include positionabsolut(3%,10%);
-    font-size: $taille-police-grande;
-}
 
 .logo-ohmyfood {
 
-@include logoohmyfood();
+    display: flex;
+    align-items: center;
+    padding-left: 45px;;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 65px;
 
+     .logo-img{
+
+        width: 230px;
+        height: 35px;
+        padding-left:40px;
+    }
+    .fa-arrow-left{
+
+        font-size: $taille-police-grande;
+    }
 }
 .img-resto {
 
-@include positionabsolut(9%,0%);
     width: 414px;
     height: 240px;
 }
 
-.entree{
-    
-    @include notification(left,33%,1200px);
-    left: 0%;
-    margin-top: 20px;
+.menu{
+
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    margin-top:-40px;
+    background-color: $grisclair;
+    width: 414px;
+    height: 1370px;
+    padding-left:10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
-    .title-alafran{
-
-        @include restaurants(2%,$taille-police-grande,$policetitle);
-    
-    }
-    .heart1{
-
-        color:transparent;
-        @include positionabsolut(3%,80%);
-        font-size: $taille-police-grande;
-        &:hover{
-            color:$violet;
-            .heart2{
-             display:none;
-            }
-        }
-    
-    }
-    .heart2{
-    
-        @include positionabsolut(3%,80%);
-        font-size: $taille-police-grande;
-     &:hover {
-       display:none;
-        }
-}
 }
 
-/*****************************/
+.title-and-heart{
+
+    display:flex;
+    padding-left:5%;
+    padding-top: 2%;
+    font-size: 170%;
+    font-weight: bold;
+    font-family:$policetitle;
+    margin-top:10px;
+    height: 80px;
+
+}
+
+.heart {
+
+    margin-left: 33px;
+    margin-top:15px;
+    font-size: 30px;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    cursor: pointer;
+  }
+  .heart-blanc {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 600ms ease;
+  }
+  .heart-violet {
+    transform: scale(0);
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    -webkit-text-stroke-width: 0px;
+    transition: transform 500ms ease;
+  }
+  .heart:hover .heart-blanc {
+    opacity: 0;
+  }
+  .heart:hover .heart-violet {
+    transform: scale(1);
+  }
+
+  .titre-1{
+    margin-top:10px;
+    margin-bottom:20px;
+    height:40px;
+  }
+  .titre-2{
+    margin-top:10px;
+    margin-bottom:20px;
+    height:40px;
+  }
+  .titre-3{
+    margin-top:10px;
+    margin-bottom:20px;
+    height:40px;
+  }
+
 .title-entr{
 
-@include positionabsolut(6%,5%);
+    margin-left:20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 20px;
     font-family: $policetext;
     font-weight: bold;
 
 }
 
-.bordure-moitie-1{
+.bordure-moitie{
 
-@include  borduremoitie (7%);
+    margin-top:-13px;
+    padding-top: 0px;
+    margin-left:5%;
+    width: 40px;
+    height:20px ;
+    border-bottom:solid;
+    border-color:$vert;  
     
 }
 
-.btn-1-entree{
 
-@include  boutonmenu(10%);
+.btn-plat {
 
-animation: animationbutton1 3s linear ;
-&:active{
-    width :305px;
-    border-top-right-radius: 0%;
-    border-bottom-right-radius: 0%;
-}
-}
-@keyframes animationbutton1 {
+    background-color:white;
+    cursor: pointer;
+    border: none;
+    width: 385px;
+    height: 80px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+    margin-bottom:20px;
+    margin-left:5px;
+    transition: transform 300ms ease;
+    animation: animation-card 500ms both;
+    overflow: hidden;
 
-    0%{
-            background-color : #f2f2f2;
-            color:#f2f2f2;
-            top:11%;
-        }
-    
-    100%{
-        
-        background-color:white;
-        color:black;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-    }
 }
 
-
-.btn-2-entree{
-
-@include  boutonmenu(17%);
-animation: animationbutton2 3s linear ;
-}
-
-@keyframes animationbutton2 {
-
-    0%{
-            background-color : #f2f2f2;
-      top:18%;
-        }
-    
-    100%{
-        
-        background-color:white;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-    }
-}
-.btn-3-entree{
-
-@include  boutonmenu(24%);
-animation: animationbutton3 3s linear ;
-}
-@keyframes animationbutton3 {
-
-    0%{
-            background-color : #f2f2f2;
-      top:25%;
-        }
-    
-    100%{
-        
-        background-color:white;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-    }
-}
-
-/**********************/
 .menu-entree{
 
-    @include textmenu(0%,$taille-police-moyenne);
+    display:flex;
+    justify-content: flex-start;
+    width: 350px;
+    height: 27px;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto';
     font-weight: bold;
-    animation-name: animationmenu 3s linear;
-
-
-}
-@keyframes animationmenu {
-0%{
-        background-color : #f2f2f2;
-        color:#f2f2f2;
-        
-    }
-
-100%{
-    
-    background-color:white;
+    font-size: $taille-police-moyenne;
     color:black;
-}
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    text-overflow: ellipsis; 
+    overflow: hidden ; 
+    white-space: nowrap ;
+    
 }
 
+.desc-and-prix{
+
+    display:flex;
+
+}
 
 .menu-entree-desc{
-
-    @include textmenu(37%,$taille-police-normal);
-    animation-name: animationdesc 3s linear;;
-
-}
-@keyframes animationdesc {
-    0%{
-        opacity:0;
-        }
-    
-    100%{
-        
-       opacity:1;
-    }
-    }
-
-.prix {
-@include prixmenu ();
-animation-name: animationprix 3s linear;
-}
-@keyframes animationprix {
-    0%{
-            background-color : #f2f2f2;
-            color:#f2f2f2;
-        }
-    
-    100%{
-        
-        background-color:white;
-        color:black;
-    }
-    }
-/*********************************************/
-
-.checked {
-    position:absolute;
-    top:10%;
-    left: 78%;
-    width:65px;
-    height: 70px;
-    border-top-right-radius:17px ;
-    border-bottom-right-radius:17px ;
-    background-color: #99E2D0;
-    animation-name: animationcheck 3s linear;
-
-    .fa-circle-check{
-        display: flex;
-        justify-content: center;
-        padding-top:25px;
-        font-size: 150%;
-        color:white;
-        animation-name: animationcheck 3s linear;
-    }
-      
-    }
- 
-        @keyframes animationcheck {
-            0%{
-                   display:none;
-                }
-            
-            100%{
-                
-                display:block;
-               
-            }
-        }
-
-/*****************************/
-
-.title-plats{
-
-    @include positionabsolut(31%,5%);
-    font-family: $policetext;
+    display:flex;
+    justify-content: flex-start;
+    width: 330px;
+    height: 27px;
+    background-color: white;
+    border: none;
+    font-family: 'Roboto';
+    font-size: $taille-police-normal;
+    color:black;
     font-weight: bold;
-   
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    text-overflow: ellipsis; 
+    overflow: hidden ; 
+    white-space: nowrap ;
 }
 
-.bordure-moitie-2{
+/********************/
 
-@include  borduremoitie (32%);  
+ /****************************/
 
-}
-
-
-.btn-1-plats{
-
-    @include  boutonmenu(35%);
-    animation: animationbutton4 3s linear ;
-    }
-    @keyframes animationbutton4 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:36%;
-            }
+.check-square {
+      display: flex;
+        position: absolute;
+        height: 80px;
+        width: 70px;
+        background-color: #99E2D0;
+        right: 0px;
+        top: 0px;
+        color:transparent;
+        transform: translateX(100px);
+        transition: transform 700ms ease-out;
+        border-top-right-radius: 17px ;
+        border-bottom-right-radius: 17px ;
+        display:none;
         
-        100%{
-            
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
         }
-    }
-    
 
-
-.btn-2-plats{
-
-    @include  boutonmenu(42%);
-    animation: animationbutton5 3s linear ;
-    }
-    @keyframes animationbutton5 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:43%;
-            }
-        
-        100%{
-            
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-        }
-    }
-.btn-3-plats{
-
-    @include  boutonmenu(49%);
-    animation: animationbutton6 3s linear ;
-    }
-    @keyframes animationbutton6 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:50%;
-            }
-        
-        100%{
-            
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-        }
-    }
-
-/********************************/
-
-
-.title-dessert{
-
-    @include positionabsolut(56%,5%);
-    font-family: $policetext;
+        .prix p
+{
+    margin-top:0px;
+    font-family: 'Roboto';
     font-weight: bold;
 
 }
-.bordure-moitie-3{
 
-@include  borduremoitie (57%); 
+        .prix {
 
-}
-
-.btn-1-dessert{
-
-    @include  boutonmenu(60%);
-    animation: animationbutton7 3s linear ;
-    }
-    @keyframes animationbutton7 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:61%;
-            }
-        
-        100%{
+            font-family: 'Roboto';
+            font-weight: bold;
+            transition: all 700ms ease-out;
+            display: block;
+            padding-left: 10px;
+            margin-top:0px;
             
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-        }
-    }
-.btn-2-dessert{
-
-    @include  boutonmenu(67%);
-    animation: animationbutton8 3s linear ;
-    }
-    @keyframes animationbutton8 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:68%;
+            &:hover{
+                transform: translateX(-80px);
+                padding-left: 90px;
             }
-        
-        100%{
-            
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-        }
-    }
-.btn-3-dessert{
 
-    @include  boutonmenu(74%);
-    animation: animationbutton9 3s linear ;
-    }
-    @keyframes animationbutton9 {
-    
-        0%{
-                background-color : #f2f2f2;
-          top:75%;
+        }
+
+
+        .check {
+            position: absolute;
+            font-size: 35px;
+            top: 22px;
+            left: 18px;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #99E2D0;
+            background-color: white;
+
+          }
+          
+          @keyframes check-rotate {
+            0% {
+              transform: rotate(0deg);
             }
-        
-        100%{
-            
-            background-color:white;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 3%);
-        }
-    }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
 
 
-/************************************/
 
+          .btn-plat:hover .check-square{
+            transform: translateX(0px);
+            display:block;
+          }
+
+          .btn-plat:hover .prix{
+            transform: translateX(-80px);
+            padding-left: 90px;
+          }
+          .btn-plat:hover .check{
+            animation: check-rotate 700ms both alternate ease;
+          }
+
+         /*******************************/
+         /*******************************/
+
+
+         .btn-1 {
+            animation-delay: 50ms;
+          }
+          .btn-2 {
+            animation-delay: 100ms;
+          }
+          .btn-3 {
+            animation-delay: 150ms;
+          }
+          .btn-4 {
+            animation-delay: 200ms;
+          }
+          .btn-5 {
+            animation-delay: 250ms;
+          }
+          .btn-6 {
+            animation-delay: 300ms;
+          }
+          .btn-7 {
+            animation-delay: 350ms;
+          }
+          .btn-8 {
+            animation-delay: 400ms;
+          }
+          .btn-9 {
+            animation-delay: 450ms;
+          }
+          .btn-10 {
+            animation-delay: 500ms;
+          }
+
+         @keyframes animation-card {
+            0% {
+              transform: translateY(20px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+
+
+ .bouton-commander{
+    display:flex;
+    justify-content: center;
+    height:60px;
+ }
 .btn-commander{
 
-    @include boutonexplorer(86%,61px);
-    &:hover {
-        background: linear-gradient($rose,white);
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
-    }
-}
+    background: linear-gradient($rose,$violet);
+    border: none;
+    color: white;
+    padding: 16px;
+    font-size: $taille-police-moyenne;
+    width: 270px;
+    height: 60px;
+    margin-top:35px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: $policetext;
+    opacity:1;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        &:hover {
+            opacity:0.9;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
+        }
+    } 
+
 
 
 /*************************************/
 
-
 .footer {
     
-    @include footerohmyfood(195%);
-    
-        .footer-title{
-         margin-bottom: 30px;
-         }
-    
-        .footer-element{
-    
-         font-family: $policetext;
-         }
-    }
-    
-    .btn-resto{
-    
-    @include boutonfooter();
-    
-        .fa-utensils{
-        color: white;
-        }
-    
-       .resto-text{
-    
-        @include iconefooter(15px);      
-        }
-    }
-    
-    .btn-part{
-    
-        @include boutonfooter();
-      
-        .fa-handshake-angle{
-            color:white;
-        }
-    
-        .part-text{
-        
-            @include iconefooter(10px);
-             margin-bottom: 0%;
-        }
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    height: 270px;
+    padding-left: 25px;
+    color:white;
+    background-color:$noirfooter;
+    font-family: $policetitle ;
+    font-weight:normal;
+    font-size: $taille-police-moyenne;
+
+    .footer-title{
+     margin-bottom: 30px;
+     }
+
+    .footer-element{
+
+     font-family: $policetext;
+     font-size: $taille-police-normal;
+     font-weight: bold;
+     }
+}
+
+.btn-resto{
+
+    display:flex;
+    width: 250px;
+    background-color: $noirfooter;
+
+    .fa-utensils{
+    color: white;
     }
 
+   .resto-text{
 
-    a h4 {
+    background-color: $noirfooter;
+    color:white;
+    margin-top: 0%;
+    margin-left: 15px;     
+    }
+}
 
-        color: white;
-        text-decoration: none;
-    
+.btn-part{
+
+    display:flex;
+    width: 250px;
+    background-color: $noirfooter;
+    margin-bottom: 20px;
+  
+    .fa-handshake-angle{
+        color:white;
     }
-    
-    a {
-        color: black;
-        text-decoration: none;
-        &:active{
-            color: black; 
-        }
-    
+
+    .part-text{
+
+        background-color: $noirfooter;
+        color:white;
+        margin-top: 0%;
+        margin-left: 10px;
+        margin-bottom: 0px;
     }
+}
+a p {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    &:active{
+        color: black; 
+    }
+
+}

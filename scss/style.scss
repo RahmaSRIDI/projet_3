@@ -7,389 +7,595 @@
 }
 /**************************************/
 
-.loader-bloc{
-
-height: 100vh;
-width:100%;
-background-color: white;
-position:fixed;
-display:flex;
-
-}
-
-.loader{
-
-    position:fixed;
-    margin:auto;
-    margin-top:100px;
-    margin-bottom:100px;
-    top:23%;
-    left:33%;
-    border:16px solid #9356DC;
-    width:120px;
-    height:120px;
-    border-top-color:#FF79DA;
-    border-bottom-color:#99E2D0;
-    border-radius:50%;
-    animation: chargeur 3s forwards  ;
-
-    }
-    
-    @keyframes chargeur{
-    
-    0%{
-        -webkit-transform:rotate(0deg) scale(1);
-    border-top-color: red;
-    border-bottom-color: red;
-
-    }
-    
-    25%{
-    
-    border-top-color:blue;
-    border-bottom-color:blue;
-    }
-    
-    50%{
-        -webkit-transform:rotate(360deg) scale(1);
-    border-top-color: red;
-    border-bottom-color: red;
-    }
-    
-    75%{
-    
-    border-top-color:green;
-    border-bottom-color:green;
-    }
-    
-    
-    100%{
-        -webkit-transform:rotate(720deg) scale(1);
-    border-top-color:red;
-    border-bottom-color:red;
-
-    }
-    }
-    /******************************************/
-
-
 @import './variables.scss';
 @import './mixins.scss';
 
-.logo-ohmyfood {
-position: absolute;
-    top:3%;
-    left:30%;
-    max-width: 40%;
-  
 
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+.loader-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $dark;
+  animation: loader 3s forwards;
+
+}
+
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.loader .loader-circle {
+
+  opacity: 0.5;
+  transform: scale(1);
+
+}
+
+.loader-circle > div > div {
+
+  border: 5px solid rgba(200, 200, 200, 1);
+  border-radius: 50%;
+  animation: rotate 3s linear ;
+  border-left-color: rgba(200, 200, 200, 0.4);
+  width: 100%;
+  height: 100%;
+
+  
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg) ;
+
+  }
+}
+.loader-circle > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2000px $dark;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+
+ 
+}
+
+.loader .loader-circle i {
+  font-size: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  line-height: 1;
+  transform: scale(0) translate3d(0, 0, 0);
+
+}
+
+.loader .loader-circle i:nth-of-type(1) {
+  animation: loadicons 3s  ease-in-out;
+}
+.loader .loader-circle i:nth-of-type(2) {
+  animation: loadicons 3s 1s  ease-in-out;
+}
+.loader .loader-circle i:nth-of-type(3) {
+  animation: loadicons 3s 2s  ease-in-out;
+}
+
+@keyframes loadicons {
+  0% {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  11% {
+    transform: scale(1.2) translate3d(0, 0, 0);
+  }
+  22% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  33% {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+
+}
+
+.logo-ohmyfood {
+
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 7px;
+    height: 65px;
+    box-shadow: 0 7px 8px 0 rgb(0 0 0 / 20%);
+
+     .logo-img{
+
+        width: 200px;
+        height: 35px;
+    }
+    
 }
 
     .btn-Location {
 
-     @include location();
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color:$grismoyen;
+        color: black;
+        cursor: pointer;
+        border: none;
+        width: 414px;
+        height: 50px;
+        margin-bottom:0px;
+        padding-bottom: 0px;
         
         .fa-location-dot{
 
-         @include iconelocation ();
+        font-size: $taille-police-normal;
+        margin-top: 10px;
+        margin-right: 10px;
 
        } //end fa-location-dot
 
         .recherche-Text{
          
-         @include textlocation();
+         margin-top: 10px;
+         margin-left: 10px;
+         background-color: $grismoyen;
+         border:none;
+         font-family: $policetext;
+         font-weight: bold;
+         font-size: $taille-police-moyenne;
         
         } // end recherche-Text
 
     } // end btn-Location
 
 
+/**************************************/
+
 .exploration{
 
-@include notification(center,15%,330px);
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: $grisclair;
+margin-bottom: 0px;
+width: 414px;
+height: 350px;
 
-    #reservez1{
 
-        @include positionreserv(10%);
+
+     #reservez1{
+
+        margin-top:0px;
+        padding-top:0px;
+        margin-bottom:7px;
+        padding-bottom: 0px;
+        font-family: $policetext;
+        font-size: $taille-police-grande;
+        font-weight: bold;
     }
+
     #reservez2{
-        @include positionreserv(20%);
+
+        margin-top:0px;
+        padding-top:0px;
+        margin-bottom:0px;
+        padding-bottom: 0px;
+        font-size: $taille-police-grande;
+        font-family: $policetext;
+        font-weight: bold;
     }
     #decouvrez1{
 
-        @include positionreserv(35%);
+        margin-top:35px;
+        padding-top:0px;
+        margin-bottom:7px;
+        padding-bottom: 0px;
+        font-size: $taille-police-moyenne;
+        font-weight: bold;
+        font-family: $policetext;
+   
     }
     #decouvrez2{
-        @include positionreserv(45%);
+        margin-top:0px;
+        padding-top:0px;
+        margin-bottom:0px;
+        padding-bottom: 0px;
+        font-family: $policetext;
+        font-size: $taille-police-moyenne;
+        font-weight: bold;
     }
 
     .btn-explorer{
     
-        @include boutonexplorer(63%,51px);
+
+    background: linear-gradient($rose,$violet);
+    border: none;
+    color: white;
+    padding: 16px;
+    font-size: $taille-police-moyenne;
+    width: 270px;
+    height: 60px;
+    margin-top:35px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: $policetext;
+    opacity:1;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
         &:hover {
-            background: linear-gradient($rose,white);
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+            opacity:0.9;
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
         }
-    }
-}
-.number{
-
-@include chiffre(35%)
+    } 
 }
 
+/********************** fonctionnement ********************/
 
 .title-fonctionnement{
-    @include positionabsolut(63%,5%);
+
+    margin-top:20px;
+    margin-left:10px;
+    padding-left:20px;
+    padding-top:20px;
     font-family: $policetext;
     font-weight: bold;
 
 }
 
+.number{
+
+    margin-left: -15px;
+    margin-top:15px;
+    padding-left:0px;
+    height: 25px; 
+    width: 25px; 
+    color:white;
+    background-color: $violet;
+    border: solid ;
+    border-color:$violet;
+    border-radius: 50%; 
+    font-family: $policetext;
+    font-weight: bold;
+}
+
 .btn-fonct-1{
 
-@include boutonfonct; 
+    display: flex;
+    flex-direction: row;
+    background-color: $grisclair;
+    margin-left:25px;
+    margin-top:25px;
+    color: grey;
+    cursor: pointer;
+    border: none;
+    width: 370px;
+    height: 80px;
+    padding-top: 10px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
 
 &:hover{
     .step-fonct{
-        background: rgb(241, 215, 248);
+        background: #f2eafb;
         }
 .fa-mobile-screen-button{
     color:$violet;
 }
-        background: rgba(245, 219, 252, 0.87);
+        background: #f2eafb;
         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
     }
+
+}
+
+.step-fonct{
+
+
+    padding-left:30px;
+    color:black;
+    background-color: $grisclair;
+    border: none;
+    font-family: $policetext;
+    font-weight: bold;
+    font-size: $taille-police-normal;
+
+}
+
+.fa-mobile-screen-button{
+
+    margin-left:30px;
+    margin-top: 15px;;
+    padding-right: 15px;
+    font-size:$taille-police-grande;
 
 }
 
 .btn-fonct-2{
 
-@include boutonfonct; 
+    display: flex;
+    flex-direction: row;
+    background-color: $grisclair;
+    margin-left:25px;
+    margin-top:25px;
+    color: grey;
+    cursor: pointer;
+    border: none;
+    width: 370px;
+    height: 80px;
+    padding-top: 10px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
 
 &:hover{
     .step-fonct{
-        background: rgb(241, 215, 248);
+        background: #f2eafb;
         }
 .fa-list-ul{
     color:$violet;
 }
-        background: rgba(245, 219, 252, 0.87);
+        background: #f2eafb;
         box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
     }
 
 }
 
+.fa-list-ul{
+    margin-left:30px;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-size:$taille-police-grande;
+
+}
+
 .btn-fonct-3{
 
-    @include boutonfonct; 
+    display: flex;
+    flex-direction: row;
+    background-color: $grisclair;
+    margin-left:25px;
+    margin-top:25px;
+    color: grey;
+    cursor: pointer;
+    border: none;
+    width: 370px;
+    height: 80px;
+    padding-top: 10px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
     
     &:hover{
         .step-fonct{
-            background: rgb(241, 215, 248);
+            background: #f2eafb;
             }
-    .fa-store{
+       .fa-store{
         color:$violet;
     }
-            background:  rgb(241, 215, 248);
+            background:  #f2eafb;
             box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
         }
     
     }
 
-
-.step-fonct{
-
-@include etapefonct;
-
-}
-.choisissez{
-
-    @include positionabsolut(75%,5%);   
-
-}
-
-.fa-mobile-screen-button{
-
-    @include iconefonct;
-
-}
-
-.composez{
-
-@include positionabsolut(88%,5%);
-
-}
-
-.fa-list-ul{
-
-    @include iconefonct;
-
-}
-
-.degustez{
-
-    @include positionabsolut(101%,5%);
-
-}
-
 .fa-store{
-
- @include iconefonct;
+    margin-left:30px;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-size:$taille-police-grande;
 
 }
 
+/*************************restaurants***************************/
 .restaurants{
 
-@include les4resto();
+    display: flex;
+    flex-direction: column;
+    width:414px;
+    height: 1240px;
+    margin-top: 60px;
+    padding-bottom:10px;
+    background-color: $grisclair;
  
 }
 
 .title-restaurants{
 
-@include restaurants(5%,$taille-police-moyenne,$policetext);
-
-}
-
-.btn-nouveau{
-
-    @include boutonnv();
-    
+    margin-top:20px;
+    margin-left:10px;
+    padding-left:20px;
+    padding-top:20px;
+    font-family: $policetext;
+    font-weight: bold;
+   
     }
+    .btn-nouveau-1{
+
+        position:absolute;
+        top:138%;
+        left:67%;
+        background-color: $vert;
+        border: none;
+        color: green;
+        font-size: $taille-police-normal;
+        width: 100px;
+        height: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: $policetext;
+        
+        }
+    
+        .btn-nouveau-2{
+    
+            position:absolute;
+            top:175%;
+            left:67%;
+            background-color: $vert;
+            border: none;
+            color: green;
+            font-size: $taille-police-normal;
+            width: 100px;
+            height: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: $policetext;
+            
+            }
 
 .card-restaurant-1{
 
-    @include carteresto(7%);
+    text-align: left;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 25PX;
+    margin-bottom:25px;
+    width: 90%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+    border-radius: 25px;
 
 }
 
 .img-restaurant{
 
-@include imageresto();
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    object-fit: cover;
+    margin-bottom:0px;
 
 }
 
 .restaurant-img-text-title {
 
     @include imgdescription();
+    width:200px;
     font-weight: bold;
 
 }
 
 .restaurant-img-text-desc {
-
+    width:200px;
 @include imgdescription();
 
 }
-.heart11{
+.title-and-heart{
 
-    color:transparent;
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
-    &:hover{
-        color:$violet;
-        .heart21{
-         display:none;
-        }
-    }
+    margin-top:10px;
+    display:flex;
+    height: 25px;
 
 }
-.heart21{
+/***********************************/
+/***********************************/
 
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
- &:hover {
-   display:none;
-    }
+.heart {
 
+  margin-left: 50px;
+  font-size: 30px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  cursor: pointer;
+}
+.heart-blanc {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 600ms ease;
+}
+.heart-violet {
+  transform: scale(0);
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-stroke-width: 0px;
+  transition: transform 500ms ease;
+}
+.heart:hover .heart-blanc {
+  opacity: 0;
+}
+.heart:hover .heart-violet {
+  transform: scale(1);
 }
 
-.heart12{
+/***********************************/
+/***********************************/
 
-    color:transparent;
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
-    &:hover{
-        color:$violet;
-        .heart22{
-         display:none;
-        }
-    }
-
-}
-.heart22{
-
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
- &:hover {
-   display:none;
-    }
-
-}
-
-.heart13{
-
-    color:transparent;
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
-    &:hover{
-        color:$violet;
-        .heart23{
-         display:none;
-        }
-    }
-
-}
-.heart23{
-
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
- &:hover {
-   display:none;
-    }
-
-}
-.heart14{
-
-    color:transparent;
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
-    &:hover{
-        color:$violet;
-        .heart24{
-         display:none;
-        }
-    }
-
-}
-.heart24{
-
-    @include positionabsolut(80%,85%);
-    font-size: $taille-police-grande;
- &:hover {
-   display:none;
-    }
-
-}
 .card-restaurant-2{
 
-    @include carteresto(28%);
+    text-align: left;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 25PX;
+    margin-bottom:25px;
+    width: 90%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+    border-radius: 25px;
  }
 
 .card-restaurant-3{
 
-    @include carteresto(49%);
+    text-align: left;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 25PX;
+    margin-bottom:25px;
+    width: 90%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+    border-radius: 25px;
 
 }
 
 .card-restaurant-4{
 
-    @include carteresto(70%);
+    text-align: left;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 25PX;
+    margin-bottom:25px;
+    width: 90%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+    border-radius: 25px;
 
 }
 
 .footer {
     
-@include footerohmyfood(285%);
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    height: 270px;
+    padding-left: 25px;
+    color:white;
+    background-color:$noirfooter;
+    font-family: $policetitle ;
+    font-weight:normal;
+    font-size: $taille-police-moyenne;
 
     .footer-title{
      margin-bottom: 30px;
@@ -398,12 +604,16 @@ position: absolute;
     .footer-element{
 
      font-family: $policetext;
+     font-size: $taille-police-normal;
+     font-weight: bold;
      }
 }
 
 .btn-resto{
 
-@include boutonfooter();
+    display:flex;
+    width: 250px;
+    background-color: $noirfooter;
 
     .fa-utensils{
     color: white;
@@ -411,25 +621,35 @@ position: absolute;
 
    .resto-text{
 
-    @include iconefooter(15px);      
+
+    background-color: $noirfooter;
+    color:white;
+    margin-top: 0%;
+    margin-left: 15px;     
     }
 }
 
 .btn-part{
 
-    @include boutonfooter();
+    display:flex;
+    width: 250px;
+    background-color: $noirfooter;
+    margin-bottom: 20px;
   
     .fa-handshake-angle{
         color:white;
     }
 
     .part-text{
-    
-        @include iconefooter(10px);
-         margin-bottom: 0%;
+
+        background-color: $noirfooter;
+        color:white;
+        margin-top: 0%;
+        margin-left: 10px;
+        margin-bottom: 0px;
     }
 }
-a h4 {
+a p {
 
     color: white;
     text-decoration: none;

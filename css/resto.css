@@ -7,85 +7,114 @@
 /* les variables*/
 /********* mixin menu ************/
 /********* mixin resto ************/
-.fa-arrow-left {
-  position: absolute;
-  top: 3%;
-  left: 10%;
+.logo-ohmyfood {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 65px;
+}
+.logo-ohmyfood .logo-img {
+  width: 230px;
+  height: 35px;
+  padding-left: 40px;
+}
+.logo-ohmyfood .fa-arrow-left {
   font-size: 150%;
 }
 
-.logo-ohmyfood {
-  position: absolute;
-  top: 3%;
-  left: 30%;
-  max-width: 40%;
-}
-
 .img-resto {
-  position: absolute;
-  top: 9%;
-  left: 0%;
   width: 414px;
   height: 240px;
 }
 
-.entree {
+.menu {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  position: absolute;
+  position: relative;
+  margin-top: -40px;
   background-color: #F2F2F2;
-  top: 33%;
   width: 414px;
-  height: 1200px;
-  left: 0%;
-  margin-top: 20px;
+  height: 1370px;
+  padding-left: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.entree .title-alafran {
+
+.title-and-heart {
+  display: flex;
   padding-left: 5%;
   padding-top: 2%;
-  font-size: 150%;
+  font-size: 170%;
   font-weight: bold;
   font-family: "Shrikhand", cursive;
-}
-.entree .heart1 {
-  color: transparent;
-  position: absolute;
-  top: 3%;
-  left: 80%;
-  font-size: 150%;
-}
-.entree .heart1:hover {
-  color: #9356DC;
-}
-.entree .heart1:hover .heart2 {
-  display: none;
-}
-.entree .heart2 {
-  position: absolute;
-  top: 3%;
-  left: 80%;
-  font-size: 150%;
-}
-.entree .heart2:hover {
-  display: none;
+  margin-top: 10px;
+  height: 80px;
 }
 
-/*****************************/
-.title-entr {
+.heart {
+  margin-left: 33px;
+  margin-top: 15px;
+  font-size: 30px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  cursor: pointer;
+}
+
+.heart-blanc {
   position: absolute;
-  top: 6%;
-  left: 5%;
+  opacity: 1;
+  transition: opacity 600ms ease;
+}
+
+.heart-violet {
+  transform: scale(0);
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-stroke-width: 0px;
+  transition: transform 500ms ease;
+}
+
+.heart:hover .heart-blanc {
+  opacity: 0;
+}
+
+.heart:hover .heart-violet {
+  transform: scale(1);
+}
+
+.titre-1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.titre-2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.titre-3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.title-entr {
+  margin-left: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
-.bordure-moitie-1 {
-  position: absolute;
-  top: 7%;
-  margin-top: 2%;
+.bordure-moitie {
+  margin-top: -13px;
+  padding-top: 0px;
   margin-left: 5%;
   width: 40px;
   height: 20px;
@@ -93,404 +122,233 @@
   border-color: #99E2D0;
 }
 
-.btn-1-entree {
-  position: absolute;
-  top: 10%;
-  left: 5%;
+.btn-plat {
   background-color: white;
   cursor: pointer;
   border: none;
-  width: 370px;
-  height: 70px;
+  width: 385px;
+  height: 80px;
   border-radius: 17px;
-  animation: animationbutton1 3s linear;
-}
-.btn-1-entree:active {
-  width: 305px;
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 0%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  margin-left: 5px;
+  transition: transform 300ms ease;
+  animation: animation-card 500ms both;
+  overflow: hidden;
 }
 
-@keyframes animationbutton1 {
-  0% {
-    background-color: #f2f2f2;
-    color: #f2f2f2;
-    top: 11%;
-  }
-  100% {
-    background-color: white;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-2-entree {
-  position: absolute;
-  top: 17%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton2 3s linear;
-}
-
-@keyframes animationbutton2 {
-  0% {
-    background-color: #f2f2f2;
-    top: 18%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-3-entree {
-  position: absolute;
-  top: 24%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton3 3s linear;
-}
-
-@keyframes animationbutton3 {
-  0% {
-    background-color: #f2f2f2;
-    top: 25%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-/**********************/
 .menu-entree {
   display: flex;
   justify-content: flex-start;
-  position: absolute;
-  top: 0%;
-  left: 3%;
-  width: 280px;
+  width: 350px;
+  height: 27px;
   background-color: white;
   border: none;
   font-family: "Roboto";
+  font-weight: bold;
   font-size: 120%;
   color: black;
-  font-weight: bold;
-  animation-name: animationmenu 3s linear;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-@keyframes animationmenu {
-  0% {
-    background-color: #f2f2f2;
-    color: #f2f2f2;
-  }
-  100% {
-    background-color: white;
-    color: black;
-  }
+.desc-and-prix {
+  display: flex;
 }
+
 .menu-entree-desc {
   display: flex;
   justify-content: flex-start;
-  position: absolute;
-  top: 37%;
-  left: 3%;
-  width: 280px;
+  width: 330px;
+  height: 27px;
   background-color: white;
   border: none;
   font-family: "Roboto";
   font-size: 100%;
   color: black;
-  animation-name: animationdesc 3s linear;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-@keyframes animationdesc {
+/********************/
+/****************************/
+.check-square {
+  display: flex;
+  position: absolute;
+  height: 80px;
+  width: 70px;
+  background-color: #99E2D0;
+  right: 0px;
+  top: 0px;
+  color: transparent;
+  transform: translateX(100px);
+  transition: transform 700ms ease-out;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  display: none;
+}
+
+.prix p {
+  margin-top: 0px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.prix {
+  font-family: "Roboto";
+  font-weight: bold;
+  transition: all 700ms ease-out;
+  display: block;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+.prix:hover {
+  transform: translateX(-80px);
+  padding-left: 90px;
+}
+
+.check {
+  position: absolute;
+  font-size: 35px;
+  top: 22px;
+  left: 18px;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #99E2D0;
+  background-color: white;
+}
+
+@keyframes check-rotate {
   0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn-plat:hover .check-square {
+  transform: translateX(0px);
+  display: block;
+}
+
+.btn-plat:hover .prix {
+  transform: translateX(-80px);
+  padding-left: 90px;
+}
+
+.btn-plat:hover .check {
+  animation: check-rotate 700ms both alternate ease;
+}
+
+/*******************************/
+/*******************************/
+.btn-1 {
+  animation-delay: 50ms;
+}
+
+.btn-2 {
+  animation-delay: 100ms;
+}
+
+.btn-3 {
+  animation-delay: 150ms;
+}
+
+.btn-4 {
+  animation-delay: 200ms;
+}
+
+.btn-5 {
+  animation-delay: 250ms;
+}
+
+.btn-6 {
+  animation-delay: 300ms;
+}
+
+.btn-7 {
+  animation-delay: 350ms;
+}
+
+.btn-8 {
+  animation-delay: 400ms;
+}
+
+.btn-9 {
+  animation-delay: 450ms;
+}
+
+.btn-10 {
+  animation-delay: 500ms;
+}
+
+@keyframes animation-card {
+  0% {
+    transform: translateY(20px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-.prix {
-  position: absolute;
-  top: 40%;
-  left: 89%;
-  background-color: white;
-  font-family: "Roboto";
-  font-weight: bold;
-  color: black;
-  font-size: 85%;
-  animation-name: animationprix 3s linear;
-}
-
-@keyframes animationprix {
-  0% {
-    background-color: #f2f2f2;
-    color: #f2f2f2;
-  }
-  100% {
-    background-color: white;
-    color: black;
-  }
-}
-/*********************************************/
-.checked {
-  position: absolute;
-  top: 10%;
-  left: 78%;
-  width: 65px;
-  height: 70px;
-  border-top-right-radius: 17px;
-  border-bottom-right-radius: 17px;
-  background-color: #99E2D0;
-  animation-name: animationcheck 3s linear;
-}
-.checked .fa-circle-check {
+.bouton-commander {
   display: flex;
   justify-content: center;
-  padding-top: 25px;
-  font-size: 150%;
-  color: white;
-  animation-name: animationcheck 3s linear;
+  height: 60px;
 }
 
-@keyframes animationcheck {
-  0% {
-    display: none;
-  }
-  100% {
-    display: block;
-  }
-}
-/*****************************/
-.title-plats {
-  position: absolute;
-  top: 31%;
-  left: 5%;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-}
-
-.bordure-moitie-2 {
-  position: absolute;
-  top: 32%;
-  margin-top: 2%;
-  margin-left: 5%;
-  width: 40px;
-  height: 20px;
-  border-bottom: solid;
-  border-color: #99E2D0;
-}
-
-.btn-1-plats {
-  position: absolute;
-  top: 35%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton4 3s linear;
-}
-
-@keyframes animationbutton4 {
-  0% {
-    background-color: #f2f2f2;
-    top: 36%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-2-plats {
-  position: absolute;
-  top: 42%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton5 3s linear;
-}
-
-@keyframes animationbutton5 {
-  0% {
-    background-color: #f2f2f2;
-    top: 43%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-3-plats {
-  position: absolute;
-  top: 49%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton6 3s linear;
-}
-
-@keyframes animationbutton6 {
-  0% {
-    background-color: #f2f2f2;
-    top: 50%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-/********************************/
-.title-dessert {
-  position: absolute;
-  top: 56%;
-  left: 5%;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-}
-
-.bordure-moitie-3 {
-  position: absolute;
-  top: 57%;
-  margin-top: 2%;
-  margin-left: 5%;
-  width: 40px;
-  height: 20px;
-  border-bottom: solid;
-  border-color: #99E2D0;
-}
-
-.btn-1-dessert {
-  position: absolute;
-  top: 60%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton7 3s linear;
-}
-
-@keyframes animationbutton7 {
-  0% {
-    background-color: #f2f2f2;
-    top: 61%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-2-dessert {
-  position: absolute;
-  top: 67%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton8 3s linear;
-}
-
-@keyframes animationbutton8 {
-  0% {
-    background-color: #f2f2f2;
-    top: 68%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-.btn-3-dessert {
-  position: absolute;
-  top: 74%;
-  left: 5%;
-  background-color: white;
-  cursor: pointer;
-  border: none;
-  width: 370px;
-  height: 70px;
-  border-radius: 17px;
-  animation: animationbutton9 3s linear;
-}
-
-@keyframes animationbutton9 {
-  0% {
-    background-color: #f2f2f2;
-    top: 75%;
-  }
-  100% {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03);
-  }
-}
-/************************************/
 .btn-commander {
-  position: absolute;
-  top: 86%;
-  left: 20%;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   color: white;
   padding: 16px;
-  font-size: 100%;
-  width: 250px;
-  height: 61px;
+  font-size: 120%;
+  width: 270px;
+  height: 60px;
+  margin-top: 35px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 25px;
   font-family: "Roboto", sans-serif;
+  opacity: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .btn-commander:hover {
-  background: linear-gradient(#FF79DA, white);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
 }
 
 /*************************************/
 .footer {
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 414px;
-  height: 250px;
-  top: 195%;
-  left: 0%;
+  height: 270px;
   padding-left: 25px;
   color: white;
   background-color: rgb(43, 42, 41);
   font-family: "Shrikhand", cursive;
   font-weight: normal;
+  font-size: 120%;
 }
 .footer .footer-title {
   margin-bottom: 30px;
 }
 .footer .footer-element {
   font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  font-weight: bold;
 }
 
 .btn-resto {
@@ -502,8 +360,6 @@
   color: white;
 }
 .btn-resto .resto-text {
-  position: relative;
-  top: 10%;
   background-color: rgb(43, 42, 41);
   color: white;
   margin-top: 0%;
@@ -514,21 +370,20 @@
   display: flex;
   width: 250px;
   background-color: rgb(43, 42, 41);
+  margin-bottom: 20px;
 }
 .btn-part .fa-handshake-angle {
   color: white;
 }
 .btn-part .part-text {
-  position: relative;
-  top: 10%;
   background-color: rgb(43, 42, 41);
   color: white;
   margin-top: 0%;
   margin-left: 10px;
-  margin-bottom: 0%;
+  margin-bottom: 0px;
 }
 
-a h4 {
+a p {
   color: white;
   text-decoration: none;
 }
