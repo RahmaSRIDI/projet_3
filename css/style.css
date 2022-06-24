@@ -664,11 +664,7 @@ a:active {
   margin-bottom: 20px;
   margin-left: 5px;
   transition: transform 300ms ease;
-  animation: animation-card 500ms both;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  resize: horizontal;
+  animation: animation-card 1000ms both;
 }
 
 .choix-menu {
