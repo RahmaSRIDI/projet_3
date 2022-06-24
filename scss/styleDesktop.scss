@@ -1,0 +1,887 @@
+
+* {
+  box-sizing: border-box;
+  /* box-sizing est appliqué à tous les éléments */
+}
+/**************************************/
+
+@import './variables.scss';
+@import './mixins.scss';
+
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+/********************** début loader *******************/
+
+.loader-circle {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: $dark;
+animation: loader 3s forwards;
+
+}
+
+@keyframes loader {
+0% {
+  visibility: visible;
+}
+100% {
+  visibility: hidden;
+}
+}
+
+.loader .loader-circle {
+
+opacity: 0.5;
+transform: scale(1);
+
+}
+
+.loader-circle > div > div {
+
+border: 5px solid rgba(200, 200, 200, 1);
+border-radius: 50%;
+animation: rotate 3s linear ;
+border-left-color: rgba(200, 200, 200, 0.4);
+width: 100%;
+height: 100%;
+
+}
+
+@keyframes rotate {
+100% {
+  transform: rotate(360deg) ;
+
+}
+}
+.loader-circle > div {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+border-radius: 50%;
+box-shadow: 0 0 0 2000px $dark;
+width: 300px;
+height: 300px;
+padding: 5px;
+
+
+}
+
+.loader .loader-circle i {
+font-size: 150px;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+color: #fff;
+width: 150px;
+height: 150px;
+line-height: 1;
+transform: scale(0) translate3d(0, 0, 0);
+
+}
+
+.loader .loader-circle i:nth-of-type(1) {
+animation: loadicons 3s  ease-in-out;
+}
+.loader .loader-circle i:nth-of-type(2) {
+animation: loadicons 3s 1s  ease-in-out;
+}
+.loader .loader-circle i:nth-of-type(3) {
+animation: loadicons 3s 2s  ease-in-out;
+}
+
+@keyframes loadicons {
+0% {
+  transform: scale(0) translate3d(0, 0, 0);
+}
+11% {
+  transform: scale(1.2) translate3d(0, 0, 0);
+}
+22% {
+  transform: scale(1) translate3d(0, 0, 0);
+}
+33% {
+  transform: scale(0) translate3d(0, 0, 0);
+}
+
+}
+
+
+/********************** fin loader *******************/
+
+.logo-ohmyfood {
+
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 7px;
+  height: 65px;
+  box-shadow: 0 7px 8px 0 rgb(0 0 0 / 20%);
+
+   .logo-img{
+
+      width: 200px;
+      height: 35px;
+  }
+  
+}
+
+  .btn-Location {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color:$grismoyen;
+      color: black;
+      cursor: pointer;
+      border: none;
+      width: 414px;
+      height: 50px;
+      margin-bottom:0px;
+      padding-bottom: 0px;
+      
+      .fa-location-dot{
+
+      font-size: $taille-police-normal;
+      margin-top: 10px;
+      margin-right: 10px;
+
+     } //end fa-location-dot
+
+      .recherche-Text{
+       
+       margin-top: 10px;
+       margin-left: 10px;
+       background-color: $grismoyen;
+       border:none;
+       font-family: $policetext;
+       font-weight: bold;
+       font-size: $taille-police-moyenne;
+      
+      } // end recherche-Text
+
+  } // end btn-Location
+
+
+/**************************************/
+
+.exploration{
+
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: $grisclair;
+margin-bottom: 0px;
+width: 414px;
+height: 350px;
+
+
+
+   #reservez1{
+
+    @include etapeexploration (0px,7px,$taille-police-grande)
+
+  }
+
+  #reservez2{
+
+    @include etapeexploration (0px,0px,$taille-police-grande)
+  }
+
+  #decouvrez1{
+
+    @include etapeexploration (35px,7px,$taille-police-moyenne)
+ 
+  }
+
+  #decouvrez2{
+
+    @include etapeexploration (0px,0px,$taille-police-moyenne)
+
+  }
+
+  .btn-explorer{
+  
+  display:flex;
+  justify-content: space-around;
+  background: linear-gradient($rose,$violet);
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: $taille-police-moyenne;
+  width: 270px;
+  height: 60px;
+  margin-top:35px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: $policetext;
+  opacity:1;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+      &:hover {
+          opacity:0.9;
+          box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
+      }
+  } 
+}
+
+/********************** fonctionnement ********************/
+
+.title-fonctionnement{
+
+  margin-top:20px;
+  margin-left:10px;
+  padding-left:20px;
+  padding-top:20px;
+  font-family: $policetext;
+  font-weight: bold;
+
+}
+
+.number{
+
+  margin-left: -15px;
+  margin-top:15px;
+  padding-left:5px;
+  height: 25px; 
+  width: 25px; 
+  color:white;
+  background-color: $violet;
+  border: solid ;
+  border-color:$violet;
+  border-radius: 50%; 
+  font-family: $policetext;
+  font-weight: bold;
+}
+
+.btn-fonct{
+
+  display: flex;
+  flex-direction: row;
+  background-color: $grisclair;
+  margin-left:25px;
+  margin-top:25px;
+  color: grey;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
+}
+
+.step-fonct{
+
+padding-left:30px;
+color:black;
+background-color: $grisclair;
+border: none;
+font-family: $policetext;
+font-weight: bold;
+font-size: $taille-police-normal;
+
+}
+
+.btn-fonct-1:hover{
+
+background: #f2eafb;
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+
+  .step-fonct{
+      background: #f2eafb;
+      }
+  .fa-mobile-screen-button{
+      color:$violet;
+      }
+ 
+  }
+
+  .fa-mobile-screen-button{
+
+    margin-left:30px;
+    margin-top: 15px;;
+    padding-right: 15px;
+    font-size:$taille-police-grande;
+  
+  }
+
+.btn-fonct-2:hover{
+
+background: #f2eafb;
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+
+  .step-fonct{
+      background: #f2eafb;
+      }
+.fa-list-ul{
+  color:$violet;
+}
+   
+  }
+
+.fa-list-ul{
+  margin-left:30px;
+  margin-top: 15px;
+  padding-right: 15px;
+  font-size:$taille-police-grande;
+
+}
+
+.btn-fonct-3:hover{
+
+background:  #f2eafb;
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+      .step-fonct{
+          background: #f2eafb;
+          }
+     .fa-store{
+      color:$violet;
+  }
+
+      }
+
+.fa-store{
+  margin-left:30px;
+  margin-top: 15px;
+  padding-right: 15px;
+  font-size:$taille-police-grande;
+
+}
+
+/*************************restaurants***************************/
+.restaurants{
+
+  display: flex;
+  flex-direction: column;
+  width:414px;
+  height: 1240px;
+  margin-top: 60px;
+  padding-bottom:10px;
+  background-color: $grisclair;
+
+}
+
+.title-restaurants{
+
+  margin-top:20px;
+  margin-left:10px;
+  padding-left:20px;
+  padding-top:20px;
+  font-family: $policetext;
+  font-weight: bold;
+ 
+  }
+
+.card-restaurant{
+
+  text-align: left;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 25PX;
+  margin-bottom:25px;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+  border-radius: 25px;
+
+}
+
+.img-restaurant{
+
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+  margin-bottom:0px;
+
+}
+
+.btn-nouveau-1{
+
+@include boutonnv(138%);
+
+}
+
+.btn-nouveau-2{
+
+@include boutonnv(175%);
+   
+   }
+
+
+.restaurant-img-text-title {
+
+  @include imgdescription();
+ 
+  font-weight: bold;
+
+}
+
+.restaurant-img-text-desc {
+
+@include imgdescription();
+
+}
+.title-and-heart{
+
+  margin-top:10px;
+  display:flex;
+  height: 25px;
+
+}
+/***********************************/
+/***********************************/
+
+.heart {
+
+margin-left: 50px;
+font-size: 30px;
+color: transparent;
+-webkit-background-clip: text;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: black;
+cursor: pointer;
+}
+.heart-blanc {
+position: absolute;
+opacity: 1;
+transition: opacity 600ms ease;
+}
+.heart-violet {
+transform: scale(0);
+background-image: linear-gradient(#9356DC, #FF79DA);
+-webkit-text-stroke-width: 0px;
+transition: transform 500ms ease;
+}
+.heart:hover .heart-blanc {
+opacity: 0;
+}
+.heart:hover .heart-violet {
+transform: scale(1);
+}
+
+/***********************************/
+/***********************************/
+
+
+.footer {
+  
+  display: flex;
+  flex-direction: column;
+  width: 414px;
+  height: 270px;
+  padding-left: 25px;
+  color:white;
+  background-color:$noirfooter;
+  font-family: $policetitle ;
+  font-weight:normal;
+  font-size: $taille-police-moyenne;
+
+  .footer-title{
+   margin-bottom: 30px;
+   }
+
+  .footer-element{
+
+   font-family: $policetext;
+   font-size: $taille-police-normal;
+   font-weight: bold;
+   }
+}
+
+.btn-resto{
+
+  display:flex;
+  width: 250px;
+  background-color: $noirfooter;
+
+  .fa-utensils{
+  color: white;
+  }
+
+ .resto-text{
+
+
+  background-color: $noirfooter;
+  color:white;
+  margin-top: 0%;
+  margin-left: 15px;     
+  }
+}
+
+.btn-part{
+
+  display:flex;
+  width: 250px;
+  background-color: $noirfooter;
+  margin-bottom: 20px;
+
+  .fa-handshake-angle{
+      color:white;
+  }
+
+  .part-text{
+
+      background-color: $noirfooter;
+      color:white;
+      margin-top: 0%;
+      margin-left: 10px;
+      margin-bottom: 0px;
+  }
+}
+a p {
+
+  color: white;
+  text-decoration: none;
+
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  &:active{
+      color: black; 
+  }
+
+}
+
+
+
+
+/************************************* style des pages restaurants******************/
+/***********************************************************************************/
+
+
+.logo-ohmyfood-2 {
+
+display: flex;
+align-items: center;
+padding-left: 45px;;
+padding-top: 20px;
+padding-bottom: 20px;
+height: 65px;
+
+ .logo-img-2{
+
+    width: 230px;
+    height: 35px;
+    padding-left:40px;
+}
+.fa-arrow-left{
+
+    font-size: $taille-police-grande;
+}
+}
+
+.img-resto {
+
+object-fit: cover;
+width: 414px;
+height: 240px;
+}
+
+
+.menu{
+
+@include hauteurmenu (1370px);
+
+}
+
+.menu-2{
+
+@include hauteurmenu (1470px);
+
+}
+.title-and-heart-2{
+
+display:flex;
+justify-content: space-between;
+padding-left:5%;
+padding-right: 20px;
+padding-top: 2%;
+font-size: 170%;
+font-weight: bold;
+font-family:$policetitle;
+margin-top:10px;
+height: 80px;
+
+}
+
+.heart-2 {
+
+margin-left: 0px;
+margin-top:15px;
+font-size: 30px;
+color: transparent;
+-webkit-background-clip: text;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: black;
+cursor: pointer;
+}
+
+.heart-blanc-2 {
+position: absolute;
+opacity: 1;
+transition: opacity 600ms ease;
+}
+.heart-violet-2 {
+transform: scale(0);
+background-image: linear-gradient(#9356DC, #FF79DA);
+-webkit-text-stroke-width: 0px;
+transition: transform 500ms ease;
+}
+
+.heart-2:hover .heart-blanc-2 {
+opacity: 0;
+}
+.heart-2:hover .heart-violet-2 {
+transform: scale(1);
+}
+
+
+.titre-1{
+
+@include titre();
+
+}
+.titre-2{
+
+@include titre();
+
+}
+.titre-3{
+
+@include titre();
+
+}
+
+.title-entr{
+
+margin-left:20px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+height: 20px;
+font-family: $policetext;
+font-weight: bold;
+
+}
+
+.bordure-moitie{
+
+margin-top:-13px;
+padding-top: 0px;
+margin-left:5%;
+width: 40px;
+height:20px ;
+border-bottom:solid;
+border-color:$vert;  
+
+}
+
+.btn-plat {
+
+display: flex;
+align-items: flex-end;
+background-color:white;
+cursor: pointer;
+border: none;
+width: 385px;
+height: 80px;
+border-radius: 17px;
+box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+margin-bottom:20px;
+margin-left:5px;
+transition: transform 300ms ease;
+animation: animation-card 500ms both;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+resize: horizontal;
+
+}
+
+.choix-menu {
+width: 315px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+height: 70px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.menu-desc{
+
+@include menudescription ($taille-police-moyenne,5px);
+
+}
+.menu-desc-compl {
+
+@include menudescription ($taille-police-normal,10px);
+
+}
+
+/********************/
+
+/****************************/
+
+.check-square {
+
+  display: flex;
+    position: absolute;
+    height: 80px;
+    width: 70px;
+    background-color: #99E2D0;
+    right: 0px;
+    top: 0px;
+    color:transparent;
+    transform: translateX(100px);
+    transition: transform 700ms ease-out;
+    border-top-right-radius: 17px ;
+    border-bottom-right-radius: 17px ;
+    display:none;
+    
+    }
+
+
+    .prix {
+
+        font-family: 'Roboto';
+        font-weight: bold;
+        transition: all 600ms ease-out;
+        display: block;
+        padding-right: 15px;
+        margin-left:39px;
+        padding-top:20px;
+        height: 70px;
+
+    }
+
+
+    .check {
+        position: absolute;
+        font-size: 27px;
+        top: 27px;
+        left: 22px;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: #99E2D0;
+        background-color: white;
+
+      }
+      
+      @keyframes check-rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+
+
+      .btn-plat:hover .check-square{
+        transform: translateX(0px);
+        display:block;
+      }
+
+      .btn-plat:hover .prix{
+        transform: translateX(-90px);
+        padding-left: 80px;
+      }
+      .btn-plat:hover .check{
+        animation: check-rotate 1000ms both alternate ease;
+      }
+
+     /*******************************/
+     /*******************************/
+
+
+     .btn-1 {
+        animation-delay: 50ms;
+      }
+      .btn-2 {
+        animation-delay: 100ms;
+      }
+      .btn-3 {
+        animation-delay: 150ms;
+      }
+      .btn-4 {
+        animation-delay: 200ms;
+      }
+      .btn-5 {
+        animation-delay: 250ms;
+      }
+      .btn-6 {
+        animation-delay: 300ms;
+      }
+      .btn-7 {
+        animation-delay: 350ms;
+      }
+      .btn-8 {
+        animation-delay: 400ms;
+      }
+      .btn-9 {
+        animation-delay: 450ms;
+      }
+      .btn-10 {
+        animation-delay: 500ms;
+      }
+
+     @keyframes animation-card {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+
+.bouton-commander{
+display:flex;
+justify-content: center;
+height:60px;
+}
+.btn-commander{
+display:flex;
+justify-content: space-around;
+background: linear-gradient($rose,$violet);
+border: none;
+color: white;
+padding: 16px;
+font-size: $taille-police-moyenne;
+width: 270px;
+height: 60px;
+margin-top:35px;
+font-weight: bold;
+cursor: pointer;
+border-radius: 25px;
+font-family: $policetext;
+opacity:1;
+box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    &:hover {
+        opacity:0.9;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
+    }
+} 
+

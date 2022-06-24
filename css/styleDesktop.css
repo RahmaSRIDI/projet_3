@@ -738,9 +738,10 @@ a:active {
   font-family: "Roboto";
   font-weight: bold;
   transition: all 600ms ease-out;
+  display: block;
   padding-right: 15px;
   margin-left: 39px;
-  padding-top: 15px;
+  padding-top: 20px;
   height: 70px;
 }
 
@@ -859,4 +860,4 @@ a:active {
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styleDesktop.css.map */
