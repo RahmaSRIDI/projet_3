@@ -121,7 +121,6 @@
 
 }
 
-
 /********************** fin loader *******************/
 
 .logo-ohmyfood {
@@ -211,7 +210,6 @@
     flex-direction: column;
     align-items: center;
   }
-
 
   #reservez1 {
 
@@ -513,7 +511,6 @@
 /***********************************/
 /***********************************/
 
-
 .footer {
 
   display: flex;
@@ -597,12 +594,8 @@ a {
 
 }
 
-
-
-
 /************************************* style des pages restaurants******************/
 /***********************************************************************************/
-
 
 .logo-ohmyfood-2 {
 
@@ -632,7 +625,6 @@ a {
   width: 414px;
   height: 240px;
 }
-
 
 .menu {
 
@@ -694,7 +686,6 @@ a {
   transform: scale(1);
 }
 
-
 .titre-1 {
 
   @include titre();
@@ -748,7 +739,7 @@ a {
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
   margin-bottom: 20px;
   margin-left: 5px;
-  overflow:hidden;
+  overflow: hidden;
   transition: transform 300ms ease;
   animation: animation-card 1000ms both;
 
@@ -768,13 +759,13 @@ a {
 
 .menu-desc {
 
-  @include menudescription (95%,$taille-police-moyenne, 15px);
+  @include menudescription (95%, $taille-police-moyenne, 15px);
 
 }
 
 .menu-desc-compl {
 
-  @include menudescription (95%,$taille-police-normal, 5px);
+  @include menudescription (95%, $taille-police-normal, 5px);
 
 }
 
@@ -840,7 +831,6 @@ a {
   animation: check-rotate 1000ms both alternate ease;
 }
 
-
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
@@ -853,7 +843,6 @@ a {
 
 /*******************************/
 /*******************************/
-
 
 .btn-1 {
   animation-delay: 50ms;
@@ -937,9 +926,7 @@ a {
   }
 }
 
-
 @media screen and (min-width: 992px) {
-
 
   .btn-Location {
     width: 100%;
@@ -950,129 +937,97 @@ a {
     width: 100%;
   }
 
-  
   .exp-1 {
-
     flex-direction: row !important;
-    
-
   }
 
   .exp-2 {
-
     flex-direction: row !important;
-
   }
 
   #reservez1 {
-
     @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
-
   }
 
   #reservez2 {
-
     @include etapeexploration (0px, 0px, 0px, 8px !important, $taille-police-grande);
     padding-left: 6px !important;
   }
 
   #decouvrez1 {
-
     @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
-
   }
 
   #decouvrez2 {
-
     @include etapeexploration (35px, 28px !important, 7px, 0px, $taille-police-moyenne);
     padding-left: 6px !important;
-
   }
 
+  .boutons-fonct {
+    display: flex;
+    margin-right: 10px;
+  }
 
-.boutons-fonct{
-  display: flex;
-  margin-right:10px;
-}
   .btn-nouveau-1 {
-
-    @include boutonnv(830px, 395px);
-
+  
+    @include boutonnv(168%, 37%);
   }
 
   .btn-nouveau-2 {
-
-    @include boutonnv(830px, 910px);
-
+    @include boutonnv(168%, 86%);
   }
 
   .restaurants {
-
     width: 100%;
     height: 670px;
   }
 
-  .card-restaurant{
+  .card-restaurant {
     width: 45%;
-   
   }
 
-   .les-4-resto{
+  .les-4-resto {
     display: flex;
     flex-wrap: wrap;
-    margin-left:20px;
+    margin-left: 20px;
   }
 
   .restaurant-img-text-title {
-
     @include imgdescription(60%);
-
   }
-/************************************************************/
-/***********************************************************/
 
+  /************************************************************/
+  /***********************************************************/
 
   .logo-ohmyfood-2 {
-
     justify-content: center;
     padding-right: 90px;
-     width: 100%;
+    width: 100%;
   }
 
   .img-resto {
-
     width: 100%;
-
   }
 
   .menu {
-
     @include hauteurmenu (1370px, 100%);
-
   }
 
   .menu-2 {
-
     @include hauteurmenu (1470px, 100%);
-
   }
 
   .bordure-moitie {
-
     margin-left: 20px;
-
   }
 
   .heart-2 {
-
     margin-right: 30px;
   }
 
   .btn-plat {
-
     width: 97%;
-    margin-left:10px;
-
+    margin-left: 10px;
   }
 
   .choix-menu {
@@ -1080,26 +1035,19 @@ a {
   }
 
   .menu-desc {
-
-    @include menudescription (95%,$taille-police-grande, 15px);
-
+    @include menudescription (95%, $taille-police-grande, 15px);
   }
 
   .menu-desc-compl {
-
-    @include menudescription (95%,$taille-police-moyenne, 5px);
-
+    @include menudescription (95%, $taille-police-moyenne, 5px);
   }
 
   .prix {
-
     font-size: $taille-police-moyenne;
-
   }
 
   .footer {
     width: 100%;
-
   }
 }
 
@@ -1114,41 +1062,29 @@ a {
   }
 
   .exp-1 {
-
     flex-direction: row !important;
-    
-
   }
 
   .exp-2 {
-
     flex-direction: row !important;
-
   }
 
   #reservez1 {
-
     @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
-
   }
 
   #reservez2 {
-
     @include etapeexploration (0px, 0px, 0px, 8px !important, $taille-police-grande);
     padding-left: 6px !important;
   }
 
   #decouvrez1 {
-
     @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
-
   }
 
   #decouvrez2 {
-
     @include etapeexploration (35px, 28px !important, 7px, 0px, $taille-police-moyenne);
     padding-left: 6px !important;
-
   }
 
   .btn-fonct {
@@ -1169,77 +1105,54 @@ a {
   }
 
   .btn-nouveau-1 {
-
     @include boutonnv(100%, 79%);
-
   }
 
   .btn-nouveau-2 {
-
     @include boutonnv(127%, 79%);
-
   }
 
   .restaurant-img-text-title {
-
     @include imgdescription(78%);
-
   }
 
   .restaurant-img-text-desc {
-
     @include imgdescription(78%);
-
   }
 
   .title-and-heart {
-
     margin-right: 30px;
   }
 
   .logo-ohmyfood-2 {
-
-
     justify-content: center;
     padding-right: 90px;
     width: 100%;
-
   }
 
   .img-resto {
-
     width: 100%;
-
   }
 
   .menu {
-
     @include hauteurmenu (1370px, 100%);
-
   }
 
   .menu-2 {
-
     @include hauteurmenu (1470px, 100%);
-
   }
 
   .bordure-moitie {
-
     margin-left: 20px;
-
   }
 
   .heart-2 {
-
     margin-right: 10px;
   }
 
   .btn-plat {
-
     width: 97%;
-    margin-left:10px;
-
+    margin-left: 10px;
   }
 
   .choix-menu {
@@ -1247,25 +1160,18 @@ a {
   }
 
   .menu-desc {
-
-    @include menudescription (95%,$taille-police-grande, 15px);
-
+    @include menudescription (95%, $taille-police-grande, 15px);
   }
 
   .menu-desc-compl {
-
-    @include menudescription (95%,$taille-police-moyenne, 5px);
-
+    @include menudescription (95%, $taille-police-moyenne, 5px);
   }
 
   .prix {
-
     font-size: $taille-police-moyenne;
-
   }
 
   .footer {
     width: 100%;
-
   }
 }

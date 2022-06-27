@@ -1,12 +1,12 @@
 /*****************mixin acceuil ******************/
 
-@mixin boutonnv ($top,$left){
-    position:absolute;
-    display:flex;
+@mixin boutonnv ($top, $left) {
+    position: absolute;
+    display: flex;
     justify-content: space-around;
-    padding-top:5px;
-    top:$top;
-    left:$left;
+    padding-top: 5px;
+    top: $top;
+    left: $left;
     background-color: $vert;
     border: none;
     color: green;
@@ -16,20 +16,20 @@
     font-weight: bold;
     cursor: pointer;
     font-family: $policetext;
-    
+
 }
 
-@mixin imgdescription($width){
+@mixin imgdescription($width) {
     margin-top: 5Px;
     margin-bottom: 5px;
     margin-left: 15px;
-    width:$width;
+    width: $width;
 }
 
-@mixin etapeexploration ($top,$paddingtop,$bottom,$paddingbttom,$taillepolice){
-    margin-top:$top;
-    padding-top:$paddingtop;
-    margin-bottom:$bottom;
+@mixin etapeexploration ($top, $paddingtop, $bottom, $paddingbttom, $taillepolice) {
+    margin-top: $top;
+    padding-top: $paddingtop;
+    margin-bottom: $bottom;
     padding-bottom: $paddingbttom;
     font-family: $policetext;
     font-size: $taillepolice;
@@ -39,27 +39,27 @@
 
 /********************* mixin resto *******************/
 
-@mixin hauteurmenu ($height,$width){
-    display:flex;
+@mixin hauteurmenu ($height, $width) {
+    display: flex;
     flex-direction: column;
     position: relative;
-    margin-top:-40px;
+    margin-top: -40px;
     background-color: $grisclair;
     height: $height;
     width: $width;
-    padding-left:10px;
+    padding-left: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-@mixin titre(){
-    margin-top:10px;
-    margin-bottom:20px;
-    height:40px;
+@mixin titre() {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 40px;
 }
 
-@mixin menudescription($width,$taillepolice,$top) {
-    
+@mixin menudescription($width, $taillepolice, $top) {
+
     width: $width;
     height: 23px;
     background-color: white;
@@ -67,7 +67,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: $taillepolice;
-    color:black;
+    color: black;
     margin-top: $top;
     margin-bottom: 0px;
     margin-left: 10px;
