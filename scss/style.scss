@@ -425,7 +425,7 @@
   width: 90%;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-  border-radius: 25px;
+  border-radius: 10%;
 
 }
 
@@ -609,7 +609,6 @@ a {
   display: flex;
   align-items: center;
   padding-left: 45px;
-  ;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 65px;
@@ -742,7 +741,6 @@ a {
   display: flex;
   align-items: flex-end;
   background-color: white;
-  cursor: pointer;
   border: none;
   width: 385px;
   height: 80px;
@@ -750,6 +748,7 @@ a {
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
   margin-bottom: 20px;
   margin-left: 5px;
+  overflow:hidden;
   transition: transform 300ms ease;
   animation: animation-card 1000ms both;
 
@@ -760,7 +759,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 70px;
+  height: 80px;
+  margin-left: 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -768,13 +768,13 @@ a {
 
 .menu-desc {
 
-  @include menudescription ($taille-police-moyenne, 5px);
+  @include menudescription (95%,$taille-police-moyenne, 15px);
 
 }
 
 .menu-desc-compl {
 
-  @include menudescription ($taille-police-normal, 10px);
+  @include menudescription (95%,$taille-police-normal, 5px);
 
 }
 
@@ -800,6 +800,10 @@ a {
 
 }
 
+.btn-plat:hover .check-square {
+  transform: translateX(0px);
+  display: block;
+}
 
 .prix {
 
@@ -811,6 +815,11 @@ a {
   padding-top: 15px;
   height: 70px;
 
+}
+
+.btn-plat:hover .prix {
+  transform: translateX(-90px);
+  padding-left: 80px;
 }
 
 
@@ -827,6 +836,11 @@ a {
 
 }
 
+.btn-plat:hover .check {
+  animation: check-rotate 1000ms both alternate ease;
+}
+
+
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
@@ -835,22 +849,6 @@ a {
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-
-.btn-plat:hover .check-square {
-  transform: translateX(0px);
-  display: block;
-}
-
-.btn-plat:hover .prix {
-  transform: translateX(-90px);
-  padding-left: 80px;
-}
-
-.btn-plat:hover .check {
-  animation: check-rotate 1000ms both alternate ease;
 }
 
 /*******************************/
@@ -941,25 +939,187 @@ a {
 
 
 @media screen and (min-width: 992px) {
+
+
+  .btn-Location {
+    width: 100%;
+  }
+
+  .exploration {
+    display: flex;
+    width: 100%;
+  }
+
   
+  .exp-1 {
+
+    flex-direction: row !important;
+    
+
+  }
+
+  .exp-2 {
+
+    flex-direction: row !important;
+
+  }
+
+  #reservez1 {
+
+    @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
+
+  }
+
+  #reservez2 {
+
+    @include etapeexploration (0px, 0px, 0px, 8px !important, $taille-police-grande);
+    padding-left: 6px !important;
+  }
+
+  #decouvrez1 {
+
+    @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
+
+  }
+
+  #decouvrez2 {
+
+    @include etapeexploration (35px, 28px !important, 7px, 0px, $taille-police-moyenne);
+    padding-left: 6px !important;
+
+  }
+
+
+.boutons-fonct{
+  display: flex;
+  margin-right:10px;
 }
+  .btn-nouveau-1 {
+
+    @include boutonnv(170%, 37%);
+
+  }
+
+  .btn-nouveau-2 {
+
+    @include boutonnv(170%, 86%);
+
+  }
+
+  .restaurants {
+
+    width: 100%;
+    height: 670px;
+  }
+
+  .card-restaurant{
+    width: 45%;
+   
+  }
+
+   .les-4-resto{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:20px;
+  }
+
+  .restaurant-img-text-title {
+
+    @include imgdescription(60%);
+
+  }
+/************************************************************/
+/***********************************************************/
+
+
+  .logo-ohmyfood-2 {
+
+    justify-content: center;
+    padding-right: 90px;
+     width: 100%;
+  }
+
+  .img-resto {
+
+    width: 100%;
+
+  }
+
+  .menu {
+
+    @include hauteurmenu (1370px, 100%);
+
+  }
+
+  .menu-2 {
+
+    @include hauteurmenu (1470px, 100%);
+
+  }
+
+  .bordure-moitie {
+
+    margin-left: 20px;
+
+  }
+
+  .heart-2 {
+
+    margin-right: 30px;
+  }
+
+  .btn-plat {
+
+    width: 97%;
+    margin-left:10px;
+
+  }
+
+  .choix-menu {
+    width: 93%;
+  }
+
+  .menu-desc {
+
+    @include menudescription (95%,$taille-police-grande, 15px);
+
+  }
+
+  .menu-desc-compl {
+
+    @include menudescription (95%,$taille-police-moyenne, 5px);
+
+  }
+
+  .prix {
+
+    font-size: $taille-police-moyenne;
+
+  }
+
+  .footer {
+    width: 100%;
+
+  }
+}
+  
 
 
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .btn-Location {
-    width: 768px;
+    width: 100%;
   }
 
   .exploration {
     display: flex;
-    width: 768px;
+    width: 100%;
   }
 
   .exp-1 {
 
     flex-direction: row !important;
-    ;
+    
 
   }
 
@@ -995,7 +1155,7 @@ a {
   }
 
   .btn-fonct {
-    width: 700px;
+    width: 91%;
     margin-left: 40px;
   }
 
@@ -1004,7 +1164,7 @@ a {
   }
 
   .restaurants {
-    width: 768px;
+    width: 100%;
   }
 
   .card-restaurant {
@@ -1025,13 +1185,13 @@ a {
 
   .restaurant-img-text-title {
 
-    @include imgdescription(600px);
+    @include imgdescription(78%);
 
   }
 
   .restaurant-img-text-desc {
 
-    @include imgdescription(600px);
+    @include imgdescription(78%);
 
   }
 
@@ -1044,27 +1204,26 @@ a {
 
 
     justify-content: center;
-    padding-left: 45px;
-    width: 768px;
+    padding-right: 90px;
+    width: 100%;
 
   }
 
   .img-resto {
 
-
-    width: 768px;
+    width: 100%;
 
   }
 
   .menu {
 
-    @include hauteurmenu (1370px, 768px);
+    @include hauteurmenu (1370px, 100%);
 
   }
 
   .menu-2 {
 
-    @include hauteurmenu (1470px, 768px);
+    @include hauteurmenu (1470px, 100%);
 
   }
 
@@ -1081,23 +1240,24 @@ a {
 
   .btn-plat {
 
-    width: 740px;
+    width: 97%;
+    margin-left:10px;
 
   }
 
   .choix-menu {
-    width: 650px;
+    width: 84%;
   }
 
   .menu-desc {
 
-    @include menudescription ($taille-police-grande, 5px);
+    @include menudescription (95%,$taille-police-grande, 15px);
 
   }
 
   .menu-desc-compl {
 
-    @include menudescription ($taille-police-moyenne, 10px);
+    @include menudescription (95%,$taille-police-moyenne, 5px);
 
   }
 
@@ -1108,7 +1268,7 @@ a {
   }
 
   .footer {
-    width: 768px;
+    width: 100%;
 
   }
 }

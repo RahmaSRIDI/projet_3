@@ -58,13 +58,13 @@
     height:40px;
 }
 
-@mixin menudescription($taillepolice,$top) {
+@mixin menudescription($width,$taillepolice,$top) {
     
-    width: 95%;
+    width: $width;
     height: 23px;
     background-color: white;
     border: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: $taillepolice;
     color:black;

@@ -358,7 +358,7 @@
   width: 90%;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  border-radius: 10%;
 }
 
 .img-restaurant {
@@ -665,7 +665,6 @@ a:active {
   display: flex;
   align-items: flex-end;
   background-color: white;
-  cursor: pointer;
   border: none;
   width: 385px;
   height: 80px;
@@ -673,6 +672,7 @@ a:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
   margin-left: 5px;
+  overflow: hidden;
   transition: transform 300ms ease;
   animation: animation-card 1000ms both;
 }
@@ -682,7 +682,8 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 70px;
+  height: 80px;
+  margin-left: 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -693,11 +694,11 @@ a:active {
   height: 23px;
   background-color: white;
   border: none;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 120%;
   color: black;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 0px;
   margin-left: 10px;
   overflow: hidden;
@@ -710,11 +711,11 @@ a:active {
   height: 23px;
   background-color: white;
   border: none;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 100%;
   color: black;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 0px;
   margin-left: 10px;
   overflow: hidden;
@@ -740,6 +741,11 @@ a:active {
   display: none;
 }
 
+.btn-plat:hover .check-square {
+  transform: translateX(0px);
+  display: block;
+}
+
 .prix {
   font-family: "Roboto";
   font-weight: bold;
@@ -748,6 +754,11 @@ a:active {
   margin-left: 39px;
   padding-top: 15px;
   height: 70px;
+}
+
+.btn-plat:hover .prix {
+  transform: translateX(-90px);
+  padding-left: 80px;
 }
 
 .check {
@@ -762,6 +773,10 @@ a:active {
   background-color: white;
 }
 
+.btn-plat:hover .check {
+  animation: check-rotate 1000ms both alternate ease;
+}
+
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
@@ -770,20 +785,6 @@ a:active {
     transform: rotate(360deg);
   }
 }
-.btn-plat:hover .check-square {
-  transform: translateX(0px);
-  display: block;
-}
-
-.btn-plat:hover .prix {
-  transform: translateX(-90px);
-  padding-left: 80px;
-}
-
-.btn-plat:hover .check {
-  animation: check-rotate 1000ms both alternate ease;
-}
-
 /*******************************/
 /*******************************/
 .btn-1 {
@@ -865,13 +866,207 @@ a:active {
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 992px) {
   .btn-Location {
-    width: 768px;
+    width: 100%;
   }
   .exploration {
     display: flex;
-    width: 768px;
+    width: 100%;
+  }
+  .exp-1 {
+    flex-direction: row !important;
+  }
+  .exp-2 {
+    flex-direction: row !important;
+  }
+  #reservez1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+  }
+  #reservez2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 8px !important;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    padding-left: 6px !important;
+  }
+  #decouvrez1 {
+    margin-top: 35px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  #decouvrez2 {
+    margin-top: 35px;
+    padding-top: 28px !important;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    padding-left: 6px !important;
+  }
+  .boutons-fonct {
+    display: flex;
+    margin-right: 10px;
+  }
+  .btn-nouveau-1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    top: 170%;
+    left: 37%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .btn-nouveau-2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    top: 170%;
+    left: 86%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .restaurants {
+    width: 100%;
+    height: 670px;
+  }
+  .card-restaurant {
+    width: 45%;
+  }
+  .les-4-resto {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+  .restaurant-img-text-title {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 60%;
+  }
+  /************************************************************/
+  /***********************************************************/
+  .logo-ohmyfood-2 {
+    justify-content: center;
+    padding-right: 90px;
+    width: 100%;
+  }
+  .img-resto {
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -40px;
+    background-color: #F2F2F2;
+    height: 1370px;
+    width: 100%;
+    padding-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .menu-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -40px;
+    background-color: #F2F2F2;
+    height: 1470px;
+    width: 100%;
+    padding-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .bordure-moitie {
+    margin-left: 20px;
+  }
+  .heart-2 {
+    margin-right: 30px;
+  }
+  .btn-plat {
+    width: 97%;
+    margin-left: 10px;
+  }
+  .choix-menu {
+    width: 93%;
+  }
+  .menu-desc {
+    width: 95%;
+    height: 23px;
+    background-color: white;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .menu-desc-compl {
+    width: 95%;
+    height: 23px;
+    background-color: white;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .prix {
+    font-size: 120%;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn-Location {
+    width: 100%;
+  }
+  .exploration {
+    display: flex;
+    width: 100%;
   }
   .exp-1 {
     flex-direction: row !important;
@@ -918,14 +1113,14 @@ a:active {
     padding-left: 6px !important;
   }
   .btn-fonct {
-    width: 700px;
+    width: 91%;
     margin-left: 40px;
   }
   .step-fonct {
     font-size: 120%;
   }
   .restaurants {
-    width: 768px;
+    width: 100%;
   }
   .card-restaurant {
     margin-left: 40px;
@@ -968,24 +1163,24 @@ a:active {
     margin-top: 5Px;
     margin-bottom: 5px;
     margin-left: 15px;
-    width: 600px;
+    width: 78%;
   }
   .restaurant-img-text-desc {
     margin-top: 5Px;
     margin-bottom: 5px;
     margin-left: 15px;
-    width: 600px;
+    width: 78%;
   }
   .title-and-heart {
     margin-right: 30px;
   }
   .logo-ohmyfood-2 {
     justify-content: center;
-    padding-left: 45px;
-    width: 768px;
+    padding-right: 90px;
+    width: 100%;
   }
   .img-resto {
-    width: 768px;
+    width: 100%;
   }
   .menu {
     display: flex;
@@ -994,7 +1189,7 @@ a:active {
     margin-top: -40px;
     background-color: #F2F2F2;
     height: 1370px;
-    width: 768px;
+    width: 100%;
     padding-left: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -1006,7 +1201,7 @@ a:active {
     margin-top: -40px;
     background-color: #F2F2F2;
     height: 1470px;
-    width: 768px;
+    width: 100%;
     padding-left: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -1018,21 +1213,22 @@ a:active {
     margin-right: 10px;
   }
   .btn-plat {
-    width: 740px;
+    width: 97%;
+    margin-left: 10px;
   }
   .choix-menu {
-    width: 650px;
+    width: 84%;
   }
   .menu-desc {
     width: 95%;
     height: 23px;
     background-color: white;
     border: none;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 150%;
     color: black;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 0px;
     margin-left: 10px;
     overflow: hidden;
@@ -1044,11 +1240,11 @@ a:active {
     height: 23px;
     background-color: white;
     border: none;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 120%;
     color: black;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0px;
     margin-left: 10px;
     overflow: hidden;
@@ -1059,7 +1255,7 @@ a:active {
     font-size: 120%;
   }
   .footer {
-    width: 768px;
+    width: 100%;
   }
 }
 
