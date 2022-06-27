@@ -1,12 +1,12 @@
 /*****************mixin acceuil ******************/
 
-@mixin boutonnv ($top){
+@mixin boutonnv ($top,$left){
     position:absolute;
     display:flex;
     justify-content: space-around;
     padding-top:5px;
     top:$top;
-    left:67%;
+    left:$left;
     background-color: $vert;
     border: none;
     color: green;
@@ -19,18 +19,18 @@
     
 }
 
-@mixin imgdescription(){
+@mixin imgdescription($width){
     margin-top: 5Px;
     margin-bottom: 5px;
     margin-left: 15px;
-    width:200px;
+    width:$width;
 }
 
-@mixin etapeexploration ($top,$bottom,$taillepolice){
+@mixin etapeexploration ($top,$paddingtop,$bottom,$paddingbttom,$taillepolice){
     margin-top:$top;
-    padding-top:0px;
+    padding-top:$paddingtop;
     margin-bottom:$bottom;
-    padding-bottom: 0px;
+    padding-bottom: $paddingbttom;
     font-family: $policetext;
     font-size: $taillepolice;
     font-weight: bold;
@@ -39,14 +39,14 @@
 
 /********************* mixin resto *******************/
 
-@mixin hauteurmenu ($height){
+@mixin hauteurmenu ($height,$width){
     display:flex;
     flex-direction: column;
     position: relative;
     margin-top:-40px;
     background-color: $grisclair;
-    width: 414px;
     height: $height;
+    width: $width;
     padding-left:10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

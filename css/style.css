@@ -155,6 +155,16 @@
   width: 414px;
   height: 350px;
 }
+.exploration .exp-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exploration .exp-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .exploration #reservez1 {
   margin-top: 0px;
   padding-top: 0px;
@@ -549,8 +559,8 @@ a:active {
   position: relative;
   margin-top: -40px;
   background-color: #F2F2F2;
-  width: 414px;
   height: 1370px;
+  width: 414px;
   padding-left: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -562,8 +572,8 @@ a:active {
   position: relative;
   margin-top: -40px;
   background-color: #F2F2F2;
-  width: 414px;
   height: 1470px;
+  width: 414px;
   padding-left: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -853,6 +863,204 @@ a:active {
 .btn-commander:hover {
   opacity: 0.9;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn-Location {
+    width: 768px;
+  }
+  .exploration {
+    display: flex;
+    width: 768px;
+  }
+  .exp-1 {
+    flex-direction: row !important;
+  }
+  .exp-2 {
+    flex-direction: row !important;
+  }
+  #reservez1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+  }
+  #reservez2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 8px !important;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    padding-left: 6px !important;
+  }
+  #decouvrez1 {
+    margin-top: 35px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  #decouvrez2 {
+    margin-top: 35px;
+    padding-top: 28px !important;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    padding-left: 6px !important;
+  }
+  .btn-fonct {
+    width: 700px;
+    margin-left: 40px;
+  }
+  .step-fonct {
+    font-size: 120%;
+  }
+  .restaurants {
+    width: 768px;
+  }
+  .card-restaurant {
+    margin-left: 40px;
+  }
+  .btn-nouveau-1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    top: 100%;
+    left: 79%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .btn-nouveau-2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    top: 127%;
+    left: 79%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .restaurant-img-text-title {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 600px;
+  }
+  .restaurant-img-text-desc {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 600px;
+  }
+  .title-and-heart {
+    margin-right: 30px;
+  }
+  .logo-ohmyfood-2 {
+    justify-content: center;
+    padding-left: 45px;
+    width: 768px;
+  }
+  .img-resto {
+    width: 768px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -40px;
+    background-color: #F2F2F2;
+    height: 1370px;
+    width: 768px;
+    padding-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .menu-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -40px;
+    background-color: #F2F2F2;
+    height: 1470px;
+    width: 768px;
+    padding-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .bordure-moitie {
+    margin-left: 20px;
+  }
+  .heart-2 {
+    margin-right: 10px;
+  }
+  .btn-plat {
+    width: 740px;
+  }
+  .choix-menu {
+    width: 650px;
+  }
+  .menu-desc {
+    width: 95%;
+    height: 23px;
+    background-color: white;
+    border: none;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 150%;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .menu-desc-compl {
+    width: 95%;
+    height: 23px;
+    background-color: white;
+    border: none;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 120%;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .prix {
+    font-size: 120%;
+  }
+  .footer {
+    width: 768px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

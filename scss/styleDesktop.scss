@@ -43,10 +43,10 @@ transform: scale(1);
 
 .loader-circle > div > div {
 
-border: 5px solid rgba(200, 200, 200, 1);
+border: 5px solid #9356DC;
 border-radius: 50%;
 animation: rotate 3s linear ;
-border-left-color: rgba(200, 200, 200, 0.4);
+border-left-color: #FF79DA;
 width: 100%;
 height: 100%;
 
@@ -54,6 +54,7 @@ height: 100%;
 
 @keyframes rotate {
 100% {
+  
   transform: rotate(360deg) ;
 
 }
@@ -71,7 +72,6 @@ width: 300px;
 height: 300px;
 padding: 5px;
 
-
 }
 
 .loader .loader-circle i {
@@ -82,7 +82,7 @@ left: 0;
 right: 0;
 bottom: 0;
 margin: auto;
-color: #fff;
+color: #9356DC;
 width: 150px;
 height: 150px;
 line-height: 1;
@@ -412,20 +412,20 @@ box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
 
 .btn-nouveau-1{
 
-@include boutonnv(138%);
+@include boutonnv(138%,67%);
 
 }
 
 .btn-nouveau-2{
 
-@include boutonnv(175%);
+@include boutonnv(175%,67%);
    
    }
 
 
 .restaurant-img-text-title {
 
-  @include imgdescription();
+  @include imgdescription(200px);
  
   font-weight: bold;
 
@@ -433,7 +433,7 @@ box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
 
 .restaurant-img-text-desc {
 
-@include imgdescription();
+@include imgdescription(200px);
 
 }
 .title-and-heart{
@@ -597,13 +597,13 @@ height: 240px;
 
 .menu{
 
-@include hauteurmenu (1370px);
+@include hauteurmenu (1370px,414px);
 
 }
 
 .menu-2{
 
-@include hauteurmenu (1470px);
+@include hauteurmenu (1470px,414px);
 
 }
 .title-and-heart-2{
@@ -706,11 +706,7 @@ box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
 margin-bottom:20px;
 margin-left:5px;
 transition: transform 300ms ease;
-animation: animation-card 500ms both;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-resize: horizontal;
+animation: animation-card 1000ms both;
 
 }
 
@@ -764,10 +760,9 @@ text-overflow: ellipsis;
         font-family: 'Roboto';
         font-weight: bold;
         transition: all 600ms ease-out;
-        display: block;
         padding-right: 15px;
         margin-left:39px;
-        padding-top:20px;
+        padding-top:15px;
         height: 70px;
 
     }

@@ -1,16 +1,14 @@
-
 * {
-    box-sizing: border-box;
-    /* box-sizing est appliqué à tous les éléments */
+  box-sizing: border-box;
+  /* box-sizing est appliqué à tous les éléments */
 }
+
 /**************************************/
 
 @import './variables.scss';
 @import './mixins.scss';
 
-
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 
 /********************** début loader *******************/
 
@@ -29,6 +27,7 @@
   0% {
     visibility: visible;
   }
+
   100% {
     visibility: hidden;
   }
@@ -41,24 +40,26 @@
 
 }
 
-.loader-circle > div > div {
+.loader-circle>div>div {
 
   border: 5px solid #9356DC;
   border-radius: 50%;
-  animation: rotate 3s linear ;
+  animation: rotate 3s linear;
   border-left-color: #FF79DA;
   width: 100%;
   height: 100%;
-  
+
 }
 
 @keyframes rotate {
   100% {
-    transform: rotate(360deg) ;
+
+    transform: rotate(360deg);
 
   }
 }
-.loader-circle > div {
+
+.loader-circle>div {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +72,6 @@
   height: 300px;
   padding: 5px;
 
- 
 }
 
 .loader .loader-circle i {
@@ -91,25 +91,30 @@
 }
 
 .loader .loader-circle i:nth-of-type(1) {
-  animation: loadicons 3s  ease-in-out;
+  animation: loadicons 3s ease-in-out;
 }
+
 .loader .loader-circle i:nth-of-type(2) {
-  animation: loadicons 3s 1s  ease-in-out;
+  animation: loadicons 3s 1s ease-in-out;
 }
+
 .loader .loader-circle i:nth-of-type(3) {
-  animation: loadicons 3s 2s  ease-in-out;
+  animation: loadicons 3s 2s ease-in-out;
 }
 
 @keyframes loadicons {
   0% {
     transform: scale(0) translate3d(0, 0, 0);
   }
+
   11% {
     transform: scale(1.2) translate3d(0, 0, 0);
   }
+
   22% {
     transform: scale(1) translate3d(0, 0, 0);
   }
+
   33% {
     transform: scale(0) translate3d(0, 0, 0);
   }
@@ -121,172 +126,192 @@
 
 .logo-ohmyfood {
 
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    margin-bottom: 7px;
-    height: 65px;
-    box-shadow: 0 7px 8px 0 rgb(0 0 0 / 20%);
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 7px;
+  height: 65px;
+  box-shadow: 0 7px 8px 0 rgb(0 0 0 / 20%);
 
-     .logo-img{
+  .logo-img {
 
-        width: 200px;
-        height: 35px;
-    }
-    
+    width: 200px;
+    height: 35px;
+  }
+
 }
 
-    .btn-Location {
+.btn-Location {
 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color:$grismoyen;
-        color: black;
-        cursor: pointer;
-        border: none;
-        width: 414px;
-        height: 50px;
-        margin-bottom:0px;
-        padding-bottom: 0px;
-        
-        .fa-location-dot{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $grismoyen;
+  color: black;
+  cursor: pointer;
+  border: none;
+  width: 414px;
+  height: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 
-        font-size: $taille-police-normal;
-        margin-top: 10px;
-        margin-right: 10px;
+  .fa-location-dot {
 
-       } //end fa-location-dot
+    font-size: $taille-police-normal;
+    margin-top: 10px;
+    margin-right: 10px;
 
-        .recherche-Text{
-         
-         margin-top: 10px;
-         margin-left: 10px;
-         background-color: $grismoyen;
-         border:none;
-         font-family: $policetext;
-         font-weight: bold;
-         font-size: $taille-police-moyenne;
-        
-        } // end recherche-Text
+  }
 
-    } // end btn-Location
+  //end fa-location-dot
+
+  .recherche-Text {
+
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: $grismoyen;
+    border: none;
+    font-family: $policetext;
+    font-weight: bold;
+    font-size: $taille-police-moyenne;
+
+  }
+
+  // end recherche-Text
+
+}
+
+// end btn-Location
 
 
 /**************************************/
 
-.exploration{
+.exploration {
 
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: $grisclair;
-margin-bottom: 0px;
-width: 414px;
-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $grisclair;
+  margin-bottom: 0px;
+  width: 414px;
+  height: 350px;
 
 
+  .exp-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-     #reservez1{
+  }
 
-      @include etapeexploration (0px,7px,$taille-police-grande)
+  .exp-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    }
 
-    #reservez2{
+  #reservez1 {
 
-      @include etapeexploration (0px,0px,$taille-police-grande)
-    }
+    @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
 
-    #decouvrez1{
+  }
 
-      @include etapeexploration (35px,7px,$taille-police-moyenne)
-   
-    }
+  #reservez2 {
 
-    #decouvrez2{
+    @include etapeexploration (0px, 0px, 0px, 0px, $taille-police-grande);
+  }
 
-      @include etapeexploration (0px,0px,$taille-police-moyenne)
+  #decouvrez1 {
 
-    }
+    @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
 
-    .btn-explorer{
-    
-    display:flex;
+  }
+
+  #decouvrez2 {
+
+    @include etapeexploration (0px, 0px, 0px, 0px, $taille-police-moyenne);
+
+  }
+
+  .btn-explorer {
+
+    display: flex;
     justify-content: space-around;
-    background: linear-gradient($rose,$violet);
+    background: linear-gradient($rose, $violet);
     border: none;
     color: white;
     padding: 16px;
     font-size: $taille-police-moyenne;
     width: 270px;
     height: 60px;
-    margin-top:35px;
+    margin-top: 35px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 25px;
     font-family: $policetext;
-    opacity:1;
+    opacity: 1;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-        &:hover {
-            opacity:0.9;
-            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
-        }
-    } 
+
+    &:hover {
+      opacity: 0.9;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
+    }
+  }
 }
 
 /********************** fonctionnement ********************/
 
-.title-fonctionnement{
+.title-fonctionnement {
 
-    margin-top:20px;
-    margin-left:10px;
-    padding-left:20px;
-    padding-top:20px;
-    font-family: $policetext;
-    font-weight: bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: $policetext;
+  font-weight: bold;
 
 }
 
-.number{
+.number {
 
-    margin-left: -15px;
-    margin-top:15px;
-    padding-left:5px;
-    height: 25px; 
-    width: 25px; 
-    color:white;
-    background-color: $violet;
-    border: solid ;
-    border-color:$violet;
-    border-radius: 50%; 
-    font-family: $policetext;
-    font-weight: bold;
+  margin-left: -15px;
+  margin-top: 15px;
+  padding-left: 5px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  background-color: $violet;
+  border: solid;
+  border-color: $violet;
+  border-radius: 50%;
+  font-family: $policetext;
+  font-weight: bold;
 }
 
-.btn-fonct{
+.btn-fonct {
 
-    display: flex;
-    flex-direction: row;
-    background-color: $grisclair;
-    margin-left:25px;
-    margin-top:25px;
-    color: grey;
-    cursor: pointer;
-    border: none;
-    width: 370px;
-    height: 80px;
-    padding-top: 10px;
-    border-radius: 17px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%); 
+  display: flex;
+  flex-direction: row;
+  background-color: $grisclair;
+  margin-left: 25px;
+  margin-top: 25px;
+  color: grey;
+  cursor: pointer;
+  border: none;
+  width: 370px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 }
 
-.step-fonct{
+.step-fonct {
 
-  padding-left:30px;
-  color:black;
+  padding-left: 30px;
+  color: black;
   background-color: $grisclair;
   border: none;
   font-family: $policetext;
@@ -295,154 +320,161 @@ height: 350px;
 
 }
 
-.btn-fonct-1:hover{
+.btn-fonct-1:hover {
 
   background: #f2eafb;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
 
-    .step-fonct{
-        background: #f2eafb;
-        }
-    .fa-mobile-screen-button{
-        color:$violet;
-        }
-   
-    }
+  .step-fonct {
+    background: #f2eafb;
+  }
 
-    .fa-mobile-screen-button{
+  .fa-mobile-screen-button {
+    color: $violet;
+  }
 
-      margin-left:30px;
-      margin-top: 15px;;
-      padding-right: 15px;
-      font-size:$taille-police-grande;
-    
-    }
+}
 
-.btn-fonct-2:hover{
+.fa-mobile-screen-button {
+
+  margin-left: 30px;
+  margin-top: 15px;
+  ;
+  padding-right: 15px;
+  font-size: $taille-police-grande;
+
+}
+
+.btn-fonct-2:hover {
 
   background: #f2eafb;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
 
-    .step-fonct{
-        background: #f2eafb;
-        }
-.fa-list-ul{
-    color:$violet;
-}
-     
-    }
+  .step-fonct {
+    background: #f2eafb;
+  }
 
-.fa-list-ul{
-    margin-left:30px;
-    margin-top: 15px;
-    padding-right: 15px;
-    font-size:$taille-police-grande;
+  .fa-list-ul {
+    color: $violet;
+  }
 
 }
 
-.btn-fonct-3:hover{
+.fa-list-ul {
+  margin-left: 30px;
+  margin-top: 15px;
+  padding-right: 15px;
+  font-size: $taille-police-grande;
 
-  background:  #f2eafb;
+}
+
+.btn-fonct-3:hover {
+
+  background: #f2eafb;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
-        .step-fonct{
-            background: #f2eafb;
-            }
-       .fa-store{
-        color:$violet;
-    }
 
-        }
+  .step-fonct {
+    background: #f2eafb;
+  }
 
-.fa-store{
-    margin-left:30px;
-    margin-top: 15px;
-    padding-right: 15px;
-    font-size:$taille-police-grande;
+  .fa-store {
+    color: $violet;
+  }
+
+}
+
+.fa-store {
+  margin-left: 30px;
+  margin-top: 15px;
+  padding-right: 15px;
+  font-size: $taille-police-grande;
 
 }
 
 /*************************restaurants***************************/
-.restaurants{
+.restaurants {
 
-    display: flex;
-    flex-direction: column;
-    width:414px;
-    height: 1240px;
-    margin-top: 60px;
-    padding-bottom:10px;
-    background-color: $grisclair;
- 
-}
-
-.title-restaurants{
-
-    margin-top:20px;
-    margin-left:10px;
-    padding-left:20px;
-    padding-top:20px;
-    font-family: $policetext;
-    font-weight: bold;
-   
-    }
-
-.card-restaurant{
-
-    text-align: left;
-    background-color: white;
-    margin-left: 20px;
-    margin-right: 25PX;
-    margin-bottom:25px;
-    width: 90%;
-    height: 250px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-    border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 414px;
+  height: 1240px;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  background-color: $grisclair;
 
 }
 
-.img-restaurant{
+.title-restaurants {
 
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    object-fit: cover;
-    margin-bottom:0px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: $policetext;
+  font-weight: bold;
 
 }
 
-.btn-nouveau-1{
+.card-restaurant {
 
-  @include boutonnv(138%);
- 
- }
+  text-align: left;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 25PX;
+  margin-bottom: 25px;
+  width: 90%;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
+  border-radius: 25px;
 
-.btn-nouveau-2{
+}
 
- @include boutonnv(175%);
-     
-     }
+.img-restaurant {
+
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 0px;
+
+}
+
+.btn-nouveau-1 {
+
+  @include boutonnv(138%, 67%);
+
+}
+
+.btn-nouveau-2 {
+
+  @include boutonnv(175%, 67%);
+
+}
 
 
 .restaurant-img-text-title {
 
-    @include imgdescription();
-   
-    font-weight: bold;
+  @include imgdescription(200px);
+
+  font-weight: bold;
 
 }
 
 .restaurant-img-text-desc {
-  
-@include imgdescription();
+
+  @include imgdescription(200px);
 
 }
-.title-and-heart{
 
-    margin-top:10px;
-    display:flex;
-    height: 25px;
+.title-and-heart {
+
+  margin-top: 10px;
+  display: flex;
+  height: 25px;
 
 }
+
 /***********************************/
 /***********************************/
 
@@ -456,20 +488,24 @@ height: 350px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
 }
+
 .heart-blanc {
   position: absolute;
   opacity: 1;
   transition: opacity 600ms ease;
 }
+
 .heart-violet {
   transform: scale(0);
   background-image: linear-gradient(#9356DC, #FF79DA);
   -webkit-text-stroke-width: 0px;
   transition: transform 500ms ease;
 }
+
 .heart:hover .heart-blanc {
   opacity: 0;
 }
+
 .heart:hover .heart-violet {
   transform: scale(1);
 }
@@ -479,83 +515,85 @@ height: 350px;
 
 
 .footer {
-    
-    display: flex;
-    flex-direction: column;
-    width: 414px;
-    height: 270px;
-    padding-left: 25px;
-    color:white;
-    background-color:$noirfooter;
-    font-family: $policetitle ;
-    font-weight:normal;
-    font-size: $taille-police-moyenne;
 
-    .footer-title{
-     margin-bottom: 30px;
-     }
+  display: flex;
+  flex-direction: column;
+  width: 414px;
+  height: 270px;
+  padding-left: 25px;
+  color: white;
+  background-color: $noirfooter;
+  font-family: $policetitle ;
+  font-weight: normal;
+  font-size: $taille-police-moyenne;
 
-    .footer-element{
+  .footer-title {
+    margin-bottom: 30px;
+  }
 
-     font-family: $policetext;
-     font-size: $taille-police-normal;
-     font-weight: bold;
-     }
+  .footer-element {
+
+    font-family: $policetext;
+    font-size: $taille-police-normal;
+    font-weight: bold;
+  }
 }
 
-.btn-resto{
+.btn-resto {
 
-    display:flex;
-    width: 250px;
-    background-color: $noirfooter;
+  display: flex;
+  width: 250px;
+  background-color: $noirfooter;
 
-    .fa-utensils{
+  .fa-utensils {
     color: white;
-    }
+  }
 
-   .resto-text{
+  .resto-text {
 
 
     background-color: $noirfooter;
-    color:white;
+    color: white;
     margin-top: 0%;
-    margin-left: 15px;     
-    }
+    margin-left: 15px;
+  }
 }
 
-.btn-part{
+.btn-part {
 
-    display:flex;
-    width: 250px;
+  display: flex;
+  width: 250px;
+  background-color: $noirfooter;
+  margin-bottom: 20px;
+
+  .fa-handshake-angle {
+    color: white;
+  }
+
+  .part-text {
+
     background-color: $noirfooter;
-    margin-bottom: 20px;
-  
-    .fa-handshake-angle{
-        color:white;
-    }
-
-    .part-text{
-
-        background-color: $noirfooter;
-        color:white;
-        margin-top: 0%;
-        margin-left: 10px;
-        margin-bottom: 0px;
-    }
+    color: white;
+    margin-top: 0%;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
 }
+
 a p {
 
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 
 }
 
 a {
+  color: black;
+  text-decoration: none;
+
+  &:active {
     color: black;
-    text-decoration: none;
-    &:active{
-        color: black; 
-    }
+  }
 
 }
 
@@ -570,20 +608,22 @@ a {
 
   display: flex;
   align-items: center;
-  padding-left: 45px;;
+  padding-left: 45px;
+  ;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 65px;
 
-   .logo-img-2{
+  .logo-img-2 {
 
-      width: 230px;
-      height: 35px;
-      padding-left:40px;
+    width: 230px;
+    height: 35px;
+    padding-left: 40px;
   }
-  .fa-arrow-left{
 
-      font-size: $taille-police-grande;
+  .fa-arrow-left {
+
+    font-size: $taille-police-grande;
   }
 }
 
@@ -595,28 +635,29 @@ a {
 }
 
 
-.menu{
+.menu {
 
-  @include hauteurmenu (1370px);
+  @include hauteurmenu (1370px, 414px);
+
+}
+
+.menu-2 {
+
+  @include hauteurmenu (1470px, 414px);
 
 }
 
-.menu-2{
+.title-and-heart-2 {
 
-  @include hauteurmenu (1470px);
-
-}
-.title-and-heart-2{
-
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  padding-left:5%;
+  padding-left: 5%;
   padding-right: 20px;
   padding-top: 2%;
   font-size: 170%;
   font-weight: bold;
-  font-family:$policetitle;
-  margin-top:10px;
+  font-family: $policetitle;
+  margin-top: 10px;
   height: 80px;
 
 }
@@ -624,7 +665,7 @@ a {
 .heart-2 {
 
   margin-left: 0px;
-  margin-top:15px;
+  margin-top: 15px;
   font-size: 30px;
   color: transparent;
   -webkit-background-clip: text;
@@ -638,6 +679,7 @@ a {
   opacity: 1;
   transition: opacity 600ms ease;
 }
+
 .heart-violet-2 {
   transform: scale(0);
   background-image: linear-gradient(#9356DC, #FF79DA);
@@ -648,30 +690,33 @@ a {
 .heart-2:hover .heart-blanc-2 {
   opacity: 0;
 }
+
 .heart-2:hover .heart-violet-2 {
   transform: scale(1);
 }
 
 
-.titre-1{
-
-  @include titre();
-
-}
-.titre-2{
-
-  @include titre();
-
-}
-.titre-3{
+.titre-1 {
 
   @include titre();
 
 }
 
-.title-entr{
+.titre-2 {
 
-  margin-left:20px;
+  @include titre();
+
+}
+
+.titre-3 {
+
+  @include titre();
+
+}
+
+.title-entr {
+
+  margin-left: 20px;
   margin-bottom: 0px;
   padding-bottom: 0px;
   height: 20px;
@@ -680,31 +725,31 @@ a {
 
 }
 
-.bordure-moitie{
+.bordure-moitie {
 
-  margin-top:-13px;
+  margin-top: -13px;
   padding-top: 0px;
-  margin-left:5%;
+  margin-left: 5%;
   width: 40px;
-  height:20px ;
-  border-bottom:solid;
-  border-color:$vert;  
-  
+  height: 20px;
+  border-bottom: solid;
+  border-color: $vert;
+
 }
 
 .btn-plat {
 
   display: flex;
   align-items: flex-end;
-  background-color:white;
+  background-color: white;
   cursor: pointer;
   border: none;
   width: 385px;
   height: 80px;
   border-radius: 17px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-  margin-bottom:20px;
-  margin-left:5px;
+  margin-bottom: 20px;
+  margin-left: 5px;
   transition: transform 300ms ease;
   animation: animation-card 1000ms both;
 
@@ -713,22 +758,23 @@ a {
 .choix-menu {
   width: 315px;
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
   height: 70px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
- }
+}
 
-.menu-desc{
+.menu-desc {
 
-@include menudescription ($taille-police-moyenne,5px);
+  @include menudescription ($taille-police-moyenne, 5px);
 
 }
+
 .menu-desc-compl {
 
-@include menudescription ($taille-police-normal,10px);
+  @include menudescription ($taille-police-normal, 10px);
 
 }
 
@@ -737,146 +783,332 @@ a {
 /****************************/
 
 .check-square {
-  
-    display: flex;
-      position: absolute;
-      height: 80px;
-      width: 70px;
-      background-color: #99E2D0;
-      right: 0px;
-      top: 0px;
-      color:transparent;
-      transform: translateX(100px);
-      transition: transform 700ms ease-out;
-      border-top-right-radius: 17px ;
-      border-bottom-right-radius: 17px ;
-      display:none;
-      
-      }
 
+  display: flex;
+  position: absolute;
+  height: 80px;
+  width: 70px;
+  background-color: #99E2D0;
+  right: 0px;
+  top: 0px;
+  color: transparent;
+  transform: translateX(100px);
+  transition: transform 700ms ease-out;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  display: none;
 
-      .prix {
-
-          font-family: 'Roboto';
-          font-weight: bold;
-          transition: all 600ms ease-out;
-          padding-right: 15px;
-          margin-left:39px;
-          padding-top:15px;
-          height: 70px;
-
-      }
-
-
-      .check {
-          position: absolute;
-          font-size: 27px;
-          top: 27px;
-          left: 22px;
-          -webkit-background-clip: text;
-          color: transparent;
-          -webkit-text-stroke-width: 0px;
-          -webkit-text-stroke-color: #99E2D0;
-          background-color: white;
-
-        }
-        
-        @keyframes check-rotate {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-
-
-
-        .btn-plat:hover .check-square{
-          transform: translateX(0px);
-          display:block;
-        }
-
-        .btn-plat:hover .prix{
-          transform: translateX(-90px);
-          padding-left: 80px;
-        }
-        .btn-plat:hover .check{
-          animation: check-rotate 1000ms both alternate ease;
-        }
-
-       /*******************************/
-       /*******************************/
-
-
-       .btn-1 {
-          animation-delay: 50ms;
-        }
-        .btn-2 {
-          animation-delay: 100ms;
-        }
-        .btn-3 {
-          animation-delay: 150ms;
-        }
-        .btn-4 {
-          animation-delay: 200ms;
-        }
-        .btn-5 {
-          animation-delay: 250ms;
-        }
-        .btn-6 {
-          animation-delay: 300ms;
-        }
-        .btn-7 {
-          animation-delay: 350ms;
-        }
-        .btn-8 {
-          animation-delay: 400ms;
-        }
-        .btn-9 {
-          animation-delay: 450ms;
-        }
-        .btn-10 {
-          animation-delay: 500ms;
-        }
-
-       @keyframes animation-card {
-          0% {
-            transform: translateY(20px);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0px);
-            opacity: 1;
-          }
-        }
-
-
-.bouton-commander{
-  display:flex;
-  justify-content: center;
-  height:60px;
 }
-.btn-commander{
-  display:flex;
+
+
+.prix {
+
+  font-family: 'Roboto';
+  font-weight: bold;
+  transition: all 600ms ease-out;
+  padding-right: 15px;
+  margin-left: 39px;
+  padding-top: 15px;
+  height: 70px;
+
+}
+
+
+.check {
+  position: absolute;
+  font-size: 27px;
+  top: 27px;
+  left: 22px;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: #99E2D0;
+  background-color: white;
+
+}
+
+@keyframes check-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.btn-plat:hover .check-square {
+  transform: translateX(0px);
+  display: block;
+}
+
+.btn-plat:hover .prix {
+  transform: translateX(-90px);
+  padding-left: 80px;
+}
+
+.btn-plat:hover .check {
+  animation: check-rotate 1000ms both alternate ease;
+}
+
+/*******************************/
+/*******************************/
+
+
+.btn-1 {
+  animation-delay: 50ms;
+}
+
+.btn-2 {
+  animation-delay: 100ms;
+}
+
+.btn-3 {
+  animation-delay: 150ms;
+}
+
+.btn-4 {
+  animation-delay: 200ms;
+}
+
+.btn-5 {
+  animation-delay: 250ms;
+}
+
+.btn-6 {
+  animation-delay: 300ms;
+}
+
+.btn-7 {
+  animation-delay: 350ms;
+}
+
+.btn-8 {
+  animation-delay: 400ms;
+}
+
+.btn-9 {
+  animation-delay: 450ms;
+}
+
+.btn-10 {
+  animation-delay: 500ms;
+}
+
+@keyframes animation-card {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.bouton-commander {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+
+.btn-commander {
+  display: flex;
   justify-content: space-around;
-  background: linear-gradient($rose,$violet);
+  background: linear-gradient($rose, $violet);
   border: none;
   color: white;
   padding: 16px;
   font-size: $taille-police-moyenne;
   width: 270px;
   height: 60px;
-  margin-top:35px;
+  margin-top: 35px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 25px;
   font-family: $policetext;
-  opacity:1;
+  opacity: 1;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-      &:hover {
-          opacity:0.9;
-          box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
-      }
-  } 
 
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 100%);
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn-Location {
+    width: 768px;
+  }
+
+  .exploration {
+    display: flex;
+    width: 768px;
+  }
+
+  .exp-1 {
+
+    flex-direction: row !important;
+    ;
+
+  }
+
+  .exp-2 {
+
+    flex-direction: row !important;
+
+  }
+
+  #reservez1 {
+
+    @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
+
+  }
+
+  #reservez2 {
+
+    @include etapeexploration (0px, 0px, 0px, 8px !important, $taille-police-grande);
+    padding-left: 6px !important;
+  }
+
+  #decouvrez1 {
+
+    @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
+
+  }
+
+  #decouvrez2 {
+
+    @include etapeexploration (35px, 28px !important, 7px, 0px, $taille-police-moyenne);
+    padding-left: 6px !important;
+
+  }
+
+  .btn-fonct {
+    width: 700px;
+    margin-left: 40px;
+  }
+
+  .step-fonct {
+    font-size: $taille-police-moyenne;
+  }
+
+  .restaurants {
+    width: 768px;
+  }
+
+  .card-restaurant {
+    margin-left: 40px;
+  }
+
+  .btn-nouveau-1 {
+
+    @include boutonnv(100%, 79%);
+
+  }
+
+  .btn-nouveau-2 {
+
+    @include boutonnv(127%, 79%);
+
+  }
+
+  .restaurant-img-text-title {
+
+    @include imgdescription(600px);
+
+  }
+
+  .restaurant-img-text-desc {
+
+    @include imgdescription(600px);
+
+  }
+
+  .title-and-heart {
+
+    margin-right: 30px;
+  }
+
+  .logo-ohmyfood-2 {
+
+
+    justify-content: center;
+    padding-left: 45px;
+    width: 768px;
+
+  }
+
+  .img-resto {
+
+
+    width: 768px;
+
+  }
+
+  .menu {
+
+    @include hauteurmenu (1370px, 768px);
+
+  }
+
+  .menu-2 {
+
+    @include hauteurmenu (1470px, 768px);
+
+  }
+
+  .bordure-moitie {
+
+    margin-left: 20px;
+
+  }
+
+  .heart-2 {
+
+    margin-right: 10px;
+  }
+
+  .btn-plat {
+
+    width: 740px;
+
+  }
+
+  .choix-menu {
+    width: 650px;
+  }
+
+  .menu-desc {
+
+    @include menudescription ($taille-police-grande, 5px);
+
+  }
+
+  .menu-desc-compl {
+
+    @include menudescription ($taille-police-moyenne, 10px);
+
+  }
+
+  .prix {
+
+    font-size: $taille-police-moyenne;
+
+  }
+
+  .footer {
+    width: 768px;
+
+  }
+}
