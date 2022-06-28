@@ -968,13 +968,18 @@ a {
     margin-right: 10px;
   }
 
+  .btn-fonct {
+    width: 91%;
+    margin-left: 40px;
+  }
+
   .btn-nouveau-1 {
-  
-    @include boutonnv(168%, 37%);
+
+    @include boutonnv(820px, 38%);
   }
 
   .btn-nouveau-2 {
-    @include boutonnv(168%, 86%);
+    @include boutonnv(820px, 87%);
   }
 
   .restaurants {
@@ -983,7 +988,10 @@ a {
   }
 
   .card-restaurant {
+    margin-left:40px;
+    margin-right: 10PX;
     width: 45%;
+    border-radius: 5%;
   }
 
   .les-4-resto {
@@ -1005,8 +1013,9 @@ a {
     width: 100%;
   }
 
-  .img-resto {
+  .img-restaurant {
     width: 100%;
+    border-radius: 5%;
   }
 
   .menu {
@@ -1102,14 +1111,19 @@ a {
 
   .card-restaurant {
     margin-left: 40px;
+    border-radius: 5%;
+  }
+
+  .img-restaurant {
+    border-radius: 5%;
   }
 
   .btn-nouveau-1 {
-    @include boutonnv(100%, 79%);
+    @include boutonnv(1030px, 79%);
   }
 
   .btn-nouveau-2 {
-    @include boutonnv(127%, 79%);
+    @include boutonnv(1300px, 79%);
   }
 
   .restaurant-img-text-title {

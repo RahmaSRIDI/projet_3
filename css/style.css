@@ -922,13 +922,17 @@ a:active {
     display: flex;
     margin-right: 10px;
   }
+  .btn-fonct {
+    width: 91%;
+    margin-left: 40px;
+  }
   .btn-nouveau-1 {
     position: absolute;
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 168%;
-    left: 37%;
+    top: 820px;
+    left: 38%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -944,8 +948,8 @@ a:active {
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 168%;
-    left: 86%;
+    top: 820px;
+    left: 87%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -961,7 +965,10 @@ a:active {
     height: 670px;
   }
   .card-restaurant {
+    margin-left: 40px;
+    margin-right: 10PX;
     width: 45%;
+    border-radius: 5%;
   }
   .les-4-resto {
     display: flex;
@@ -981,8 +988,9 @@ a:active {
     padding-right: 90px;
     width: 100%;
   }
-  .img-resto {
+  .img-restaurant {
     width: 100%;
+    border-radius: 5%;
   }
   .menu {
     display: flex;
@@ -1124,13 +1132,17 @@ a:active {
   }
   .card-restaurant {
     margin-left: 40px;
+    border-radius: 5%;
+  }
+  .img-restaurant {
+    border-radius: 5%;
   }
   .btn-nouveau-1 {
     position: absolute;
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 100%;
+    top: 1030px;
     left: 79%;
     background-color: #99E2D0;
     border: none;
@@ -1147,7 +1159,7 @@ a:active {
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 127%;
+    top: 1300px;
     left: 79%;
     background-color: #99E2D0;
     border: none;
