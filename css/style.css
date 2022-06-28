@@ -970,6 +970,11 @@ a:active {
     width: 45%;
     border-radius: 5%;
   }
+  .img-restaurant {
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
   .les-4-resto {
     display: flex;
     flex-wrap: wrap;
@@ -988,9 +993,8 @@ a:active {
     padding-right: 90px;
     width: 100%;
   }
-  .img-restaurant {
+  .img-resto {
     width: 100%;
-    border-radius: 5%;
   }
   .menu {
     display: flex;
@@ -1135,7 +1139,8 @@ a:active {
     border-radius: 5%;
   }
   .img-restaurant {
-    border-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
   }
   .btn-nouveau-1 {
     position: absolute;
