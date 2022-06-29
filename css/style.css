@@ -259,7 +259,7 @@
   color: grey;
   cursor: pointer;
   border: none;
-  width: 370px;
+  width: 90%;
   height: 80px;
   padding-top: 10px;
   border-radius: 17px;
@@ -371,13 +371,21 @@
   margin-bottom: 0px;
 }
 
+.nouveau-1 {
+  position: relative;
+}
+
+.nouveau-2 {
+  position: relative;
+}
+
 .btn-nouveau-1 {
   position: absolute;
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
-  top: 138%;
-  left: 67%;
+  margin-top: 5%;
+  margin-left: 65%;
   background-color: #99E2D0;
   border: none;
   color: green;
@@ -394,8 +402,8 @@
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
-  top: 175%;
-  left: 67%;
+  margin-top: 5%;
+  margin-left: 65%;
   background-color: #99E2D0;
   border: none;
   color: green;
@@ -411,15 +419,14 @@
   margin-top: 5Px;
   margin-bottom: 5px;
   margin-left: 15px;
-  width: 200px;
-  font-weight: bold;
+  width: 50%;
 }
 
 .restaurant-img-text-desc {
   margin-top: 5Px;
   margin-bottom: 5px;
   margin-left: 15px;
-  width: 200px;
+  width: 50%;
 }
 
 .title-and-heart {
@@ -667,7 +674,7 @@ a:active {
   align-items: flex-end;
   background-color: white;
   border: none;
-  width: 385px;
+  width: 93%;
   height: 80px;
   border-radius: 17px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -927,13 +934,19 @@ a:active {
     width: 91%;
     margin-left: 40px;
   }
+  .nouveau-1 {
+    position: relative;
+  }
+  .nouveau-2 {
+    position: relative;
+  }
   .btn-nouveau-1 {
     position: absolute;
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 820px;
-    left: 38%;
+    margin-top: 4%;
+    margin-left: 77%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -949,8 +962,8 @@ a:active {
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 820px;
-    left: 87%;
+    margin-top: 4%;
+    margin-left: 77%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -985,7 +998,7 @@ a:active {
     margin-top: 5Px;
     margin-bottom: 5px;
     margin-left: 15px;
-    width: 60%;
+    width: 67%;
   }
   /************************************************************/
   /***********************************************************/
@@ -1143,13 +1156,19 @@ a:active {
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
   }
+  .nouveau-1 {
+    position: relative;
+  }
+  .nouveau-2 {
+    position: relative;
+  }
   .btn-nouveau-1 {
     position: absolute;
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 1030px;
-    left: 79%;
+    margin-top: 3%;
+    margin-left: 83%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -1165,8 +1184,8 @@ a:active {
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
-    top: 1300px;
-    left: 79%;
+    margin-top: 3%;
+    margin-left: 83%;
     background-color: #99E2D0;
     border: none;
     color: green;
@@ -1238,7 +1257,7 @@ a:active {
     width: 84%;
   }
   .menu-desc {
-    width: 95%;
+    width: 90%;
     height: 23px;
     background-color: white;
     border: none;

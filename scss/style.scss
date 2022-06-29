@@ -300,7 +300,7 @@
   color: grey;
   cursor: pointer;
   border: none;
-  width: 370px;
+  width: 90%;
   height: 80px;
   padding-top: 10px;
   border-radius: 17px;
@@ -439,30 +439,36 @@
 
 }
 
+.nouveau-1{
+  position: relative;
+}
+
+.nouveau-2{
+  position: relative;
+}
+
 .btn-nouveau-1 {
 
-  @include boutonnv(138%, 67%);
+  @include boutonnv(5%, 65%);
 
 }
 
 .btn-nouveau-2 {
 
-  @include boutonnv(175%, 67%);
+  @include boutonnv(5%, 65%);
 
 }
 
 
 .restaurant-img-text-title {
 
-  @include imgdescription(200px);
-
-  font-weight: bold;
+  @include imgdescription(50%);
 
 }
 
 .restaurant-img-text-desc {
 
-  @include imgdescription(200px);
+  @include imgdescription(50%);
 
 }
 
@@ -734,7 +740,7 @@ a {
   align-items: flex-end;
   background-color: white;
   border: none;
-  width: 385px;
+  width: 93%;
   height: 80px;
   border-radius: 17px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
@@ -973,14 +979,21 @@ a {
     width: 91%;
     margin-left: 40px;
   }
-
+  .nouveau-1{
+    position: relative;
+  }
+  
+  .nouveau-2{
+    position: relative;
+  }
+  
   .btn-nouveau-1 {
 
-    @include boutonnv(820px, 38%);
+    @include boutonnv(4%, 77%);
   }
 
   .btn-nouveau-2 {
-    @include boutonnv(820px, 87%);
+    @include boutonnv(4%, 77%);
   }
 
   .restaurants {
@@ -1008,7 +1021,7 @@ a {
   }
 
   .restaurant-img-text-title {
-    @include imgdescription(60%);
+    @include imgdescription(67%);
   }
 
   /************************************************************/
@@ -1123,13 +1136,20 @@ a {
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
   }
-
+  .nouveau-1{
+    position: relative;
+  }
+  
+  .nouveau-2{
+    position: relative;
+  }
+  
   .btn-nouveau-1 {
-    @include boutonnv(1030px, 79%);
+    @include boutonnv(3%, 83%);
   }
 
   .btn-nouveau-2 {
-    @include boutonnv(1300px, 79%);
+    @include boutonnv(3%, 83%);
   }
 
   .restaurant-img-text-title {
@@ -1180,7 +1200,8 @@ a {
   }
 
   .menu-desc {
-    @include menudescription (95%, $taille-police-grande, 15px);
+    @include menudescription (90%, $taille-police-grande, 15px);
+ 
   }
 
   .menu-desc-compl {
