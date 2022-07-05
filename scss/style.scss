@@ -3,6 +3,10 @@
   /* box-sizing est appliqué à tous les éléments */
 }
 
+body{
+  font-family: 'Roboto';
+}
+
 /**************************************/
 
 @import './variables.scss';
@@ -20,24 +24,20 @@
   height: 100vh;
   background: $dark;
   animation: loader 3s forwards;
-
 }
 
 @keyframes loader {
   0% {
     visibility: visible;
   }
-
   100% {
     visibility: hidden;
   }
 }
 
 .loader .loader-circle {
-
   opacity: 0.5;
   transform: scale(1);
-
 }
 
 .loader-circle>div>div {
@@ -48,14 +48,11 @@
   border-left-color: #FF79DA;
   width: 100%;
   height: 100%;
-
 }
 
 @keyframes rotate {
   100% {
-
     transform: rotate(360deg);
-
   }
 }
 
@@ -71,7 +68,6 @@
   width: 300px;
   height: 300px;
   padding: 5px;
-
 }
 
 .loader .loader-circle i {
@@ -87,17 +83,14 @@
   height: 150px;
   line-height: 1;
   transform: scale(0) translate3d(0, 0, 0);
-
 }
 
 .loader .loader-circle i:nth-of-type(1) {
   animation: loadicons 3s ease-in-out;
 }
-
 .loader .loader-circle i:nth-of-type(2) {
   animation: loadicons 3s 1s ease-in-out;
 }
-
 .loader .loader-circle i:nth-of-type(3) {
   animation: loadicons 3s 2s ease-in-out;
 }
@@ -106,19 +99,15 @@
   0% {
     transform: scale(0) translate3d(0, 0, 0);
   }
-
   11% {
     transform: scale(1.2) translate3d(0, 0, 0);
   }
-
   22% {
     transform: scale(1) translate3d(0, 0, 0);
   }
-
   33% {
     transform: scale(0) translate3d(0, 0, 0);
   }
-
 }
 
 /********************** fin loader *******************/
@@ -135,7 +124,6 @@
   box-shadow: 0 7px 8px 0 rgb(0 0 0 / 20%);
 
   .logo-img {
-
     width: 200px;
     height: 35px;
   }
@@ -157,31 +145,21 @@
   padding-bottom: 0px;
 
   .fa-location-dot {
-
     font-size: $taille-police-normal;
     margin-top: 10px;
     margin-right: 10px;
-
   }
-
   //end fa-location-dot
 
   .recherche-Text {
-
     margin-top: 10px;
     margin-left: 10px;
     background-color: $grismoyen;
     border: none;
-    font-family: $policetext;
-    font-weight: bold;
     font-size: $taille-police-moyenne;
-
   }
-
   // end recherche-Text
-
 }
-
 // end btn-Location
 
 
@@ -203,7 +181,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    font-weight: bold;
   }
 
   .exp-2 {
@@ -213,24 +191,20 @@
   }
 
   #reservez1 {
-
     @include etapeexploration (0px, 0px, 7px, 0px, $taille-police-grande);
 
   }
 
   #reservez2 {
-
     @include etapeexploration (0px, 0px, 0px, 0px, $taille-police-grande);
   }
 
   #decouvrez1 {
-
     @include etapeexploration (35px, 0px, 7px, 0px, $taille-police-moyenne);
 
   }
 
   #decouvrez2 {
-
     @include etapeexploration (0px, 0px, 0px, 0px, $taille-police-moyenne);
 
   }
@@ -247,10 +221,9 @@
     width: 270px;
     height: 60px;
     margin-top: 35px;
-    font-weight: bold;
+    font-weight: 1000;
     cursor: pointer;
     border-radius: 25px;
-    font-family: $policetext;
     opacity: 1;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 
@@ -269,7 +242,6 @@
   margin-left: 10px;
   padding-left: 20px;
   padding-top: 20px;
-  font-family: $policetext;
   font-weight: bold;
 
 }
@@ -286,7 +258,6 @@
   border: solid;
   border-color: $violet;
   border-radius: 50%;
-  font-family: $policetext;
   font-weight: bold;
 }
 
@@ -313,9 +284,17 @@
   color: black;
   background-color: $grisclair;
   border: none;
-  font-family: $policetext;
   font-weight: bold;
   font-size: $taille-police-normal;
+
+}
+
+.fa-mobile-screen-button {
+
+  margin-left: 30px;
+  margin-top: 15px;
+  padding-right: 15px;
+  font-size: $taille-police-grande;
 
 }
 
@@ -334,17 +313,7 @@
 
 }
 
-.fa-mobile-screen-button {
-
-  margin-left: 30px;
-  margin-top: 15px;
-  ;
-  padding-right: 15px;
-  font-size: $taille-police-grande;
-
-}
-
-.btn-fonct-2:hover {
+btn-fonct-2:hover {
 
   background: #f2eafb;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
@@ -409,7 +378,6 @@
   margin-left: 10px;
   padding-left: 20px;
   padding-top: 20px;
-  font-family: $policetext;
   font-weight: bold;
 
 }
@@ -424,7 +392,7 @@
   width: 90%;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0/ 20%);
-  border-radius: 10%;
+  border-radius: 20px;
 
 }
 
@@ -432,8 +400,8 @@
 
   width: 100%;
   height: 70%;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   object-fit: cover;
   margin-bottom: 0px;
 
@@ -448,34 +416,28 @@
 }
 
 .btn-nouveau-1 {
-
   @include boutonnv(5%, 65%);
-
 }
 
 .btn-nouveau-2 {
-
   @include boutonnv(5%, 65%);
-
 }
 
 
 .restaurant-img-text-title {
-
   @include imgdescription(50%);
-
+  font-weight: bold;
 }
 
 .restaurant-img-text-desc {
-
   @include imgdescription(50%);
-
 }
 
 .title-and-heart {
 
   margin-top: 10px;
-  display: flex;
+   display:flex;
+  justify-content: space-between;
   height: 25px;
 
 }
@@ -485,7 +447,7 @@
 
 .heart {
 
-  margin-left: 50px;
+  margin-right: 15px;
   font-size: 30px;
   color: transparent;
   -webkit-background-clip: text;
@@ -527,19 +489,19 @@
   padding-left: 25px;
   color: white;
   background-color: $noirfooter;
-  font-family: $policetitle ;
+  font-family: $policetext ;
   font-weight: normal;
   font-size: $taille-police-moyenne;
 
   .footer-title {
     margin-bottom: 30px;
+    font-family: $policetitle;
   }
 
   .footer-element {
 
-    font-family: $policetext;
     font-size: $taille-police-normal;
-    font-weight: bold;
+  
   }
 }
 
@@ -717,7 +679,6 @@ a {
   margin-bottom: 0px;
   padding-bottom: 0px;
   height: 20px;
-  font-family: $policetext;
   font-weight: bold;
 
 }
@@ -767,6 +728,7 @@ a {
 .menu-desc {
 
   @include menudescription (95%, $taille-police-moyenne, 15px);
+  font-weight: bold;
 
 }
 
@@ -784,42 +746,38 @@ a {
 
   display: flex;
   position: absolute;
-  height: 80px;
-  width: 70px;
+  height: 90px;
+  width: 80px;
   background-color: #99E2D0;
   right: 0px;
   top: 0px;
   color: transparent;
   transform: translateX(100px);
-  transition: transform 700ms ease-out;
+  transition: transform 500ms ease-out;
   border-top-right-radius: 17px;
   border-bottom-right-radius: 17px;
-  display: none;
 
 }
 
 .btn-plat:hover .check-square {
   transform: translateX(0px);
-  display: block;
+
 }
 
 .prix {
 
-  font-family: 'Roboto';
   font-weight: bold;
   transition: all 600ms ease-out;
   padding-right: 15px;
   margin-left: 39px;
   padding-top: 15px;
   height: 70px;
-
 }
 
 .btn-plat:hover .prix {
-  transform: translateX(-90px);
-  padding-left: 80px;
+  transform: translateX(-80px);
+  padding-left: 90px;
 }
-
 
 .check {
   position: absolute;
@@ -831,18 +789,16 @@ a {
   -webkit-text-stroke-width: 0px;
   -webkit-text-stroke-color: #99E2D0;
   background-color: white;
-
 }
 
 .btn-plat:hover .check {
-  animation: check-rotate 1000ms both alternate ease;
+  animation: check-rotate 700ms both alternate ease;
 }
 
 @keyframes check-rotate {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -923,7 +879,6 @@ a {
   font-weight: bold;
   cursor: pointer;
   border-radius: 25px;
-  font-family: $policetext;
   opacity: 1;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 
@@ -998,20 +953,19 @@ a {
 
   .restaurants {
     width: 100%;
-    height: 670px;
+    height:auto;
   }
 
   .card-restaurant {
-    margin-left:40px;
-    margin-right: 10PX;
+
     width: 45%;
-    border-radius: 5%;
+    border-radius: 20px;
   }
 
     .img-restaurant {
     width: 100%;
-    border-top-left-radius:5%;
-    border-top-right-radius: 5%;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
   }
 
   .les-4-resto {
@@ -1079,6 +1033,7 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  
   .btn-Location {
     width: 100%;
   }
@@ -1129,12 +1084,12 @@ a {
 
   .card-restaurant {
     margin-left: 40px;
-    border-radius: 5%;
+    border-radius:20px;
   }
 
   .img-restaurant {
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .nouveau-1{
     position: relative;
@@ -1161,6 +1116,8 @@ a {
   }
 
   .title-and-heart {
+    display:flex;
+    justify-content: space-between;
     margin-right: 30px;
   }
 

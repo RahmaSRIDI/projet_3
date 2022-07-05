@@ -13,8 +13,7 @@
     font-size: $taille-police-normal;
     width: 100px;
     height: 30px;
-    font-weight: bold;
-    cursor: pointer;
+      cursor: pointer;
     font-family: $policetext;
     
 }
@@ -33,7 +32,6 @@
     padding-bottom: $paddingbttom;
     font-family: $policetext;
     font-size: $taillepolice;
-    font-weight: bold;
 
 }
 
@@ -64,8 +62,6 @@
     height: 23px;
     background-color: white;
     border: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     font-size: $taillepolice;
     color:black;
     margin-top: $top;
