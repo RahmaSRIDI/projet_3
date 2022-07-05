@@ -12,7 +12,9 @@ body {
 /**************************************/
 /* les variables*/ /*****************mixin acceuil ******************/
 /********************* mixin resto *******************/
-/********************** début loader *******************/
+/*****************mixin acceuil ******************/
+/********************* mixin resto *******************/
+/* les variables*/
 .loader-circle {
   position: fixed;
   top: 0;
@@ -105,7 +107,6 @@ body {
     transform: scale(0) translate3d(0, 0, 0);
   }
 }
-/********************** fin loader *******************/
 .logo-ohmyfood {
   display: flex;
   justify-content: center;
