@@ -144,7 +144,6 @@ body{
 
 /********************/
 
-
 .bouton-commander {
   display: flex;
   justify-content: center;
@@ -176,11 +175,6 @@ body{
 
 @media screen and (min-width: 992px) {
 
-  .menu-contenue{
-
-    max-width:1400px;
-    margin: auto;
-  }
   .img-resto {
     width: 100%;
   }
@@ -197,11 +191,7 @@ body{
     margin-left: 20px;
   }
 
-  .menu-contenue{
 
-    max-width: 1350px;
-    margin: auto;
-  }
   .btn-plat {
     width: 97%;
     margin-left: 10px;
