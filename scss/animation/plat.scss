@@ -1,0 +1,52 @@
+
+.btn-1 {
+    animation-delay: 50ms;
+  }
+  
+  .btn-2 {
+    animation-delay: 100ms;
+  }
+  
+  .btn-3 {
+    animation-delay: 150ms;
+  }
+  
+  .btn-4 {
+    animation-delay: 200ms;
+  }
+  
+  .btn-5 {
+    animation-delay: 250ms;
+  }
+  
+  .btn-6 {
+    animation-delay: 300ms;
+  }
+  
+  .btn-7 {
+    animation-delay: 350ms;
+  }
+  
+  .btn-8 {
+    animation-delay: 400ms;
+  }
+  
+  .btn-9 {
+    animation-delay: 450ms;
+  }
+  
+  .btn-10 {
+    animation-delay: 500ms;
+  }
+  
+  @keyframes animation-card {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }

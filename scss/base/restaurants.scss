@@ -26,7 +26,7 @@
     text-align: left;
     background-color: white;
     margin-left: 20px;
-    margin-right: 25PX;
+
     margin-bottom: 25px;
     width: 90%;
     height: 250px;
@@ -62,7 +62,6 @@
     @include boutonnv(5%, 65%);
   }
   
-  
   .restaurant-img-text-title {
     @include imgdescription(50%);
     font-weight: bold;
@@ -75,14 +74,12 @@
   .title-and-heart {
   
     margin-top: 10px;
-     display:flex;
+    display:flex;
     justify-content: space-between;
     height: 25px;
   
   }
 
-
-  
 @media screen and (min-width: 992px) {
 
     .nouveau-1{
@@ -103,6 +100,7 @@
     }
   
     .restaurants {
+
       width: 100%;
       height:auto;
     }
@@ -121,15 +119,16 @@
   
     .les-4-resto {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      margin-left: 20px;
+      margin : auto;
+      width: 95%;
     }
   
     .restaurant-img-text-title {
       @include imgdescription(67%);
     }
 }
-
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
@@ -146,6 +145,15 @@
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }
+
+    .les-4-resto {
+    
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      width: 90%;
+    }
+
     .nouveau-1{
       position: relative;
     }

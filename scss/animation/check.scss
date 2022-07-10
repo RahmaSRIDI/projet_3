@@ -1,0 +1,62 @@
+
+.check-square {
+
+    display: flex;
+    position: absolute;
+    height: 90px;
+    width: 80px;
+    background-color: #99E2D0;
+    right: 0px;
+    top: 0px;
+    color: transparent;
+    transform: translateX(100px);
+    transition: transform 500ms ease-out;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+  
+  }
+  
+  .btn-plat:hover .check-square {
+    transform: translateX(0px);
+  
+  }
+  
+  .prix {
+  
+    font-weight: bold;
+    transition: all 600ms ease-out;
+    padding-right: 15px;
+    margin-left: 39px;
+    padding-top: 15px;
+    height: 70px;
+  }
+  
+  .btn-plat:hover .prix {
+    transform: translateX(-80px);
+    padding-left: 90px;
+  }
+  
+  .check {
+    position: absolute;
+    font-size: 27px;
+    top: 27px;
+    left: 22px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #99E2D0;
+    background-color: white;
+  }
+  
+  .btn-plat:hover .check {
+    animation: check-rotate 700ms both alternate ease;
+  }
+  
+  @keyframes check-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

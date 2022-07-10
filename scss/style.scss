@@ -17,44 +17,13 @@ body{
 @import './base/exploration.scss';
 @import './base/fonctionnement.scss';
 @import './base/restaurants.scss';
+@import './animation/heart.scss';
+@import './animation/check.scss';
+@import './animation/plat.scss';
 
-/**************************************/
 
-.heart {
-
-  margin-right: 15px;
-  font-size: 30px;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  cursor: pointer;
-}
-
-.heart-blanc {
-  position: absolute;
-  opacity: 1;
-  transition: opacity 600ms ease;
-}
-
-.heart-violet {
-  transform: scale(0);
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-text-stroke-width: 0px;
-  transition: transform 500ms ease;
-}
-
-.heart:hover .heart-blanc {
-  opacity: 0;
-}
-
-.heart:hover .heart-violet {
-  transform: scale(1);
-}
 
 /************************************* style des pages restaurants******************/
-/***********************************************************************************/
-
 
 .img-resto {
 
@@ -79,48 +48,15 @@ body{
 
   display: flex;
   justify-content: space-between;
-  padding-left: 5%;
   padding-right: 20px;
-  padding-top: 2%;
   font-size: 170%;
   font-weight: bold;
   font-family: $policetitle;
   margin-top: 10px;
+  margin-left:20px;
+  margin-right: 20px;
   height: 80px;
 
-}
-
-.heart-2 {
-
-  margin-left: 0px;
-  margin-top: 15px;
-  font-size: 30px;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  cursor: pointer;
-}
-
-.heart-blanc-2 {
-  position: absolute;
-  opacity: 1;
-  transition: opacity 600ms ease;
-}
-
-.heart-violet-2 {
-  transform: scale(0);
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  -webkit-text-stroke-width: 0px;
-  transition: transform 500ms ease;
-}
-
-.heart-2:hover .heart-blanc-2 {
-  opacity: 0;
-}
-
-.heart-2:hover .heart-violet-2 {
-  transform: scale(1);
 }
 
 .titre-1 {
@@ -166,7 +102,7 @@ body{
 .btn-plat {
 
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
   background-color: white;
   border: none;
   width: 93%;
@@ -203,129 +139,11 @@ body{
 .menu-desc-compl {
 
   @include menudescription (95%, $taille-police-normal, 5px);
-
+  font-weight: normal;
 }
 
 /********************/
 
-/****************************/
-
-.check-square {
-
-  display: flex;
-  position: absolute;
-  height: 90px;
-  width: 80px;
-  background-color: #99E2D0;
-  right: 0px;
-  top: 0px;
-  color: transparent;
-  transform: translateX(100px);
-  transition: transform 500ms ease-out;
-  border-top-right-radius: 17px;
-  border-bottom-right-radius: 17px;
-
-}
-
-.btn-plat:hover .check-square {
-  transform: translateX(0px);
-
-}
-
-.prix {
-
-  font-weight: bold;
-  transition: all 600ms ease-out;
-  padding-right: 15px;
-  margin-left: 39px;
-  padding-top: 15px;
-  height: 70px;
-}
-
-.btn-plat:hover .prix {
-  transform: translateX(-80px);
-  padding-left: 90px;
-}
-
-.check {
-  position: absolute;
-  font-size: 27px;
-  top: 27px;
-  left: 22px;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke-width: 0px;
-  -webkit-text-stroke-color: #99E2D0;
-  background-color: white;
-}
-
-.btn-plat:hover .check {
-  animation: check-rotate 700ms both alternate ease;
-}
-
-@keyframes check-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*******************************/
-/*******************************/
-
-.btn-1 {
-  animation-delay: 50ms;
-}
-
-.btn-2 {
-  animation-delay: 100ms;
-}
-
-.btn-3 {
-  animation-delay: 150ms;
-}
-
-.btn-4 {
-  animation-delay: 200ms;
-}
-
-.btn-5 {
-  animation-delay: 250ms;
-}
-
-.btn-6 {
-  animation-delay: 300ms;
-}
-
-.btn-7 {
-  animation-delay: 350ms;
-}
-
-.btn-8 {
-  animation-delay: 400ms;
-}
-
-.btn-9 {
-  animation-delay: 450ms;
-}
-
-.btn-10 {
-  animation-delay: 500ms;
-}
-
-@keyframes animation-card {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 
 .bouton-commander {
   display: flex;
@@ -358,7 +176,11 @@ body{
 
 @media screen and (min-width: 992px) {
 
+  .menu-contenue{
 
+    max-width:1400px;
+    margin: auto;
+  }
   .img-resto {
     width: 100%;
   }
@@ -375,10 +197,11 @@ body{
     margin-left: 20px;
   }
 
-  .heart-2 {
-    margin-right: 10px;
-  }
+  .menu-contenue{
 
+    max-width: 1350px;
+    margin: auto;
+  }
   .btn-plat {
     width: 97%;
     margin-left: 10px;
