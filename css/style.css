@@ -107,6 +107,70 @@ body {
     transform: scale(0) translate3d(0, 0, 0);
   }
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 270px;
+  padding-left: 25px;
+  color: white;
+  background-color: rgb(43, 42, 41);
+  font-weight: normal;
+  font-size: 120%;
+}
+.footer .footer-title {
+  margin-bottom: 30px;
+  font-family: "Shrikhand", cursive;
+}
+.footer .footer-element {
+  font-size: 100%;
+}
+
+.btn-resto {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+}
+.btn-resto .fa-utensils {
+  color: white;
+}
+.btn-resto .resto-text {
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 15px;
+}
+
+.btn-part {
+  display: flex;
+  width: 250px;
+  background-color: rgb(43, 42, 41);
+  margin-bottom: 20px;
+}
+.btn-part .fa-handshake-angle {
+  color: white;
+}
+.btn-part .part-text {
+  background-color: rgb(43, 42, 41);
+  color: white;
+  margin-top: 0%;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+a p {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+}
+
 .logo-ohmyfood {
   display: flex;
   justify-content: center;
@@ -148,7 +212,37 @@ body {
   font-size: 120%;
 }
 
-/**************************************/
+.logo-ohmyfood-2 {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 65px;
+}
+.logo-ohmyfood-2 .logo-img-2 {
+  width: 230px;
+  height: 35px;
+  padding-left: 40px;
+}
+.logo-ohmyfood-2 .fa-arrow-left {
+  font-size: 150%;
+}
+
+@media screen and (min-width: 992px) {
+  .logo-ohmyfood-2 {
+    justify-content: center;
+    padding-right: 90px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .logo-ohmyfood-2 {
+    justify-content: center;
+    padding-right: 90px;
+    width: 100%;
+  }
+}
 .exploration {
   display: flex;
   flex-direction: column;
@@ -224,7 +318,104 @@ body {
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
 }
 
-/********************** fonctionnement ********************/
+@media screen and (min-width: 992px) {
+  .btn-Location {
+    width: 100%;
+  }
+  .exploration {
+    display: flex;
+    width: 100%;
+  }
+  .exp-1 {
+    flex-direction: row !important;
+  }
+  .exp-2 {
+    flex-direction: row !important;
+  }
+  #reservez1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+  }
+  #reservez2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 8px !important;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    padding-left: 6px !important;
+  }
+  #decouvrez1 {
+    margin-top: 35px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+  }
+  #decouvrez2 {
+    margin-top: 35px;
+    padding-top: 28px !important;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    padding-left: 6px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn-Location {
+    width: 100%;
+  }
+  .exploration {
+    display: flex;
+    width: 100%;
+  }
+  .exp-1 {
+    flex-direction: row !important;
+  }
+  .exp-2 {
+    flex-direction: row !important;
+  }
+  #reservez1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+  }
+  #reservez2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 8px !important;
+    font-family: "Roboto", sans-serif;
+    font-size: 150%;
+    padding-left: 6px !important;
+  }
+  #decouvrez1 {
+    margin-top: 35px;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+  }
+  #decouvrez2 {
+    margin-top: 35px;
+    padding-top: 28px !important;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    padding-left: 6px !important;
+  }
+}
 .title-fonctionnement {
   margin-top: 20px;
   margin-left: 10px;
@@ -326,7 +517,25 @@ btn-fonct-2:hover .fa-list-ul {
   font-size: 150%;
 }
 
-/*************************restaurants***************************/
+@media screen and (min-width: 992px) {
+  .boutons-fonct {
+    display: flex;
+    margin-right: 10px;
+  }
+  .btn-fonct {
+    width: 91%;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .btn-fonct {
+    width: 91%;
+    margin-left: 40px;
+  }
+  .step-fonct {
+    font-size: 120%;
+  }
+}
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -430,8 +639,139 @@ btn-fonct-2:hover .fa-list-ul {
   height: 25px;
 }
 
-/***********************************/
-/***********************************/
+@media screen and (min-width: 992px) {
+  .nouveau-1 {
+    position: relative;
+  }
+  .nouveau-2 {
+    position: relative;
+  }
+  .btn-nouveau-1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    margin-top: 4%;
+    margin-left: 77%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .btn-nouveau-2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    margin-top: 4%;
+    margin-left: 77%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .restaurants {
+    width: 100%;
+    height: auto;
+  }
+  .card-restaurant {
+    width: 45%;
+    border-radius: 20px;
+  }
+  .img-restaurant {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .les-4-resto {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+  .restaurant-img-text-title {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 67%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .restaurants {
+    width: 100%;
+  }
+  .card-restaurant {
+    margin-left: 40px;
+    border-radius: 20px;
+  }
+  .img-restaurant {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .nouveau-1 {
+    position: relative;
+  }
+  .nouveau-2 {
+    position: relative;
+  }
+  .btn-nouveau-1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    margin-top: 3%;
+    margin-left: 83%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .btn-nouveau-2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+    margin-top: 3%;
+    margin-left: 83%;
+    background-color: #99E2D0;
+    border: none;
+    color: green;
+    font-size: 100%;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  }
+  .restaurant-img-text-title {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 78%;
+  }
+  .restaurant-img-text-desc {
+    margin-top: 5Px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 78%;
+  }
+  .title-and-heart {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+}
+/**************************************/
 .heart {
   margin-right: 15px;
   font-size: 30px;
@@ -463,92 +803,8 @@ btn-fonct-2:hover .fa-list-ul {
   transform: scale(1);
 }
 
-/***********************************/
-/***********************************/
-.footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 270px;
-  padding-left: 25px;
-  color: white;
-  background-color: rgb(43, 42, 41);
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  font-size: 120%;
-}
-.footer .footer-title {
-  margin-bottom: 30px;
-  font-family: "Shrikhand", cursive;
-}
-.footer .footer-element {
-  font-size: 100%;
-}
-
-.btn-resto {
-  display: flex;
-  width: 250px;
-  background-color: rgb(43, 42, 41);
-}
-.btn-resto .fa-utensils {
-  color: white;
-}
-.btn-resto .resto-text {
-  background-color: rgb(43, 42, 41);
-  color: white;
-  margin-top: 0%;
-  margin-left: 15px;
-}
-
-.btn-part {
-  display: flex;
-  width: 250px;
-  background-color: rgb(43, 42, 41);
-  margin-bottom: 20px;
-}
-.btn-part .fa-handshake-angle {
-  color: white;
-}
-.btn-part .part-text {
-  background-color: rgb(43, 42, 41);
-  color: white;
-  margin-top: 0%;
-  margin-left: 10px;
-  margin-bottom: 0px;
-}
-
-a p {
-  color: white;
-  text-decoration: none;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-a:active {
-  color: black;
-}
-
 /************************************* style des pages restaurants******************/
 /***********************************************************************************/
-.logo-ohmyfood-2 {
-  display: flex;
-  align-items: center;
-  padding-left: 45px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 65px;
-}
-.logo-ohmyfood-2 .logo-img-2 {
-  width: 230px;
-  height: 35px;
-  padding-left: 40px;
-}
-.logo-ohmyfood-2 .fa-arrow-left {
-  font-size: 150%;
-}
-
 .img-resto {
   object-fit: cover;
   width: 100%;
@@ -861,331 +1117,6 @@ a:active {
 }
 
 @media screen and (min-width: 992px) {
-  .btn-Location {
-    width: 100%;
-  }
-  .exploration {
-    display: flex;
-    width: 100%;
-  }
-  .exp-1 {
-    flex-direction: row !important;
-  }
-  .exp-2 {
-    flex-direction: row !important;
-  }
-  #reservez1 {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 150%;
-  }
-  #reservez2 {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 8px !important;
-    font-family: "Roboto", sans-serif;
-    font-size: 150%;
-    padding-left: 6px !important;
-  }
-  #decouvrez1 {
-    margin-top: 35px;
-    padding-top: 0px;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 120%;
-  }
-  #decouvrez2 {
-    margin-top: 35px;
-    padding-top: 28px !important;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 120%;
-    padding-left: 6px !important;
-  }
-  .boutons-fonct {
-    display: flex;
-    margin-right: 10px;
-  }
-  .btn-fonct {
-    width: 91%;
-    margin-left: 40px;
-  }
-  .nouveau-1 {
-    position: relative;
-  }
-  .nouveau-2 {
-    position: relative;
-  }
-  .btn-nouveau-1 {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5px;
-    margin-top: 4%;
-    margin-left: 77%;
-    background-color: #99E2D0;
-    border: none;
-    color: green;
-    font-size: 100%;
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-  }
-  .btn-nouveau-2 {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5px;
-    margin-top: 4%;
-    margin-left: 77%;
-    background-color: #99E2D0;
-    border: none;
-    color: green;
-    font-size: 100%;
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-  }
-  .restaurants {
-    width: 100%;
-    height: auto;
-  }
-  .card-restaurant {
-    width: 45%;
-    border-radius: 20px;
-  }
-  .img-restaurant {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .les-4-resto {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 20px;
-  }
-  .restaurant-img-text-title {
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    width: 67%;
-  }
-  /************************************************************/
-  /***********************************************************/
-  .logo-ohmyfood-2 {
-    justify-content: center;
-    padding-right: 90px;
-    width: 100%;
-  }
-  .img-resto {
-    width: 100%;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-top: -40px;
-    background-color: #F2F2F2;
-    height: 1370px;
-    width: 100%;
-    padding-left: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .menu-2 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-top: -40px;
-    background-color: #F2F2F2;
-    height: 1470px;
-    width: 100%;
-    padding-left: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .bordure-moitie {
-    margin-left: 20px;
-  }
-  .heart-2 {
-    margin-right: 30px;
-  }
-  .btn-plat {
-    width: 97%;
-    margin-left: 10px;
-  }
-  .choix-menu {
-    width: 93%;
-  }
-  .menu-desc {
-    width: 95%;
-    height: 23px;
-    background-color: white;
-    border: none;
-    font-size: 150%;
-    color: black;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .menu-desc-compl {
-    width: 95%;
-    height: 23px;
-    background-color: white;
-    border: none;
-    font-size: 120%;
-    color: black;
-    margin-top: 5px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .prix {
-    font-size: 120%;
-  }
-  .footer {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .btn-Location {
-    width: 100%;
-  }
-  .exploration {
-    display: flex;
-    width: 100%;
-  }
-  .exp-1 {
-    flex-direction: row !important;
-  }
-  .exp-2 {
-    flex-direction: row !important;
-  }
-  #reservez1 {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 150%;
-  }
-  #reservez2 {
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 8px !important;
-    font-family: "Roboto", sans-serif;
-    font-size: 150%;
-    padding-left: 6px !important;
-  }
-  #decouvrez1 {
-    margin-top: 35px;
-    padding-top: 0px;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 120%;
-  }
-  #decouvrez2 {
-    margin-top: 35px;
-    padding-top: 28px !important;
-    margin-bottom: 7px;
-    padding-bottom: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 120%;
-    padding-left: 6px !important;
-  }
-  .btn-fonct {
-    width: 91%;
-    margin-left: 40px;
-  }
-  .step-fonct {
-    font-size: 120%;
-  }
-  .restaurants {
-    width: 100%;
-  }
-  .card-restaurant {
-    margin-left: 40px;
-    border-radius: 20px;
-  }
-  .img-restaurant {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .nouveau-1 {
-    position: relative;
-  }
-  .nouveau-2 {
-    position: relative;
-  }
-  .btn-nouveau-1 {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5px;
-    margin-top: 3%;
-    margin-left: 83%;
-    background-color: #99E2D0;
-    border: none;
-    color: green;
-    font-size: 100%;
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-  }
-  .btn-nouveau-2 {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5px;
-    margin-top: 3%;
-    margin-left: 83%;
-    background-color: #99E2D0;
-    border: none;
-    color: green;
-    font-size: 100%;
-    width: 100px;
-    height: 30px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-  }
-  .restaurant-img-text-title {
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    width: 78%;
-  }
-  .restaurant-img-text-desc {
-    margin-top: 5Px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    width: 78%;
-  }
-  .title-and-heart {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 30px;
-  }
-  .logo-ohmyfood-2 {
-    justify-content: center;
-    padding-right: 90px;
-    width: 100%;
-  }
   .img-resto {
     width: 100%;
   }
@@ -1256,9 +1187,6 @@ a:active {
   }
   .prix {
     font-size: 120%;
-  }
-  .footer {
-    width: 100%;
   }
 }
 

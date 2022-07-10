@@ -1,0 +1,148 @@
+
+.title-fonctionnement {
+
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+  
+  }
+  
+  .number {
+  
+    margin-left: -15px;
+    margin-top: 15px;
+    padding-left: 5px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    background-color: $violet;
+    border: solid;
+    border-color: $violet;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  .btn-fonct {
+  
+    display: flex;
+    flex-direction: row;
+    background-color: $grisclair;
+    margin-left: 25px;
+    margin-top: 25px;
+    color: grey;
+    cursor: pointer;
+    border: none;
+    width: 90%;
+    height: 80px;
+    padding-top: 10px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  }
+  
+  .step-fonct {
+  
+    padding-left: 30px;
+    color: black;
+    background-color: $grisclair;
+    border: none;
+    font-weight: bold;
+    font-size: $taille-police-normal;
+  
+  }
+  
+  .fa-mobile-screen-button {
+  
+    margin-left: 30px;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-size: $taille-police-grande;
+  
+  }
+  
+  .btn-fonct-1:hover {
+  
+    background: #f2eafb;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+  
+    .step-fonct {
+      background: #f2eafb;
+    }
+  
+    .fa-mobile-screen-button {
+      color: $violet;
+    }
+  
+  }
+  
+  btn-fonct-2:hover {
+  
+    background: #f2eafb;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+  
+    .step-fonct {
+      background: #f2eafb;
+    }
+  
+    .fa-list-ul {
+      color: $violet;
+    }
+  
+  }
+  
+  .fa-list-ul {
+    margin-left: 30px;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-size: $taille-police-grande;
+  
+  }
+  
+  .btn-fonct-3:hover {
+  
+    background: #f2eafb;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+  
+    .step-fonct {
+      background: #f2eafb;
+    }
+  
+    .fa-store {
+      color: $violet;
+    }
+  
+  }
+  
+  .fa-store {
+    margin-left: 30px;
+    margin-top: 15px;
+    padding-right: 15px;
+    font-size: $taille-police-grande;
+  
+  }
+  @media screen and (min-width: 992px) {
+
+    .boutons-fonct {
+      display: flex;
+      margin-right: 10px;
+    }
+  
+    .btn-fonct {
+      width: 91%;
+      margin-left: 40px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+    .btn-fonct {
+      width: 91%;
+      margin-left: 40px;
+    }
+  
+    .step-fonct {
+      font-size: $taille-police-moyenne;
+    }
+}  

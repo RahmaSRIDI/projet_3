@@ -1,0 +1,83 @@
+
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 270px;
+    padding-left: 25px;
+    color: white;
+    background-color: $noirfooter;
+    font-weight: normal;
+    font-size: $taille-police-moyenne;
+  
+    .footer-title {
+      margin-bottom: 30px;
+      font-family: $policetitle;
+    }
+  
+    .footer-element {
+  
+      font-size: $taille-police-normal;
+    
+    }
+  }
+  
+  .btn-resto {
+  
+    display: flex;
+    width: 250px;
+    background-color: $noirfooter;
+  
+    .fa-utensils {
+      color: white;
+    }
+  
+    .resto-text {
+  
+  
+      background-color: $noirfooter;
+      color: white;
+      margin-top: 0%;
+      margin-left: 15px;
+    }
+  }
+  
+  .btn-part {
+  
+    display: flex;
+    width: 250px;
+    background-color: $noirfooter;
+    margin-bottom: 20px;
+  
+    .fa-handshake-angle {
+      color: white;
+    }
+  
+    .part-text {
+  
+      background-color: $noirfooter;
+      color: white;
+      margin-top: 0%;
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+  }
+  
+  a p {
+  
+    color: white;
+    text-decoration: none;
+  
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  
+    &:active {
+      color: black;
+    }
+  
+  }
+  
